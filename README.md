@@ -1,38 +1,31 @@
-<h1 align="center">🚀 Kainã Rodrigues</h1>
+<h1 align="center">⚡ Kainã Rodrigues ⚡</h1>
 
 <p align="center">
-  💻 Desenvolvedor Full-Stack em formação | Apaixonado por tecnologia e inovação
+  <img src="https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif" width="500"/>
 </p>
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/kaina-rodrigues/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="mailto:kainarodrigues684@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-</p>
+<h3 align="center">💻 Desenvolvedor Full-Stack em evolução | 🚀 Foco em alta performance</h3>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Kanexxxxx&label=Profile%20Views&color=0e75b6&style=flat" />
+  <img src="https://komarev.com/ghpvc/?username=Kanexxxxx&label=Profile%20Views&color=blueviolet&style=for-the-badge"/>
 </p>
 
 ---
 
-## 👨‍💻 Sobre Mim
+## 🧬 SOBRE MIM
 
-🎓 Técnico em **Desenvolvimento de Sistemas**  
-💡 Focado em desenvolvimento **Full-Stack**  
-🚀 Sempre buscando evoluir e construir projetos reais  
+💡 Sou Técnico em **Desenvolvimento de Sistemas** apaixonado por tecnologia, lógica e criação de sistemas.
 
-- 🔭 Atualmente desenvolvendo projetos web e lógica
-- 🌱 Estudando **JavaScript, React, Node.js e Banco de Dados**
-- 🤝 Aberto para colaboração em projetos e open source
-- 💬 Pergunte sobre: **Web, lógica e banco de dados**
+🔥 Meu objetivo é me tornar um **Desenvolvedor Full-Stack de alto nível**, trabalhando em projetos grandes e impactantes.
+
+📌 Perfil:
+- 🧠 Mentalidade de crescimento constante
+- ⚡ Foco em disciplina e evolução diária
+- 💻 Criador de aplicações web completas
 
 ---
 
-## 🛠️ Tech Stack
+## ⚔️ STACK PRINCIPAL
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=js,html,css,php,mysql,git,vscode" />
@@ -40,11 +33,19 @@
 
 ---
 
-## 📊 Estatísticas
+## 🧠 STACK EM EVOLUÇÃO
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Kanexxxxx&show_icons=true&theme=tokyonight&hide_border=true"/>
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kanexxxxx&layout=compact&theme=tokyonight&hide_border=true"/>
+  <img src="https://skillicons.dev/icons?i=react,nodejs,python,java" />
+</p>
+
+---
+
+## 📊 STATUS DO DESENVOLVEDOR
+
+<p align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Kanexxxxx&show_icons=true&theme=tokyonight&hide_border=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kanexxxxx&layout=compact&theme=tokyonight&hide_border=true"/>
 </p>
 
 <p align="center">
@@ -53,33 +54,20 @@
 
 ---
 
-## 🧠 Atualmente estudando
+## 🚀 PROJETOS EM DESTAQUE
 
-- ⚡ JavaScript Avançado
-- ⚛️ React.js
-- 🌐 APIs e Node.js
-- 🗄️ MySQL e NoSQL
-
----
-
-## 🚀 Projetos em Destaque
-
-🔹 Sistema Web com PHP + MySQL  
-🔹 CRUD completo com banco de dados  
-🔹 Aplicações front-end responsivas  
+🔥 Sistema Web completo com PHP + MySQL  
+🔥 CRUD com arquitetura organizada  
+🔥 Interfaces responsivas com HTML, CSS e JS  
+🔥 Projetos focados em lógica e performance  
 
 ---
 
-## 🤝 Vamos nos conectar?
+## 🧠 ROADMAP DO DEV
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/kaina-rodrigues/">
-    <img src="https://img.shields.io/badge/-Kainã%20Rodrigues-blue?style=for-the-badge&logo=Linkedin&logoColor=white"/>
-  </a>
-</p>
-
----
-
-<p align="center">
-  <i>"Disciplina supera talento quando o talento não se disciplina."</i>
-</p>
+```diff
++ Aprender React avançado
++ Dominar Node.js
++ Criar APIs profissionais
++ Trabalhar com banco NoSQL
++ Conseguir vaga como dev 💼
