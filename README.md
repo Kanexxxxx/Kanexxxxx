@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://eurora.site"><img src="https://img.shields.io/badge/Eurora-no%20ar-2f8a5b?style=for-the-badge&labelColor=17191b" alt="Eurora — no ar"></a>
   <a href="https://volkerr.com.br"><img src="https://img.shields.io/badge/VELKOR-no%20ar-2f8a5b?style=for-the-badge&labelColor=17191b" alt="VELKOR — no ar"></a>
-  <a href="mailto:kainarodrigues684@gmail.com"><img src="https://img.shields.io/badge/e--mail-contato-cf3c27?style=for-the-badge&labelColor=17191b" alt="E-mail"></a>
+  <a href="mailto:kainarodrigues684@gmail.com"><img src="https://img.shields.io/badge/e--mail-contato-0c8b80?style=for-the-badge&labelColor=17191b" alt="E-mail"></a>
 </p>
 
 ---
@@ -28,11 +28,30 @@ em **VPS própria** (Ubuntu · Nginx · PM2) com CI/CD por GitHub Actions.
 
 ### 🚀 Projetos
 
-| | Projeto | O que é | Stack | Status |
-|---|---|---|---|---|
-| 🟢 | **[Eurora](https://eurora.site)** · [código](https://github.com/Kanexxxxx/Eurora) | SaaS de Dia dos Namorados: páginas de amor personalizadas, presentes, mensagens agendadas e quiz do casal. Checkout PIX/cartão e deploy automatizado por SSH. | `Next.js 16` `TypeScript` `Prisma` `PostgreSQL` `Asaas` | **No ar** |
-| 🟢 | **[VELKOR](https://volkerr.com.br)** · [código](https://github.com/Kanexxxxx/Velkor_3) | Loja de streetwear e sneakers. E-commerce completo: catálogo, auth, carrinho/wishlist, pedidos e painel admin, com frete e checkout integrados. | `Next.js` `React` `Tailwind` `Node.js` `Prisma` `PostgreSQL` `Mercado Pago` `Melhor Envio` | **No ar** |
-| 🟠 | **[Confia?](https://github.com/Kanexxxxx/Confia-)** | Serviço antifraude em português: envie um link, perfil, print ou telefone e receba uma resposta explicando o raciocínio da conclusão. Roteiro em 10 etapas. | `Next.js` `TypeScript` `Node.js` `PostgreSQL` `VPS · fail2ban` | Em construção |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://eurora.site"><img src="assets/eurora.jpg" alt="Eurora"></a>
+      <h4>🟢 <a href="https://eurora.site">Eurora</a> &nbsp;·&nbsp; <a href="https://github.com/Kanexxxxx/Eurora">código</a></h4>
+      <p>SaaS de Dia dos Namorados: páginas de amor personalizadas, presentes,
+      mensagens agendadas e quiz do casal. Checkout PIX/cartão e deploy
+      automatizado por SSH.</p>
+      <sub><code>Next.js 16</code> <code>TypeScript</code> <code>Prisma</code> <code>PostgreSQL</code> <code>Asaas</code></sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://volkerr.com.br"><img src="assets/velkor.jpg" alt="VELKOR"></a>
+      <h4>🟢 <a href="https://volkerr.com.br">VELKOR</a> &nbsp;·&nbsp; <a href="https://github.com/Kanexxxxx/Velkor_3">código</a></h4>
+      <p>Loja de streetwear e sneakers. E-commerce completo: catálogo, auth,
+      carrinho/wishlist, pedidos e painel admin, com frete e checkout
+      integrados.</p>
+      <sub><code>Next.js</code> <code>React</code> <code>Tailwind</code> <code>Node.js</code> <code>Prisma</code> <code>PostgreSQL</code> <code>Mercado Pago</code> <code>Melhor Envio</code></sub>
+    </td>
+  </tr>
+</table>
+
+**🟠 [Confia?](https://github.com/Kanexxxxx/Confia-)** — serviço antifraude em português: envie um link, perfil,
+print ou telefone e receba uma resposta explicando o raciocínio da conclusão. Roteiro em 10 etapas *(em construção)*.
+<br><sub><code>Next.js</code> <code>TypeScript</code> <code>Node.js</code> <code>PostgreSQL</code> <code>VPS · fail2ban</code></sub>
 
 ---
 
@@ -63,8 +82,8 @@ em **VPS própria** (Ubuntu · Nginx · PM2) com CI/CD por GitHub Actions.
 ### 📊 GitHub
 
 <p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Kanexxxxx&show_icons=true&hide_border=true&theme=graywhite&title_color=cf3c27&icon_color=cf3c27" alt="Estatísticas">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kanexxxxx&layout=compact&hide_border=true&theme=graywhite&title_color=cf3c27" alt="Linguagens">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Kanexxxxx&show_icons=true&hide_border=true&theme=graywhite&title_color=0c8b80&icon_color=0c8b80" alt="Estatísticas">
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kanexxxxx&layout=compact&hide_border=true&theme=graywhite&title_color=0c8b80" alt="Linguagens">
 </p>
 
 ---
