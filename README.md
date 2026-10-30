@@ -87,9 +87,9 @@ Interfaces e sistemas que venho desenvolvendo. Cada projeto tem seu contexto, su
 </table>
 
 <details>
-<summary><b>Como as versões do Confia se relacionam</b></summary>
+<summary><b>Organização das versões do Confia</b></summary>
 
-[confia-minimundo](https://github.com/Kanexxxxx/confia-minimundo) compartilha a base do Confia e acrescenta documentação. É uma versão relacionada, não outro produto independente.
+As versões foram [consolidadas em Confia-](https://github.com/Kanexxxxx/Confia-/pull/3), preservando os documentos diferentes e o histórico. A vitrine apresenta apenas a fonte principal.
 
 </details>
 
