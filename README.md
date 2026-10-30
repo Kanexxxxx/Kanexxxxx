@@ -134,8 +134,6 @@ Meu trabalho reúne aplicações web, automações e projetos interativos. Gosto
 ### Estudos e aprendizado
 
 - [**Senac**](https://github.com/Kanexxxxx/Senac) — atividades por unidade curricular do curso de Desenvolvimento de Sistemas.
-- [**Exercícios de lógica**](https://github.com/Kanexxxxx/Exerc-cios_de_logica) — cálculos, validação de entradas e eventos em JavaScript, com testes de regressão.
-- [**BugsLife**](https://github.com/Kanexxxxx/BugsLife) — fork didático para praticar Git com bugs intencionais; preserva a origem e a finalidade dos exercícios.
 
 ---
 
