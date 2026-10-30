@@ -10,7 +10,7 @@ Transformo necessidades em interfaces, APIs e ferramentas: do modelo de dados à
 
 Estudante de Técnico em Desenvolvimento de Sistemas. Meu trabalho reúne aplicações com React e Next.js, serviços em Node.js, bancos relacionais e integrações. Também exploro jogos em Godot e programação de sistemas.
 
-Os projetos abaixo têm estágios diferentes. Os links levam ao código público e à documentação de cada trabalho; funcionalidades descritas não representam homologação de produção. Projetos privados e suas informações internas ficam fora deste catálogo.
+Este catálogo reúne aplicações, projetos interativos e estudos. Cada entrada identifica seu estágio e leva ao código público e à documentação correspondente.
 
 ## Projetos em destaque
 
@@ -37,27 +37,40 @@ Estado: implementação local; a documentação identifica funcionalidades e pen
 
 ## Outros trabalhos públicos
 
-| Projeto | Necessidade abordada | Tecnologias | Estado |
-| --- | --- | --- | --- |
-| [Eurora](https://github.com/Kanexxxxx/Eurora) | Páginas personalizadas, quiz e fluxos de presentes e mensagens | Next.js, TypeScript, Prisma, PostgreSQL | Implementado; operação e deploy precisam de validação atual |
-| [VOLKER / Velkor](https://github.com/Kanexxxxx/Velkor_3) | Catálogo, contas, carrinho, pedidos e administração de e-commerce | React, Next.js, Node.js, Prisma | Implementado; versões e identidade em revisão |
-| [Confia?](https://github.com/Kanexxxxx/Confia-) | Verificação antigolpe com explicações em português | Next.js, TypeScript, PostgreSQL | Em construção; existem versões relacionadas |
-| [JOGI](https://github.com/Kanexxxxx/JOGI) | Jogo de corrida que reage a eventos de uma transmissão | Godot, GDScript, Python, WebSockets | Desenvolvimento e validação local |
+### [Eurora](https://github.com/Kanexxxxx/Eurora)
+
+Páginas personalizadas, quiz e fluxos de presentes e mensagens.
+
+**Next.js, TypeScript, Prisma, PostgreSQL** · Implementado; operação e deploy precisam de validação atual.
+
+### [VOLKER / Velkor](https://github.com/Kanexxxxx/Velkor_3)
+
+Catálogo, contas, carrinho, pedidos e administração de e-commerce.
+
+**React, Next.js, Node.js, Prisma** · Implementado; versões e identidade em revisão.
+
+### [Confia?](https://github.com/Kanexxxxx/Confia-)
+
+Verificação antigolpe com explicações em português.
+
+**Next.js, TypeScript, PostgreSQL** · Em construção; existem versões relacionadas.
+
+### [JOGI](https://github.com/Kanexxxxx/JOGI)
+
+Jogo de corrida que reage a eventos de uma transmissão.
+
+**Godot, GDScript, Python, WebSockets** · Desenvolvimento e validação local.
 
 A versão [confia-minimundo](https://github.com/Kanexxxxx/confia-minimundo) compartilha a base do Confia? e acrescenta documentação. Ela não é contabilizada como outro produto.
 
 ## Tecnologias utilizadas
 
-| Área | Ferramentas presentes nos projetos públicos |
-| --- | --- |
-| Interfaces | HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind CSS |
-| Serviços e integrações | Node.js, Python, APIs HTTP, WebSockets |
-| Persistência | PostgreSQL, SQLite, Prisma, SQL |
-| Identidade e acesso | Supabase, Better Auth |
-| Qualidade e desenvolvimento | Git, GitHub Actions, testes unitários e Playwright |
-| Projetos interativos | Godot e GDScript |
-
-Estas são tecnologias utilizadas nos repositórios, sem equivalência automática a especialização ou experiência profissional contratada.
+- **Interfaces:** HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind CSS.
+- **Serviços e integrações:** Node.js, Python, APIs HTTP, WebSockets.
+- **Persistência:** PostgreSQL, SQLite, Prisma, SQL.
+- **Identidade e acesso:** Supabase, Better Auth.
+- **Qualidade e desenvolvimento:** Git, GitHub Actions, testes unitários e Playwright.
+- **Projetos interativos:** Godot e GDScript.
 
 ## Estudos e aprendizado
 
