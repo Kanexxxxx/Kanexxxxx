@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="Kainã — desenvolvimento de software. Interfaces cuidadas. Sistemas conectados." />
+  <img src="assets/header.svg" width="100%" alt="Kanex — desenvolvimento de software. Interfaces cuidadas. Sistemas conectados." />
 </p>
 
 <p align="center">
@@ -127,7 +127,7 @@ Testes unitários e Playwright fazem parte do trabalho de qualidade. Supabase e 
 
 ## Sobre
 
-Sou **Kainã**, estudante de Técnico em Desenvolvimento de Sistemas. Desenvolvo interfaces, APIs, integrações e ferramentas, com interesse em como as partes se conectam: dados, regras de negócio e experiência de uso.
+Sou **Kanex**, estudante de Técnico em Desenvolvimento de Sistemas. Desenvolvo interfaces, APIs, integrações e ferramentas, com interesse em como as partes se conectam: dados, regras de negócio e experiência de uso.
 
 Meu trabalho reúne aplicações web, automações e projetos interativos. Gosto de construir soluções que também possam ser compreendidas, testadas e mantidas depois da primeira entrega.
 
