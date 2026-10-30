@@ -1,188 +1,189 @@
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="Kanex — desenvolvimento de software. Interfaces cuidadas. Sistemas conectados." />
+  <img src="./assets/header.svg" width="100%" alt="KANEX: interfaces, sistemas e experiências. Design na superfície, engenharia por trás. Identidade visual estática em azul-noite." />
 </p>
 
 <p align="center">
-  <b>Aplicações web · Integrações · Projetos interativos</b><br/>
-  <sub>Do modelo de dados à interface que as pessoas usam.</sub>
+  <strong>Desenvolvimento web &nbsp;·&nbsp; Sistemas & APIs &nbsp;·&nbsp; Projetos interativos</strong>
 </p>
 
 <p align="center">
-  <a href="#projetos"><b>Projetos</b></a> &nbsp; / &nbsp;
-  <a href="#tecnologias"><b>Tecnologias</b></a> &nbsp; / &nbsp;
-  <a href="#sobre"><b>Sobre</b></a> &nbsp; / &nbsp;
-  <a href="mailto:kainarodrigues684@gmail.com"><b>Contato ↗</b></a>
+  Construo produtos digitais do fluxo de dados à experiência de quem usa.<br/>
+  Meu foco é unir <strong>interfaces bem resolvidas</strong>, <strong>regras de negócio claras</strong> e <strong>software que possa evoluir</strong>.
+</p>
+
+<p align="center">
+  <a href="#trabalhos-selecionados">Trabalhos selecionados</a> &nbsp;•&nbsp;
+  <a href="#outros-projetos">Mais projetos</a> &nbsp;•&nbsp;
+  <a href="#stack-e-ferramentas">Stack</a> &nbsp;•&nbsp;
+  <a href="#como-eu-trabalho">Como trabalho</a> &nbsp;•&nbsp;
+  <a href="#contato">Contato</a>
 </p>
 
 ---
 
-## Linguagens e GitHub
+## Trabalhos selecionados
+
+Uma seleção que mostra diferentes lados do meu trabalho: produtos web, fluxos completos, ferramentas de operação e experiências interativas. Os projetos têm níveis de maturidade distintos; apresento o estágio de cada um sem confundir código implementado com serviço disponível ao público.
+
+### 01 / VOLKER — uma operação de e-commerce, da vitrine ao pedido
 
 <p align="center">
-  <img src="assets/languages.svg" width="520" alt="Gráfico das linguagens mais utilizadas nos repositórios públicos, calculado a partir dos bytes informados pelo GitHub." /><br/>
-  <img src="assets/github-stats.svg" width="520" alt="Estatísticas reais dos repositórios públicos: quantidade analisada, linguagens, estrelas e forks." />
+  <a href="https://github.com/Kanexxxxx/Velkor_3"><img src="./assets/velkor.jpg" width="90%" alt="Captura da interface do VOLKER: vitrine de moda streetwear com composição escura, tipografia ampla e detalhes vermelhos." /></a>
 </p>
 
-<sub>Dados públicos consultados em 30/10/2026. O gráfico mede volume de código nas branches padrão; projetos privados e forks importados ficam fora do cálculo. A aplicação Nexakeep está em outra branch, por isso sua stack aparece também no catálogo.</sub>
+**O desafio:** ir além de uma página de produtos e estruturar uma experiência de compra com interface, API e administração.
 
-### Linguagens de programação
+**O que há no projeto:** catálogo e categorias, contas e sessões, carrinho, pedidos, cupons, área administrativa e integrações de pagamento e frete no código. Front-end e back-end são separados, com documentação de implantação e testes.
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=20232A)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![GDScript](https://img.shields.io/badge/GDScript-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Luau](https://img.shields.io/badge/Luau-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
+`Next.js` · `React` · `Node.js` · `Prisma` · `PostgreSQL`
 
-Luau no DARK; GDScript e Python no JOGI; TypeScript e JavaScript nas aplicações web.
+**Estado:** aplicação implementada; integrações reais e disponibilidade pública não foram verificadas nesta apresentação.
+
+[**Explorar repositório e arquitetura →**](https://github.com/Kanexxxxx/Velkor_3)
 
 ---
 
-## Projetos
+### 02 / Eurora Love — experiências digitais personalizadas
 
-Interfaces e sistemas que venho desenvolvendo. Cada projeto tem seu contexto, sua arquitetura e seu estágio; os repositórios detalham a implementação.
+<p align="center">
+  <a href="https://github.com/Kanexxxxx/Eurora"><img src="./assets/eurora.jpg" width="90%" alt="Captura da Eurora Love, com interface escura, tipografia clara e elementos em rosa." /></a>
+</p>
 
-### Sistemas e jogos
+**O desafio:** conectar uma experiência visual a fluxos reais de criação, personalização e persistência.
 
-<table>
-<tr>
-<td width="50%" valign="top">
-<h3>Karol</h3>
-<p>Site e agendamento para atendimento com hora marcada. Painel administrativo, agenda e mensagens, com confirmação humana nas operações do assistente.</p>
-<p><code>Next.js</code> <code>TypeScript</code> <code>Supabase</code></p>
-<p><sub>Aplicação em evolução</sub><br/><a href="https://github.com/Kanexxxxx/Karol"><b>Ver código e documentação ↗</b></a></p>
-</td>
-<td width="50%" valign="top">
-<h3>Nexakeep</h3>
-<p>Sites e agendamento por loja, com autenticação e separação de dados entre negócios. A branch de implementação contém a aplicação; a principal conserva o planejamento.</p>
-<p><code>Next.js</code> <code>PostgreSQL</code> <code>Better Auth</code></p>
-<p><sub>Implementação local</sub><br/><a href="https://github.com/Kanexxxxx/projeto-pessoal/tree/implementacao"><b>Explorar a implementação ↗</b></a></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<h3>Confia?</h3>
-<p>Projeto antigolpe em português, pensado para explicar os motivos de uma análise de links, perfis e outras entradas.</p>
-<p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL</code></p>
-<p><sub>Em construção</sub><br/><a href="https://github.com/Kanexxxxx/Confia-"><b>Conhecer o projeto ↗</b></a></p>
-</td>
-<td width="50%" valign="top">
-<h3>JOGI</h3>
-<p align="center"><img src="assets/jogi.png" height="280" alt="Prévia real do JOGI: corrida 3D vertical em uma arena, com HUD e contadores de exemplo zerados." /></p>
-<p>Corrida interativa em Godot. Uma ponte Python recebe eventos de transmissão e conecta a participação da audiência ao jogo.</p>
-<p><code>Godot</code> <code>GDScript</code> <code>Python</code> <code>WebSockets</code></p>
-<p><sub>Desenvolvimento e validação local</sub><br/><a href="https://github.com/Kanexxxxx/JOGI"><b>Explorar o projeto ↗</b></a></p>
-</td>
-</tr>
-</table>
+**O que há no projeto:** páginas personalizadas, quiz, recursos para presentes e mensagens, rotas de API, persistência com Prisma e integrações de comunicação e checkout descritas no repositório.
 
+`Next.js` · `TypeScript` · `Prisma` · `PostgreSQL`
 
-### Aplicações com interface visual
+**Estado:** código de aplicação disponível; hospedagem e fluxos externos exigem validação própria.
 
-<table>
-<tr>
-<td width="50%" valign="top">
-<a href="https://github.com/Kanexxxxx/Eurora"><img src="assets/eurora.jpg" width="100%" alt="Interface da Eurora: página escura com tipografia clara e detalhes em rosa." /></a>
-<h3>Eurora Love</h3>
-<p>Páginas personalizadas para casais, quiz, presentes e fluxos de mensagens. Uma experiência visual que conecta interface, conteúdo e integrações.</p>
-<p><code>Next.js</code> <code>TypeScript</code> <code>Prisma</code> <code>PostgreSQL</code></p>
-<p><sub>Aplicação implementada · manutenção e deploy em revisão</sub></p>
-<p><a href="https://github.com/Kanexxxxx/Eurora"><b>Explorar o projeto ↗</b></a></p>
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/Kanexxxxx/Velkor_3"><img src="assets/velkor.jpg" width="100%" alt="Interface da Velkor: catálogo de streetwear com composição escura, letras grandes e detalhes em vermelho." /></a>
-<h3>VOLKER / Velkor</h3>
-<p>E-commerce com catálogo, contas, carrinho, pedidos e administração. Frontend e API separados, com integrações de pagamento e frete.</p>
-<p><code>React</code> <code>Next.js</code> <code>Node.js</code> <code>PostgreSQL</code></p>
-<p><sub>Aplicação implementada · identidade e versões em revisão</sub></p>
-<p><a href="https://github.com/Kanexxxxx/Velkor_3"><b>Explorar o projeto ↗</b></a></p>
-</td>
-</tr>
-</table>
+[**Conhecer o projeto →**](https://github.com/Kanexxxxx/Eurora)
 
-<sub>Capturas das versões dos projetos preservadas no perfil. Não representam comprovação de operação atual nem de métricas exibidas pelas interfaces.</sub>
+---
 
-### Vitraya Studio
+### 03 / Vitraya Studio — da oferta ao material de divulgação
 
-<a href="https://github.com/Kanexxxxx/Vitraya"><img src="assets/vitraya-studio.png" width="100%" alt="Estúdio criativo do Vitraya, com seleção de produto de exemplo, direção de arte e prévia da oferta." /></a>
+<p align="center">
+  <a href="https://github.com/Kanexxxxx/Vitraya"><img src="./assets/vitraya-studio.png" width="90%" alt="Interface local do Vitraya Studio com seleção de produtos, direção de arte e prévia de materiais de divulgação." /></a>
+</p>
 
-**Uma operação de ofertas, do catálogo à arte.** Aplicativo local para importar produtos com fotos, organizar cupons, preparar legendas e criar peças visuais. O exemplo acima mostra a direção Boutique do estúdio criativo.
+**O desafio:** organizar em um único ambiente as tarefas repetitivas de quem prepara ofertas e conteúdo de afiliados.
 
-`React` `Vite` `Node.js` `SQLite` &nbsp; · &nbsp; Desenvolvimento local, com integrações em revisão.
+**O que há no projeto:** catálogo local, importação de produtos, imagens, favoritos, cupons, legendas, direção de arte, exportação e backups. Conectores de envio existem, mas foram validados com provedores simulados — isso não equivale a publicação real.
 
-[**Conhecer o Vitraya ↗**](https://github.com/Kanexxxxx/Vitraya)
+`React` · `Vite` · `Node.js` · `SQLite`
+
+**Estado:** aplicação local; integrações externas e trabalho entre versões ainda passam por revisão.
+
+[**Ver fluxo e instruções de uso →**](https://github.com/Kanexxxxx/Vitraya)
+
+---
+
+### 04 / JOGI — um jogo 3D conectado a eventos de live
+
+<p align="center">
+  <a href="https://github.com/Kanexxxxx/JOGI"><img src="./assets/jogi.png" width="66%" alt="Prévia real do jogo JOGI: arena tridimensional vertical, personagens e elementos de interface para participação durante lives." /></a>
+</p>
+
+**O desafio:** transformar eventos de audiência em ações dentro de um jogo, isolando as regras, a interface e as integrações com as plataformas.
+
+**O que há no projeto:** cena de jogo em Godot, ponte de eventos em Python, protocolos de comunicação, painéis administrativos e documentação de operação e segurança.
+
+`Godot` · `GDScript` · `Python` · `WebSockets`
+
+**Estado:** desenvolvimento e testes locais. A estreia pública depende de validações operacionais e de conformidade.
+
+[**Explorar o JOGI e sua documentação →**](https://github.com/Kanexxxxx/JOGI)
+
+---
+
+## Outros projetos
+
+Os destaques contam parte da história. O restante mostra amplitude: produtos de serviço, segurança, agendamento, experimentação e estudo.
+
+| Projeto | O que estou construindo / explorando | Estado e acesso |
+| :--- | :--- | :--- |
+| **[Studio Karol Carvalho](https://github.com/Kanexxxxx/Karol)** | Agendamento para atendimento, painel administrativo e assistente de WhatsApp com confirmação humana para operações sensíveis. | Código público; sem promessa de demo ativa. |
+| **[Confia?](https://github.com/Kanexxxxx/Confia-)** | Serviço de análise antigolpe com explicações compreensíveis para links, perfis e outras entradas. | Em construção. |
+| **[Nexakeep](https://github.com/Kanexxxxx/projeto-pessoal/tree/implementacao)** | Sites e agenda para pequenos negócios, com autenticação e separação de dados por operação. | Implementação em branch própria; `main` preserva planejamento. |
+| **[Senac](https://github.com/Kanexxxxx/Senac)** | Exercícios e atividades organizadas por unidade curricular, documentando a evolução dos estudos. | Material de aprendizado. |
 
 <details>
-<summary><b>Organização das versões do Confia</b></summary>
+  <summary><strong>Mais frentes em desenvolvimento</strong></summary>
 
-As versões foram [consolidadas em Confia-](https://github.com/Kanexxxxx/Confia-/pull/3), preservando os documentos diferentes e o histórico. A vitrine apresenta apenas a fonte principal.
+  <br/>
+
+  - **Prumo:** aplicativo pessoal de finanças, com foco em transações, cartões, gastos e comportamento offline. Repositório privado; sem acesso público ao código.
+  - **DARK:** fundação de um RPG inspirado em jogos de ação no Roblox, com módulos de cliente, servidor e recursos compartilhados. Repositório privado; projeto em evolução.
+
+  Esses trabalhos são mencionados apenas em nível geral. A existência do projeto não significa produto concluído ou publicação autorizada.
 
 </details>
 
----
+## Stack e ferramentas
 
-### Outros projetos grandes em desenvolvimento
+Gosto de trabalhar na interseção entre produto, interface e funcionamento interno. Estas tecnologias aparecem em projetos do meu portfólio — a lista representa experiência de uso, não uma classificação artificial de domínio.
 
-<table>
-<tr>
-<td width="50%" valign="top">
-<h3>Prumo</h3>
-<p>Aplicativo pessoal de finanças, com organização de transações, cartões, gastos e pagamentos. Desenvolvimento local e validação de persistência e uso offline.</p>
-<p><code>TypeScript</code> <code>Next.js</code> <code>React</code> <code>SQLite</code></p>
-<p><sub>Em desenvolvimento · código privado</sub></p>
-</td>
-<td width="50%" valign="top">
-<h3>DARK</h3>
-<p>Projeto de RPG Souls-like no Roblox. A fundação separa código do cliente, servidor e módulos compartilhados, com sincronização por Rojo.</p>
-<p><code>Luau</code> <code>Roblox Studio</code> <code>Rojo</code></p>
-<p><sub>Fundação em desenvolvimento · código privado</sub></p>
-</td>
-</tr>
-</table>
+| Camada | Tecnologias |
+| :--- | :--- |
+| **Interfaces** | `TypeScript` · `JavaScript` · `React` · `Next.js` · `Vite` · `Tailwind CSS` |
+| **Serviços e dados** | `Node.js` · `Python` · `PostgreSQL` · `SQLite` · `Prisma` · `Supabase` |
+| **Jogos e interação** | `Godot` · `GDScript` · `Luau` · `WebSockets` |
+| **Qualidade e fluxo** | `Git` · `GitHub Actions` · `Playwright` · testes e documentação técnica |
 
+### O que conecta esses projetos?
 
----
+```text
+Ideia e descoberta
+      ↓
+Experiência e interface
+      ↓
+Regras, serviços e dados
+      ↓
+Testes, documentação e evolução
+```
 
-## Tecnologias
-
-Ferramentas utilizadas nos projetos públicos, organizadas pela função que exercem.
-
-**Interfaces**
-
-![TypeScript](https://img.shields.io/badge/TypeScript-142039?style=flat-square&logo=typescript&logoColor=75B9FF)
-![JavaScript](https://img.shields.io/badge/JavaScript-142039?style=flat-square&logo=javascript&logoColor=F7DF1E)
-![React](https://img.shields.io/badge/React-142039?style=flat-square&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-142039?style=flat-square&logo=nextdotjs&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-142039?style=flat-square&logo=tailwindcss&logoColor=38BDF8)
-
-**Serviços e dados**
-
-![Node.js](https://img.shields.io/badge/Node.js-142039?style=flat-square&logo=nodedotjs&logoColor=83CD29)
-![Python](https://img.shields.io/badge/Python-142039?style=flat-square&logo=python&logoColor=FFD343)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-142039?style=flat-square&logo=postgresql&logoColor=91B9D8)
-![SQLite](https://img.shields.io/badge/SQLite-142039?style=flat-square&logo=sqlite&logoColor=69C5EA)
-![Prisma](https://img.shields.io/badge/Prisma-142039?style=flat-square&logo=prisma&logoColor=white)
-
-**Qualidade e interatividade**
-
-![Git](https://img.shields.io/badge/Git-142039?style=flat-square&logo=git&logoColor=F97A62)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-142039?style=flat-square&logo=githubactions&logoColor=8BB9FF)
-![Godot](https://img.shields.io/badge/Godot-142039?style=flat-square&logo=godotengine&logoColor=7DB6DF)
-
-Testes unitários e Playwright fazem parte do trabalho de qualidade. Supabase e Better Auth aparecem nos projetos de identidade e acesso.
+O objetivo não é apenas fazer a primeira versão funcionar: é entender a relação entre decisões de interface, persistência, segurança, manutenção e experiência real de uso.
 
 ---
+
+## Como eu trabalho
+
+| Princípio | Na prática |
+| :--- | :--- |
+| **Clareza antes de complexidade** | O projeto deve ter um objetivo compreensível e uma arquitetura que faça sentido. |
+| **Interface com intenção** | Legibilidade, responsividade, estados de erro e consistência fazem parte da funcionalidade. |
+| **Regras explícitas** | Autenticação, persistência, permissões e fluxos sensíveis precisam ser verificáveis. |
+| **Mudanças rastreáveis** | Histórico Git, documentação, testes e caminhos de recuperação ajudam a evoluir sem perder trabalho. |
 
 ## Sobre
 
-Sou **Kanex**, estudante de Técnico em Desenvolvimento de Sistemas. Desenvolvo interfaces, APIs, integrações e ferramentas, com interesse em como as partes se conectam: dados, regras de negócio e experiência de uso.
+Sou **Kanex**, interessado em transformar ideias em aplicações que as pessoas consigam realmente utilizar. Minha trajetória reúne estudos em **Desenvolvimento de Sistemas** e projetos próprios que vão de plataformas web a automações e jogos interativos.
 
-Meu trabalho reúne aplicações web, automações e projetos interativos. Gosto de construir soluções que também possam ser compreendidas, testadas e mantidas depois da primeira entrega.
+Gosto tanto do lado visual quanto das partes menos visíveis de um software: como os dados circulam, como uma regra é aplicada e o que acontece quando algo dá errado.
 
-### Estudos e aprendizado
+Este GitHub é o registro desse processo. Há projetos maiores, protótipos, experiências e estudos — cada um identificado pelo que efetivamente representa.
 
-- [**Senac**](https://github.com/Kanexxxxx/Senac) — atividades por unidade curricular do curso de Desenvolvimento de Sistemas.
+## Contato
+
+Se quiser conversar sobre desenvolvimento, colaboração ou algum dos projetos:
+
+**[Enviar um e-mail →](mailto:kainarodrigues684@gmail.com)**
+
+**[Ver todos os repositórios públicos →](https://github.com/Kanexxxxx?tab=repositories)**
 
 ---
 
-<p align="center"><b>Vamos conversar sobre desenvolvimento?</b><br/><a href="mailto:kainarodrigues684@gmail.com">kainarodrigues684@gmail.com</a></p>
+<p align="center">
+  <sub>Kanex · Software feito para ser compreendido, utilizado e evoluído.</sub><br/>
+  <sub>Identidade visual estática, sem widgets que dependam de serviços externos. Imagens são registros dos projetos, não prova de hospedagem ativa.</sub>
+</p>
+
+<details>
+  <summary><strong>English / Short introduction</strong></summary>
+
+  <br/>
+
+  I build web applications, service integrations and interactive projects with an emphasis on product design, clear business logic and maintainable code. Explore the selected work above to see real repositories, implementation details and each project's current stage.
+
+</details>
