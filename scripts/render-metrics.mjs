@@ -1,0 +1,23 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+const root = new URL('../', import.meta.url);
+const data = JSON.parse(await readFile(new URL('assets/public-metrics.json', root), 'utf8'));
+const escape = s => String(s).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('"', '&quot;');
+const colors = {TypeScript:'#3178c6',JavaScript:'#f1e05a',Python:'#3572a5',GDScript:'#355570',HTML:'#e34c26',CSS:'#563d7c',Shell:'#89e051',PLpgSQL:'#336790',PowerShell:'#012456'};
+const totals = {};
+for (const repo of data.repositories) for (const [language, bytes] of Object.entries(repo.languages)) totals[language] = (totals[language] ?? 0) + bytes;
+const all = Object.entries(totals).sort((a,b)=>b[1]-a[1]);
+const top = all.slice(0,6);
+const total = all.reduce((n,[,bytes])=>n+bytes,0);
+if (!(total > 0)) throw new Error('No language data; keep the last valid assets.');
+const frame = (title, body, description) => `<svg xmlns="http://www.w3.org/2000/svg" width="520" height="260" viewBox="0 0 520 260" role="img"><title>${escape(title)}</title><desc>${escape(description)}</desc><rect x=".5" y=".5" width="519" height="259" rx="12" fill="#0d1117" stroke="#30363d"/><text x="25" y="36" fill="#79c0ff" font-size="19" font-family="Arial,sans-serif" font-weight="700">${escape(title)}</text>${body}<text x="25" y="240" fill="#a0adba" font-family="Arial,sans-serif" font-size="11">Snapshot ${data.date} · dados públicos do GitHub</text></svg>`;
+let offset = 25;
+let bars = '';
+for (const [language,bytes] of all) {const width = 470*bytes/total;bars += `<rect x="${offset.toFixed(2)}" y="55" width="${width.toFixed(2)}" height="13" fill="${colors[language]??'#8b949e'}"/>`;offset+=width;}
+let labels = '';
+top.forEach(([language,bytes],i)=>{const x=25+(i%2)*245,y=101+Math.floor(i/2)*46;labels+=`<circle cx="${x+5}" cy="${y-5}" r="5" fill="${colors[language]??'#8b949e'}"/><text x="${x+18}" y="${y}" fill="#e6edf3" font-family="Arial,sans-serif" font-size="14">${escape(language)} <tspan fill="#a0adba">${(100*bytes/total).toFixed(1)}%</tspan></text>`;});
+await writeFile(new URL('assets/languages.svg',root),frame('Linguagens mais utilizadas',bars+labels+'<text x="25" y="210" fill="#a0adba" font-family="Arial,sans-serif" font-size="11">Proporção de bytes, não nível de domínio.</text>',top.map(([l,b])=>`${l}: ${(100*b/total).toFixed(1)}%`).join('; ')));
+const metrics=[['Repositórios analisados',data.repositories.length],['Linguagens identificadas',all.length],['Estrelas nos repositórios',data.repositories.reduce((n,r)=>n+r.stars,0)],['Forks dos repositórios',data.repositories.reduce((n,r)=>n+r.forks,0)]];
+const body=metrics.map(([label,n],i)=>`<text x="25" y="${79+i*36}" fill="#c9d1d9" font-family="Arial,sans-serif" font-size="14">${escape(label)}</text><text x="483" y="${79+i*36}" fill="#79c0ff" font-family="Arial,sans-serif" font-size="20" text-anchor="end" font-weight="700">${n}</text>`).join('');
+await writeFile(new URL('assets/github-stats.svg',root),frame('GitHub em números',body,'Dados públicos por repositório; não inclui repositórios privados nem forks importados.'));
+console.log(`Rendered ${all.length} languages from ${data.repositories.length} public repositories at ${fileURLToPath(root)}`);

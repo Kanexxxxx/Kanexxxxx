@@ -16,9 +16,68 @@
 
 ---
 
+## Linguagens e GitHub
+
+<p align="center">
+  <img src="assets/languages.svg" width="49%" alt="Gráfico das linguagens mais utilizadas nos repositórios públicos, calculado a partir dos bytes informados pelo GitHub." />
+  <img src="assets/github-stats.svg" width="49%" alt="Estatísticas reais dos repositórios públicos: quantidade analisada, linguagens, estrelas e forks." />
+</p>
+
+<sub>Dados públicos consultados em 30/10/2026. O gráfico mede volume de código nas branches padrão; projetos privados e forks importados ficam fora do cálculo. A aplicação Nexakeep está em outra branch, por isso sua stack aparece também no catálogo.</sub>
+
+### Linguagens de programação
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=20232A)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![GDScript](https://img.shields.io/badge/GDScript-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Luau](https://img.shields.io/badge/Luau-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
+
+Luau é utilizado no projeto privado DARK, apresentado abaixo com autorização do titular.
+
+---
+
 ## Projetos
 
 Interfaces e sistemas que venho desenvolvendo. Cada projeto tem seu contexto, sua arquitetura e seu estágio; os repositórios detalham a implementação.
+
+### Sistemas e jogos
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>Karol</h3>
+<p>Site e agendamento para atendimento com hora marcada. Painel administrativo, agenda e mensagens, com confirmação humana nas operações do assistente.</p>
+<p><code>Next.js</code> <code>TypeScript</code> <code>Supabase</code></p>
+<p><sub>Aplicação em evolução</sub><br/><a href="https://github.com/Kanexxxxx/Karol"><b>Ver código e documentação ↗</b></a></p>
+</td>
+<td width="50%" valign="top">
+<h3>Nexakeep</h3>
+<p>Sites e agendamento por loja, com autenticação e separação de dados entre negócios. A branch de implementação contém a aplicação; a principal conserva o planejamento.</p>
+<p><code>Next.js</code> <code>PostgreSQL</code> <code>Better Auth</code></p>
+<p><sub>Implementação local</sub><br/><a href="https://github.com/Kanexxxxx/projeto-pessoal/tree/implementacao"><b>Explorar a implementação ↗</b></a></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>Confia?</h3>
+<p>Projeto antigolpe em português, pensado para explicar os motivos de uma análise de links, perfis e outras entradas.</p>
+<p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL</code></p>
+<p><sub>Em construção</sub><br/><a href="https://github.com/Kanexxxxx/Confia-"><b>Conhecer o projeto ↗</b></a></p>
+</td>
+<td width="50%" valign="top">
+<h3>JOGI</h3>
+<p align="center"><img src="assets/jogi.png" height="280" alt="Prévia real do JOGI: corrida 3D vertical em uma arena, com HUD e contadores de exemplo zerados." /></p>
+<p>Corrida interativa em Godot. Uma ponte Python recebe eventos de transmissão e conecta a participação da audiência ao jogo.</p>
+<p><code>Godot</code> <code>GDScript</code> <code>Python</code> <code>WebSockets</code></p>
+<p><sub>Desenvolvimento e validação local</sub><br/><a href="https://github.com/Kanexxxxx/JOGI"><b>Explorar o projeto ↗</b></a></p>
+</td>
+</tr>
+</table>
+
+
+### Aplicações com interface visual
 
 <table>
 <tr>
@@ -53,45 +112,35 @@ Interfaces e sistemas que venho desenvolvendo. Cada projeto tem seu contexto, su
 
 [**Conhecer o Vitraya ↗**](https://github.com/Kanexxxxx/Vitraya)
 
-### Mais aplicações e projetos interativos
-
-<table>
-<tr>
-<td width="50%" valign="top">
-<h3>Karol</h3>
-<p>Site e agendamento para atendimento com hora marcada. Painel administrativo, agenda e mensagens, com confirmação humana nas operações do assistente.</p>
-<p><code>Next.js</code> <code>TypeScript</code> <code>Supabase</code></p>
-<p><sub>Aplicação em evolução</sub><br/><a href="https://github.com/Kanexxxxx/Karol"><b>Ver código e documentação ↗</b></a></p>
-</td>
-<td width="50%" valign="top">
-<h3>Nexakeep</h3>
-<p>Sites e agendamento por loja, com autenticação e separação de dados entre negócios. A branch de implementação contém a aplicação; a principal conserva o planejamento.</p>
-<p><code>Next.js</code> <code>PostgreSQL</code> <code>Better Auth</code></p>
-<p><sub>Implementação local</sub><br/><a href="https://github.com/Kanexxxxx/projeto-pessoal/tree/implementacao"><b>Explorar a implementação ↗</b></a></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<h3>Confia?</h3>
-<p>Projeto antigolpe em português, pensado para explicar os motivos de uma análise de links, perfis e outras entradas.</p>
-<p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL</code></p>
-<p><sub>Em construção</sub><br/><a href="https://github.com/Kanexxxxx/Confia-"><b>Conhecer o projeto ↗</b></a></p>
-</td>
-<td width="50%" valign="top">
-<h3>JOGI</h3>
-<p>Corrida interativa em Godot. Uma ponte Python recebe eventos de transmissão e conecta a participação da audiência ao jogo.</p>
-<p><code>Godot</code> <code>GDScript</code> <code>Python</code> <code>WebSockets</code></p>
-<p><sub>Desenvolvimento e validação local</sub><br/><a href="https://github.com/Kanexxxxx/JOGI"><b>Explorar o projeto ↗</b></a></p>
-</td>
-</tr>
-</table>
-
 <details>
 <summary><b>Organização das versões do Confia</b></summary>
 
 As versões foram [consolidadas em Confia-](https://github.com/Kanexxxxx/Confia-/pull/3), preservando os documentos diferentes e o histórico. A vitrine apresenta apenas a fonte principal.
 
 </details>
+
+---
+
+### Outros projetos grandes em desenvolvimento
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>Prumo</h3>
+<p>Aplicativo pessoal de finanças, com organização de transações, cartões, gastos e pagamentos. Desenvolvimento local e validação de persistência e uso offline.</p>
+<p><code>TypeScript</code> <code>Next.js</code> <code>React</code> <code>SQLite</code></p>
+<p><sub>Em desenvolvimento · código privado</sub></p>
+</td>
+<td width="50%" valign="top">
+<h3>DARK</h3>
+<p>Projeto de RPG Souls-like no Roblox. A fundação separa código do cliente, servidor e módulos compartilhados, com sincronização por Rojo.</p>
+<p><code>Luau</code> <code>Roblox Studio</code> <code>Rojo</code></p>
+<p><sub>Fundação em desenvolvimento · código privado</sub></p>
+</td>
+</tr>
+</table>
+
+Esses resumos foram autorizados para apresentação pública; código, dados e materiais internos permanecem privados.
 
 ---
 
