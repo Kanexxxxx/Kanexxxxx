@@ -19,8 +19,8 @@
 ## Linguagens e GitHub
 
 <p align="center">
-  <img src="assets/languages.svg" width="49%" alt="Gráfico das linguagens mais utilizadas nos repositórios públicos, calculado a partir dos bytes informados pelo GitHub." />
-  <img src="assets/github-stats.svg" width="49%" alt="Estatísticas reais dos repositórios públicos: quantidade analisada, linguagens, estrelas e forks." />
+  <img src="assets/languages.svg" width="520" alt="Gráfico das linguagens mais utilizadas nos repositórios públicos, calculado a partir dos bytes informados pelo GitHub." /><br/>
+  <img src="assets/github-stats.svg" width="520" alt="Estatísticas reais dos repositórios públicos: quantidade analisada, linguagens, estrelas e forks." />
 </p>
 
 <sub>Dados públicos consultados em 30/10/2026. O gráfico mede volume de código nas branches padrão; projetos privados e forks importados ficam fora do cálculo. A aplicação Nexakeep está em outra branch, por isso sua stack aparece também no catálogo.</sub>
@@ -34,7 +34,7 @@
 ![SQL](https://img.shields.io/badge/SQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Luau](https://img.shields.io/badge/Luau-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
 
-Luau é utilizado no projeto privado DARK, apresentado abaixo com autorização do titular.
+Luau no DARK; GDScript e Python no JOGI; TypeScript e JavaScript nas aplicações web.
 
 ---
 
@@ -140,7 +140,6 @@ As versões foram [consolidadas em Confia-](https://github.com/Kanexxxxx/Confia-
 </tr>
 </table>
 
-Esses resumos foram autorizados para apresentação pública; código, dados e materiais internos permanecem privados.
 
 ---
 
