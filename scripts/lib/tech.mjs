@@ -1,6 +1,6 @@
 // Catálogo de tecnologias: nome, papel, ícone oficial, cor da marca e site
 // oficial. Usado pelos chips dos projetos e pelos cartões clicáveis do Stack.
-// Ícones: Simple Icons (CC0) e Devicon (MIT), em assets/brand.
+// Ícones: Simple Icons (CC0) e Devicon (MIT), em assets/brand.\n// Linguagens usam marcas originais coloridas do Devicon para melhor reconhecimento.
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { fonts, color, text, measure, doc, tapLayers, arrowUpRight } from './kit.mjs';
 
@@ -8,15 +8,15 @@ const brandDir = new URL('../../assets/brand/', import.meta.url);
 
 export const tech = {
   // Linguagens
-  typescript: { name: 'TypeScript', sub: 'linguagem', icon: 'si:typescript', hex: '#3178C6', url: 'https://www.typescriptlang.org' },
-  javascript: { name: 'JavaScript', sub: 'linguagem', icon: 'si:javascript', hex: '#F7DF1E', url: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript' },
-  python: { name: 'Python', sub: 'linguagem', icon: 'si:python', hex: '#3776AB', url: 'https://www.python.org' },
-  gdscript: { name: 'GDScript', sub: 'Godot', icon: 'si:godotengine', hex: '#478CBF', url: 'https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html' },
-  lua: { name: 'Lua / Luau', sub: 'Roblox', icon: 'si:lua', hex: '#000080', url: 'https://luau.org' },
-  html: { name: 'HTML', sub: 'marcação', icon: 'si:html5', hex: '#E34F26', url: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML' },
-  css: { name: 'CSS', sub: 'estilo', icon: 'si:css', hex: '#663399', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
-  sql: { name: 'SQL', sub: 'PL/pgSQL', icon: 'si:postgresql', hex: '#4169E1', url: 'https://www.postgresql.org/docs/current/plpgsql.html' },
-  bash: { name: 'Shell', sub: 'Bash', icon: 'si:gnubash', hex: '#4EAA25', url: 'https://www.gnu.org/software/bash/' },
+  typescript: { name: 'TypeScript', sub: 'linguagem', icon: 'dev:typescript', hex: '#3178C6', url: 'https://www.typescriptlang.org' },
+  javascript: { name: 'JavaScript', sub: 'linguagem', icon: 'dev:javascript', hex: '#F7DF1E', url: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript' },
+  python: { name: 'Python', sub: 'linguagem', icon: 'dev:python', hex: '#3776AB', url: 'https://www.python.org' },
+  gdscript: { name: 'GDScript', sub: 'Godot', icon: 'dev:godot', hex: '#478CBF', url: 'https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html' },
+  lua: { name: 'Lua / Luau', sub: 'Roblox', icon: 'dev:lua', hex: '#000080', url: 'https://luau.org' },
+  html: { name: 'HTML', sub: 'marcação', icon: 'dev:html5', hex: '#E34F26', url: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML' },
+  css: { name: 'CSS', sub: 'estilo', icon: 'dev:css3', hex: '#663399', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
+  sql: { name: 'SQL', sub: 'PL/pgSQL', icon: 'dev:postgresql', hex: '#4169E1', url: 'https://www.postgresql.org/docs/current/plpgsql.html' },
+  bash: { name: 'Shell', sub: 'Bash', icon: 'dev:bash', hex: '#4EAA25', url: 'https://www.gnu.org/software/bash/' },
   powershell: { name: 'PowerShell', sub: 'automação', icon: 'dev:powershell', hex: '#5391FE', url: 'https://learn.microsoft.com/powershell/' },
   // Web e dados
   nextjs: { name: 'Next.js', sub: 'framework', icon: 'si:nextdotjs', hex: '#000000', url: 'https://nextjs.org' },
