@@ -5,9 +5,13 @@
   "description": "Gera os SVGs animados do README de perfil do GitHub.",
   "scripts": {
     "build": "node scripts/build-static.mjs",
-    "metrics": "node scripts/update-metrics.mjs"
+    "metrics": "node scripts/update-metrics.mjs",
+    "shots": "node scripts/build-shots.mjs"
   },
   "dependencies": {
     "opentype.js": "^1.3.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

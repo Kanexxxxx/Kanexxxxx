@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="164" height="64" viewBox="0 0 164 64" role="img" aria-labelledby="t d">
+<title id="t">Pix — pagamentos</title>
+<desc id="d">Pix (pagamentos). Abre o site oficial.</desc>
+<defs><clipPath id="t-clip"><rect width="164" height="64" rx="16"/></clipPath>
+<linearGradient id="t-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1a33"/><stop offset="1" stop-color="#05080f"/></linearGradient>
+<radialGradient id="t-glow" cx=".18" cy=".5" r=".75"><stop offset="0" stop-color="#77b6a8" stop-opacity=".22"/><stop offset="1" stop-color="#77b6a8" stop-opacity="0"/></radialGradient>
+<linearGradient id="t-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".26"/><stop offset=".5" stop-color="#fff" stop-opacity=".06"/><stop offset="1" stop-color="#77b6a8" stop-opacity=".45"/></linearGradient>
+<linearGradient id="t-top" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><radialGradient id="t-rip"><stop offset="0" stop-color="#77b6a8" stop-opacity=".55"/><stop offset=".55" stop-color="#77b6a8" stop-opacity=".18"/><stop offset="1" stop-color="#77b6a8" stop-opacity="0"/></radialGradient>
+<linearGradient id="t-edgeglow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="#77b6a8" stop-opacity=".9"/><stop offset="1" stop-color="#9aa9ff" stop-opacity=".9"/></linearGradient><path id="f1g84" d="M417 0L150 0L150-1490L707-1490Q878-1490 995-1426Q1112-1362 1172-1251Q1232-1139 1232-997L1232-997Q1232-854 1172-743Q1111-632 993-568Q875-504 703-504L703-504L334-504L334-724L668-724Q769-724 834-759Q898-794 929-856Q959-918 959-997L959-997Q959-1076 929-1137Q898-1198 833-1232Q768-1266 666-1266L666-1266L417-1266L417 0Z"/><path id="f1g167" d="M398 0L138 0L138-1118L398-1118L398 0ZM268-1276L268-1276Q206-1276 162-1318Q117-1360 117-1418L117-1418Q117-1478 162-1520Q206-1561 268-1561L268-1561Q331-1561 376-1520Q420-1478 420-1419L420-1419Q420-1360 376-1318Q331-1276 268-1276Z"/><path id="f1g238" d="M331 0L50 0L485-675L484-473L72-1118L358-1118L472-928Q522-843 561-762Q600-681 640-605L640-605L532-605Q574-680 612-762Q649-843 700-928L700-928L818-1118L1098-1118L680-469L680-666L1115 0L831 0L693-224Q643-309 604-389Q564-469 524-542L524-542L632-542Q592-469 556-389Q519-309 469-224L469-224L331 0Z"/><path id="f0g102" d="M182 180L92 180L92-550L182-550L182-445L200-445L182-424Q182-487 224-524Q265-560 333-560L333-560Q416-560 466-506Q515-451 515-356L515-356L515-195Q515-132 493-86Q470-40 430-15Q389 10 333 10L333 10Q266 10 224-27Q182-64 182-126L182-126L200-105L180-105L182 20L182 180ZM303-68L303-68Q360-68 393-102Q425-136 425-200L425-200L425-350Q425-414 393-448Q360-482 303-482L303-482Q248-482 215-447Q182-412 182-350L182-350L182-200Q182-138 215-103Q248-68 303-68Z"/><path id="f0g59" d="M252 10L252 10Q165 10 115-35Q65-79 65-155L65-155Q65-232 115-276Q165-320 250-320L250-320L420-320L420-375Q420-426 390-454Q359-481 303-481L303-481Q254-481 221-461Q188-440 183-405L183-405L93-405Q102-476 160-518Q218-560 305-560L305-560Q400-560 455-511Q510-462 510-378L510-378L510 0L422 0L422-105L407-105L422-120Q422-60 376-25Q329 10 252 10ZM274-61L274-61Q338-61 379-93Q420-125 420-175L420-175L420-253L252-253Q207-253 181-228Q155-203 155-160L155-160Q155-114 187-88Q218-61 274-61Z"/><path id="f0g78" d="M335 180L161 180L161 98L336 98Q378 98 398 79Q417 60 417 20L417 20L417-50L419-150L401-150L418-165Q418-105 378-70Q338-35 271-35L271-35Q186-35 137-91Q88-146 88-240L88-240L88-356Q88-450 137-505Q186-560 271-560L271-560Q338-560 378-525Q418-490 418-430L418-430L401-445L418-445L418-550L507-550L507 20Q507 94 462 137Q416 180 335 180L335 180ZM298-113L298-113Q354-113 386-148Q418-183 418-245L418-245L418-350Q418-412 386-447Q354-482 298-482L298-482Q241-482 210-448Q178-414 178-350L178-350L178-245Q178-181 210-147Q241-113 298-113Z"/><path id="f0g91" d="M149 0L66 0L66-550L145-550L145-484L163-484L149-460Q149-506 174-533Q198-560 240-560L240-560Q286-560 311-526Q336-492 336-430L336-430L309-484L351-484L332-460Q332-506 358-533Q383-560 425-560L425-560Q477-560 506-521Q534-482 534-418L534-418L534 0L451 0L451-419Q451-453 437-472Q422-491 394-491L394-491Q367-491 352-473Q336-454 336-420L336-420L336 0L264 0L264-419Q264-454 249-473Q233-491 205-491L205-491Q177-491 163-473Q149-454 149-420L149-420L149 0Z"/><path id="f0g72" d="M300 10L300 10Q235 10 187-16Q138-42 112-90Q85-137 85-200L85-200L85-350Q85-414 112-461Q138-508 187-534Q235-560 300-560L300-560Q365-560 414-534Q462-508 489-461Q515-414 515-350L515-350L515-253L173-253L173-200Q173-135 206-101Q239-66 300-66L300-66Q352-66 384-85Q416-103 423-140L423-140L513-140Q504-71 446-31Q387 10 300 10ZM434-321L427-313L427-350Q427-415 395-450Q362-485 300-485L300-485Q239-485 206-450Q173-415 173-350L173-350L173-321L434-321Z"/><path id="f0g92" d="M182 0L92 0L92-550L182-550L182-445L201-445L182-424Q182-489 221-525Q260-560 329-560L329-560Q412-560 461-509Q510-458 510-370L510-370L510 0L420 0L420-360Q420-419 389-451Q357-482 303-482L303-482Q247-482 215-448Q182-414 182-350L182-350L182 0Z"/><path id="f0g108" d="M510 0L360 0Q289 0 250-38Q210-76 210-145L210-145L210-468L55-468L55-550L210-550L210-705L300-705L300-550L520-550L520-468L300-468L300-145Q300-82 360-82L360-82L510-82L510 0Z"/><path id="f0g94" d="M300 8L300 8Q234 8 186-17Q138-42 112-90Q85-137 85-202L85-202L85-348Q85-414 112-461Q138-508 186-533Q234-558 300-558L300-558Q366-558 414-533Q462-508 489-461Q515-414 515-349L515-349L515-202Q515-137 489-90Q462-42 414-17Q366 8 300 8ZM300-72L300-72Q359-72 392-105Q425-138 425-202L425-202L425-348Q425-412 392-445Q359-478 300-478L300-478Q242-478 209-445Q175-412 175-348L175-348L175-202Q175-138 209-105Q242-72 300-72Z"/><path id="f0g106" d="M325 8L283 8Q227 8 186-10Q144-27 120-59Q95-91 90-135L90-135L180-135Q186-106 213-89Q239-72 283-72L283-72L325-72Q378-72 404-94Q430-115 430-151L430-151Q430-186 407-207Q383-227 337-234L337-234L263-246Q182-260 143-297Q103-333 103-403L103-403Q103-477 150-518Q197-558 291-558L291-558L329-558Q408-558 456-521Q504-484 514-421L514-421L424-421Q418-447 394-463Q370-478 329-478L329-478L291-478Q240-478 217-459Q193-440 193-402L193-402Q193-368 213-352Q233-336 276-329L276-329L350-317Q439-303 480-265Q520-227 520-155L520-155Q520-79 472-36Q423 8 325 8L325 8Z"/></defs>
+<style>
+.rise{animation:rise .8s cubic-bezier(.16,.84,.3,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.fade{animation:fade 1s ease-out both}
+@keyframes fade{from{opacity:0}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.7)}}
+.drift-a,.drift-b,.drift-c{transform-box:fill-box;transform-origin:center}
+.drift-a{animation:driftA 16s ease-in-out infinite alternate}
+.drift-b{animation:driftB 21s ease-in-out infinite alternate}
+.drift-c{animation:driftC 26s ease-in-out infinite alternate}
+@keyframes driftA{to{transform:translate(46px,-22px) scale(1.12)}}
+@keyframes driftB{to{transform:translate(-52px,24px) scale(.9)}}
+@keyframes driftC{to{transform:translate(28px,30px) scale(1.18)}}
+.shine{animation:shine 9s cubic-bezier(.45,0,.2,1) infinite}
+@keyframes shine{0%{transform:translateX(-140%)}18%,100%{transform:translateX(260%)}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{0%{opacity:.7;transform:scale(1)}80%,100%{opacity:0;transform:scale(2.8)}}
+.blink{animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.float-a{animation:floatA 7s ease-in-out infinite alternate}
+.float-b{animation:floatB 9s ease-in-out infinite alternate}
+.float-c{animation:floatC 8s ease-in-out infinite alternate}
+@keyframes floatA{to{transform:translateY(-9px)}}
+@keyframes floatB{to{transform:translateY(8px)}}
+@keyframes floatC{to{transform:translateY(-6px)}}
+.grow{transform-box:fill-box;transform-origin:left center;animation:grow 1.4s cubic-bezier(.16,.84,.3,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.rise-y{transform-box:fill-box;transform-origin:center bottom;animation:riseY 1.2s cubic-bezier(.16,.84,.3,1) both}
+@keyframes riseY{from{transform:scaleY(0)}}
+.draw{stroke-dasharray:1;animation:draw 2.4s cubic-bezier(.4,0,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.breathe{transform-box:fill-box;transform-origin:center bottom;animation:breathe 3.6s ease-in-out infinite alternate}
+@keyframes breathe{to{transform:scaleY(.55)}}
+.flow{animation:flow 6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-48}}
+.press,.ripple,.ring{transform-box:fill-box;transform-origin:center}
+.press-soft,.press-vb{transform-box:view-box;transform-origin:50% 50%}
+.press-vb{animation:press 8s cubic-bezier(.3,.7,.3,1) infinite}
+.press{animation:press 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes press{0%,70%{transform:scale(1)}72.5%{transform:scale(.955)}78%{transform:scale(1.015)}83%,100%{transform:scale(1)}}
+.press-soft{animation:pressSoft 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes pressSoft{0%,70%{transform:scale(1)}72.5%{transform:scale(.988)}78%{transform:scale(1.003)}83%,100%{transform:scale(1)}}
+.ripple{opacity:0;animation:ripple 8s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes ripple{0%,70%{opacity:0;transform:scale(.12)}71.5%{opacity:.8}92%,100%{opacity:0;transform:scale(1)}}
+.ring{opacity:0;animation:ring 8s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes ring{0%,71%{opacity:0;transform:scale(.8)}73%{opacity:.95}93%,100%{opacity:0;transform:scale(2)}}
+.edge{opacity:0;animation:edge 8s ease-out infinite}
+@keyframes edge{0%,70%{opacity:0}73%{opacity:1}96%,100%{opacity:0}}
+.nudge{animation:nudge 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes nudge{0%,70%{transform:translate(0,0)}74%{transform:translate(2.5px,-2.5px)}80%{transform:translate(-.8px,.8px)}86%,100%{transform:translate(0,0)}}
+.nudge-down{animation:nudgeDown 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes nudgeDown{0%,70%{transform:translate(0,0)}74%{transform:translate(0,3px)}80%{transform:translate(0,-1px)}86%,100%{transform:translate(0,0)}}
+@media (prefers-reduced-motion:reduce){
+.drift-a,.drift-b,.drift-c,.float-a,.float-b,.float-c,.breathe,.wave1,.wave2,.wave3,.press,.press-soft,.press-vb,.nudge,.nudge-down{animation:none!important}
+.rise,.pop{animation-name:fade!important}
+}
+</style>
+<g class="fade" style="animation-delay:0.35s">
+<rect width="164" height="64" rx="16" fill="url(#t-bg)"/>
+<rect width="164" height="64" rx="16" fill="url(#t-glow)"/>
+<rect width="164" height="64" rx="16" fill="#fff" fill-opacity=".03"/>
+<g clip-path="url(#t-clip)"><circle class="ripple" style="animation-delay:3.62s;animation-duration:12s" cx="32" cy="32" r="190" fill="url(#t-rip)"/></g>
+<rect x="12" y="12" width="40" height="40" rx="12" fill="#77b6a8" fill-opacity=".12" stroke="#77b6a8" stroke-opacity=".35"/>
+<svg x="21" y="21" width="22" height="22" viewBox="0 0 24 24"><path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156" fill="#77b6a8"/></svg>
+<g fill="#eef2fb"><use href="#f1g84" transform="matrix(0.0065918 0 0 0.0065918 62 30)"/><use href="#f1g167" transform="matrix(0.0065918 0 0 0.0065918 70.71 30)"/><use href="#f1g238" transform="matrix(0.0065918 0 0 0.0065918 74.24 30)"/></g>
+<g fill="#6f7b96"><use href="#f0g102" transform="matrix(0.0095 0 0 0.0095 62 46)"/><use href="#f0g59" transform="matrix(0.0095 0 0 0.0095 67.7 46)"/><use href="#f0g78" transform="matrix(0.0095 0 0 0.0095 73.4 46)"/><use href="#f0g59" transform="matrix(0.0095 0 0 0.0095 79.1 46)"/><use href="#f0g91" transform="matrix(0.0095 0 0 0.0095 84.8 46)"/><use href="#f0g72" transform="matrix(0.0095 0 0 0.0095 90.5 46)"/><use href="#f0g92" transform="matrix(0.0095 0 0 0.0095 96.2 46)"/><use href="#f0g108" transform="matrix(0.0095 0 0 0.0095 101.9 46)"/><use href="#f0g94" transform="matrix(0.0095 0 0 0.0095 107.6 46)"/><use href="#f0g106" transform="matrix(0.0095 0 0 0.0095 113.3 46)"/></g>
+<g class="nudge" style="animation-delay:3.62s;animation-duration:12s"><path d="M145.8 18.2L152.2 11.8M147.88 11.8H152.2V16.12" fill="none" stroke="#6f7b96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="16" y=".6" width="132" height="1" fill="url(#t-top)"/>
+<rect x=".5" y=".5" width="163" height="63" rx="15.5" fill="none" stroke="url(#t-edge)"/>
+<rect class="edge" style="animation-delay:3.62s;animation-duration:12s" x="0.75" y="0.75" width="162.5" height="62.5" rx="15.25" fill="none" stroke="url(#t-edgeglow)" stroke-width="1.5"/>
+</g>
+</svg>

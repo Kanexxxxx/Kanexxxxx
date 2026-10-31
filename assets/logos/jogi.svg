@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+<title id="t">JOGI</title>
+<desc id="d">Logo do JOGI: pista azul em perspectiva, letra J e raio de turbo amarelo.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f8cff"/><stop offset="1" stop-color="#1a3aa8"/></linearGradient>
+<linearGradient id="hi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect width="64" height="64" rx="16"/></clipPath><path id="f4g13" d="M267 14L267 14Q159 14 96-45Q32-104 32-210L32-210L32-276L164-276L164-210Q164-163 190-137Q216-110 263-110L263-110Q307-110 332-136Q356-162 356-210L356-210L356-580L236-580L236-700L568-700L568-580L488-580L488-210Q488-101 429-44Q370 14 267 14Z"/></defs>
+<g clip-path="url(#c)">
+<rect width="64" height="64" fill="url(#bg)"/>
+<path d="M14 64L28.5 34h7L50 64z" fill="#fff" fill-opacity=".14"/>
+<path d="M31.4 37h1.2v4h-1.2zM31.2 45h1.6v5.5h-1.6zM30.9 54h2.2v8h-2.2z" fill="#fff" fill-opacity=".55"/>
+<rect width="64" height="64" fill="url(#hi)"/>
+</g>
+<g transform="translate(16.80 44) skewX(-10)"><g fill="#0f2a6b" fill-opacity=".55"><use href="#f4g13" transform="matrix(0.04 0 0 0.04 2 2)"/></g><g fill="#fff"><use href="#f4g13" transform="matrix(0.04 0 0 0.04 0 0)"/></g></g>
+<path d="M47 8l-8.5 13.5h6.2L40.5 33 52 17.5h-6.5L49.6 8z" fill="#ffd23f" stroke="#0f2a6b" stroke-opacity=".35" stroke-width="1"/>
+<rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/>
+</svg>

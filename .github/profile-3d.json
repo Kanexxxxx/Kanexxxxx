@@ -1,13 +1,19 @@
 {
   "type": "normal",
   "fileName": "profile-kanex.svg",
-  "backgroundColor": "#0a1122",
+  "backgroundColor": "transparent",
   "foregroundColor": "#eef2fb",
   "strongColor": "#77ebd7",
   "weakColor": "#6f7b96",
   "radarColor": "#9aa9ff",
   "growingAnimation": true,
-  "contribColors": ["#16203a", "#134a4c", "#1f7f72", "#3fc0aa", "#77ebd7"],
+  "contribColors": [
+    "#16203a",
+    "#134a4c",
+    "#1f7f72",
+    "#3fc0aa",
+    "#77ebd7"
+  ],
   "l10n": {
     "commit": "commits",
     "repo": "repositórios",

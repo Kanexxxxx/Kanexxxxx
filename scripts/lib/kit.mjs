@@ -195,11 +195,13 @@ export const delay = s => `style="animation-delay:${r(s)}s"`;
  *  seta) usam o mesmo atraso, para o "clique" acontecer no segundo `at` após
  *  carregar a imagem e se repetir a cada 8 s. O README não aceita CSS nem JS,
  *  então hover e clique reais são impossíveis; isso convida ao clique. */
-export const tapAt = at => `style="animation-delay:${r(at - 5.6)}s"`;
+export const tapAt = (at, duration = 8) => duration === 8
+  ? `style="animation-delay:${r(at - 5.6)}s"`
+  : `style="animation-delay:${r(at - duration * 0.7)}s;animation-duration:${duration}s"`;
 
 /** Camadas de toque para um botão: ripple recortado + anel + borda acesa. */
-export function tapLayers({ id, at, cx, cy, ripple, ringR, accent = color.teal, clip, edge }) {
-  const t = tapAt(at);
+export function tapLayers({ id, at, cx, cy, ripple, ringR, accent = color.teal, clip, edge, duration = 8 }) {
+  const t = tapAt(at, duration);
   return {
     defs: `<radialGradient id="${id}-rip"><stop offset="0" stop-color="${accent}" stop-opacity=".55"/><stop offset=".55" stop-color="${accent}" stop-opacity=".18"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>
 <linearGradient id="${id}-edgeglow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="${accent}" stop-opacity=".9"/><stop offset="1" stop-color="${color.peri}" stop-opacity=".9"/></linearGradient>`,

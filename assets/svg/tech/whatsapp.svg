@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="164" height="64" viewBox="0 0 164 64" role="img" aria-labelledby="t d">
+<title id="t">WhatsApp — Cloud API</title>
+<desc id="d">WhatsApp (Cloud API). Abre o site oficial.</desc>
+<defs><clipPath id="t-clip"><rect width="164" height="64" rx="16"/></clipPath>
+<linearGradient id="t-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1a33"/><stop offset="1" stop-color="#05080f"/></linearGradient>
+<radialGradient id="t-glow" cx=".18" cy=".5" r=".75"><stop offset="0" stop-color="#25d366" stop-opacity=".22"/><stop offset="1" stop-color="#25d366" stop-opacity="0"/></radialGradient>
+<linearGradient id="t-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".26"/><stop offset=".5" stop-color="#fff" stop-opacity=".06"/><stop offset="1" stop-color="#25d366" stop-opacity=".45"/></linearGradient>
+<linearGradient id="t-top" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><radialGradient id="t-rip"><stop offset="0" stop-color="#25d366" stop-opacity=".55"/><stop offset=".55" stop-color="#25d366" stop-opacity=".18"/><stop offset="1" stop-color="#25d366" stop-opacity="0"/></radialGradient>
+<linearGradient id="t-edgeglow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="#25d366" stop-opacity=".9"/><stop offset="1" stop-color="#9aa9ff" stop-opacity=".9"/></linearGradient><path id="f1g112" d="M758 0L452 0L50-1490L337-1490L531-697Q551-611 569-516Q586-421 603-325Q619-229 634-137L634-137L591-137Q608-229 625-325Q642-421 661-516Q680-611 701-697L701-697L903-1490L1186-1490L1387-697Q1409-611 1428-516Q1446-421 1464-325Q1481-229 1499-137L1499-137L1453-137Q1469-229 1486-325Q1502-421 1520-516Q1538-611 1558-697L1558-697L1751-1490L2039-1490L1636 0L1330 0L1113-823Q1083-938 1061-1073Q1038-1208 1012-1359L1012-1359L1076-1359Q1048-1213 1028-1081Q1008-948 975-823L975-823L758 0Z"/><path id="f1g164" d="M398-655L398-655L398 0L138 0L138-1490L394-1490L394-842L367-842Q414-987 505-1060Q596-1132 733-1132L733-1132Q848-1132 935-1083Q1021-1034 1069-940Q1116-846 1116-711L1116-711L1116 0L855 0L855-671Q855-783 797-847Q739-911 637-911L637-911Q568-911 514-881Q460-851 429-794Q398-736 398-655Z"/><path id="f1g130" d="M450 23L450 23Q344 23 259-16Q174-54 125-129Q76-204 76-314L76-314Q76-409 112-471Q147-533 208-570Q268-607 344-626Q420-645 502-653L502-653Q599-664 660-672Q721-680 750-698Q778-716 778-754L778-754L778-759Q778-814 756-853Q734-891 691-912Q647-932 583-932L583-932Q518-932 471-912Q423-892 393-860Q363-828 349-791L349-791L108-840Q141-939 210-1004Q279-1068 375-1100Q470-1132 582-1132L582-1132Q661-1132 742-1114Q822-1095 889-1051Q956-1007 997-933Q1038-859 1038-747L1038-747L1038 0L789 0L789-154L779-154Q754-107 711-67Q667-26 603-2Q538 23 450 23ZM517-170L517-170Q598-170 657-202Q715-234 748-287Q780-339 780-401L780-401L780-533Q767-523 737-514Q706-505 669-498Q631-491 595-486Q558-481 533-478L533-478Q475-470 428-452Q381-434 355-402Q328-369 328-317L328-317Q328-269 353-237Q377-204 420-187Q462-170 517-170Z"/><path id="f1g217" d="M20-1118L655-1118L655-914L20-914L20-1118ZM179-293L179-1384L439-1384L439-315Q439-254 465-226Q491-197 550-197L550-197Q568-197 598-202Q627-206 645-210L645-210L686-9Q643 4 598 10Q553 15 512 15L512 15Q351 15 265-65Q179-145 179-293L179-293Z"/><path id="f1g213" d="M561 23L561 23Q432 23 333-14Q234-51 171-122Q107-193 88-294L88-294L331-340Q354-257 413-217Q471-176 566-176L566-176Q662-176 719-215Q775-253 775-310L775-310Q775-358 738-390Q701-421 624-438L624-438L433-479Q275-513 197-591Q119-669 119-792L119-792Q119-896 176-972Q233-1048 335-1090Q436-1132 570-1132L570-1132Q697-1132 789-1096Q880-1060 937-996Q993-931 1015-844L1015-844L783-798Q764-857 714-898Q664-938 573-938L573-938Q490-938 435-902Q379-865 379-808L379-808Q379-759 416-727Q453-695 538-677L538-677L728-637Q887-603 964-528Q1041-453 1041-335L1041-335Q1041-229 980-149Q919-68 811-23Q702 23 561 23Z"/><path id="f1g2" d="M342 0L50 0L570-1490L909-1490L1441 0L1148 0L883-774Q844-894 802-1046Q760-1197 709-1390L709-1390L765-1390Q715-1195 675-1043Q634-890 598-774L598-774L342 0ZM1138-369L353-369L353-584L1138-584L1138-369Z"/><path id="f1g207" d="M398 418L138 418L138-1118L392-1118L392-933L409-933Q429-973 466-1019Q503-1065 567-1099Q630-1132 729-1132L729-1132Q859-1132 963-1066Q1067-1000 1129-872Q1190-743 1190-557L1190-557Q1190-373 1130-244Q1070-115 966-48Q861 20 728 20L728 20Q633 20 569-13Q505-45 467-91Q429-137 409-177L409-177L398-177L398 418ZM658-194L658-194Q745-194 804-242Q863-289 893-372Q923-454 923-558L923-558Q923-662 894-744Q864-825 805-872Q746-918 658-918L658-918Q572-918 513-873Q454-828 424-748Q393-667 393-558L393-558Q393-449 424-367Q454-285 514-240Q573-194 658-194Z"/><path id="f0g11" d="M304 10L304 10Q238 10 190-15Q141-40 115-88Q88-135 88-200L88-200L88-530Q88-596 115-643Q141-690 190-715Q238-740 304-740L304-740Q370-740 418-715Q466-689 492-642Q518-595 518-530L518-530L428-530Q428-592 396-626Q363-659 304-659L304-659Q245-659 212-626Q178-593 178-531L178-531L178-200Q178-138 212-105Q245-71 304-71L304-71Q363-71 396-105Q428-138 428-200L428-200L518-200Q518-136 492-89Q466-41 418-16Q370 10 304 10Z"/><path id="f0g90" d="M550 0L375 0Q327 0 291-19Q255-38 235-73Q215-108 215-155L215-155L215-648L30-648L30-730L305-730L305-155Q305-121 324-102Q343-82 375-82L375-82L550-82L550 0Z"/><path id="f0g94" d="M300 8L300 8Q234 8 186-17Q138-42 112-90Q85-137 85-202L85-202L85-348Q85-414 112-461Q138-508 186-533Q234-558 300-558L300-558Q366-558 414-533Q462-508 489-461Q515-414 515-349L515-349L515-202Q515-137 489-90Q462-42 414-17Q366 8 300 8ZM300-72L300-72Q359-72 392-105Q425-138 425-202L425-202L425-348Q425-412 392-445Q359-478 300-478L300-478Q242-478 209-445Q175-412 175-348L175-348L175-202Q175-138 209-105Q242-72 300-72Z"/><path id="f0g109" d="M299 10L299 10Q204 10 147-47Q90-103 90-200L90-200L90-550L180-550L180-200Q180-138 212-104Q244-69 299-69L299-69Q355-69 388-104Q420-138 420-200L420-200L420-550L510-550L510-200Q510-103 452-47Q394 10 299 10Z"/><path id="f0g70" d="M268 10L268 10Q186 10 136-45Q85-100 85-194L85-194L85-355Q85-450 135-505Q185-560 268-560L268-560Q336-560 377-523Q418-486 418-424L418-424L400-445L420-445L418-570L418-730L508-730L508 0L418 0L418-105L400-105L418-126Q418-63 377-27Q336 10 268 10ZM298-68L298-68Q354-68 386-103Q418-138 418-200L418-200L418-350Q418-412 386-447Q354-482 298-482L298-482Q241-482 208-448Q175-414 175-350L175-350L175-200Q175-136 208-102Q241-68 298-68Z"/><path id="f0g1" d="M142 0L50 0L240-730L361-730L550 0L459 0L411-194L190-194L142 0ZM264-496L208-270L392-270L336-495Q320-559 311-602Q302-645 300-658L300-658Q298-645 289-602Q280-559 264-496L264-496Z"/><path id="f0g42" d="M182 0L92 0L92-730L327-730Q395-730 445-704Q495-677 523-629Q550-581 550-515L550-515Q550-450 523-402Q495-353 445-327Q395-300 327-300L327-300L182-300L182 0ZM182-649L182-381L327-381Q386-381 422-418Q457-454 457-515L457-515Q457-577 422-613Q386-649 327-649L327-649L182-649Z"/><path id="f0g23" d="M495 0L105 0L105-82L254-82L254-648L105-648L105-730L495-730L495-648L346-648L346-82L495-82L495 0Z"/></defs>
+<style>
+.rise{animation:rise .8s cubic-bezier(.16,.84,.3,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.fade{animation:fade 1s ease-out both}
+@keyframes fade{from{opacity:0}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.7)}}
+.drift-a,.drift-b,.drift-c{transform-box:fill-box;transform-origin:center}
+.drift-a{animation:driftA 16s ease-in-out infinite alternate}
+.drift-b{animation:driftB 21s ease-in-out infinite alternate}
+.drift-c{animation:driftC 26s ease-in-out infinite alternate}
+@keyframes driftA{to{transform:translate(46px,-22px) scale(1.12)}}
+@keyframes driftB{to{transform:translate(-52px,24px) scale(.9)}}
+@keyframes driftC{to{transform:translate(28px,30px) scale(1.18)}}
+.shine{animation:shine 9s cubic-bezier(.45,0,.2,1) infinite}
+@keyframes shine{0%{transform:translateX(-140%)}18%,100%{transform:translateX(260%)}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{0%{opacity:.7;transform:scale(1)}80%,100%{opacity:0;transform:scale(2.8)}}
+.blink{animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.float-a{animation:floatA 7s ease-in-out infinite alternate}
+.float-b{animation:floatB 9s ease-in-out infinite alternate}
+.float-c{animation:floatC 8s ease-in-out infinite alternate}
+@keyframes floatA{to{transform:translateY(-9px)}}
+@keyframes floatB{to{transform:translateY(8px)}}
+@keyframes floatC{to{transform:translateY(-6px)}}
+.grow{transform-box:fill-box;transform-origin:left center;animation:grow 1.4s cubic-bezier(.16,.84,.3,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.rise-y{transform-box:fill-box;transform-origin:center bottom;animation:riseY 1.2s cubic-bezier(.16,.84,.3,1) both}
+@keyframes riseY{from{transform:scaleY(0)}}
+.draw{stroke-dasharray:1;animation:draw 2.4s cubic-bezier(.4,0,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.breathe{transform-box:fill-box;transform-origin:center bottom;animation:breathe 3.6s ease-in-out infinite alternate}
+@keyframes breathe{to{transform:scaleY(.55)}}
+.flow{animation:flow 6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-48}}
+.press,.ripple,.ring{transform-box:fill-box;transform-origin:center}
+.press-soft,.press-vb{transform-box:view-box;transform-origin:50% 50%}
+.press-vb{animation:press 8s cubic-bezier(.3,.7,.3,1) infinite}
+.press{animation:press 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes press{0%,70%{transform:scale(1)}72.5%{transform:scale(.955)}78%{transform:scale(1.015)}83%,100%{transform:scale(1)}}
+.press-soft{animation:pressSoft 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes pressSoft{0%,70%{transform:scale(1)}72.5%{transform:scale(.988)}78%{transform:scale(1.003)}83%,100%{transform:scale(1)}}
+.ripple{opacity:0;animation:ripple 8s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes ripple{0%,70%{opacity:0;transform:scale(.12)}71.5%{opacity:.8}92%,100%{opacity:0;transform:scale(1)}}
+.ring{opacity:0;animation:ring 8s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes ring{0%,71%{opacity:0;transform:scale(.8)}73%{opacity:.95}93%,100%{opacity:0;transform:scale(2)}}
+.edge{opacity:0;animation:edge 8s ease-out infinite}
+@keyframes edge{0%,70%{opacity:0}73%{opacity:1}96%,100%{opacity:0}}
+.nudge{animation:nudge 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes nudge{0%,70%{transform:translate(0,0)}74%{transform:translate(2.5px,-2.5px)}80%{transform:translate(-.8px,.8px)}86%,100%{transform:translate(0,0)}}
+.nudge-down{animation:nudgeDown 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes nudgeDown{0%,70%{transform:translate(0,0)}74%{transform:translate(0,3px)}80%{transform:translate(0,-1px)}86%,100%{transform:translate(0,0)}}
+@media (prefers-reduced-motion:reduce){
+.drift-a,.drift-b,.drift-c,.float-a,.float-b,.float-c,.breathe,.wave1,.wave2,.wave3,.press,.press-soft,.press-vb,.nudge,.nudge-down{animation:none!important}
+.rise,.pop{animation-name:fade!important}
+}
+</style>
+<g class="fade" style="animation-delay:0.15s">
+<rect width="164" height="64" rx="16" fill="url(#t-bg)"/>
+<rect width="164" height="64" rx="16" fill="url(#t-glow)"/>
+<rect width="164" height="64" rx="16" fill="#fff" fill-opacity=".03"/>
+<g clip-path="url(#t-clip)"><circle class="ripple" style="animation-delay:2.52s;animation-duration:12s" cx="32" cy="32" r="190" fill="url(#t-rip)"/></g>
+<rect x="12" y="12" width="40" height="40" rx="12" fill="#25d366" fill-opacity=".12" stroke="#25d366" stroke-opacity=".35"/>
+<svg x="21" y="21" width="22" height="22" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="#25d366"/></svg>
+<g fill="#eef2fb"><use href="#f1g112" transform="matrix(0.0065918 0 0 0.0065918 62 30)"/><use href="#f1g164" transform="matrix(0.0065918 0 0 0.0065918 75.77 30)"/><use href="#f1g130" transform="matrix(0.0065918 0 0 0.0065918 84.04 30)"/><use href="#f1g217" transform="matrix(0.0065918 0 0 0.0065918 91.79 30)"/><use href="#f1g213" transform="matrix(0.0065918 0 0 0.0065918 96.55 30)"/><use href="#f1g2" transform="matrix(0.0065918 0 0 0.0065918 103.97 30)"/><use href="#f1g207" transform="matrix(0.0065918 0 0 0.0065918 113.79 30)"/><use href="#f1g207" transform="matrix(0.0065918 0 0 0.0065918 122.22 30)"/></g>
+<g fill="#6f7b96"><use href="#f0g11" transform="matrix(0.0095 0 0 0.0095 62 46)"/><use href="#f0g90" transform="matrix(0.0095 0 0 0.0095 67.7 46)"/><use href="#f0g94" transform="matrix(0.0095 0 0 0.0095 73.4 46)"/><use href="#f0g109" transform="matrix(0.0095 0 0 0.0095 79.1 46)"/><use href="#f0g70" transform="matrix(0.0095 0 0 0.0095 84.8 46)"/><use href="#f0g1" transform="matrix(0.0095 0 0 0.0095 96.2 46)"/><use href="#f0g42" transform="matrix(0.0095 0 0 0.0095 101.9 46)"/><use href="#f0g23" transform="matrix(0.0095 0 0 0.0095 107.6 46)"/></g>
+<g class="nudge" style="animation-delay:2.52s;animation-duration:12s"><path d="M145.8 18.2L152.2 11.8M147.88 11.8H152.2V16.12" fill="none" stroke="#6f7b96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="16" y=".6" width="132" height="1" fill="url(#t-top)"/>
+<rect x=".5" y=".5" width="163" height="63" rx="15.5" fill="none" stroke="url(#t-edge)"/>
+<rect class="edge" style="animation-delay:2.52s;animation-duration:12s" x="0.75" y="0.75" width="162.5" height="62.5" rx="15.25" fill="none" stroke="url(#t-edgeglow)" stroke-width="1.5"/>
+</g>
+</svg>
