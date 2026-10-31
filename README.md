@@ -28,8 +28,12 @@ Desenvolvo produtos web completos, da interface ao banco de dados e do deploy à
   <img src="./assets/svg/title-sobre-dark.svg" width="600" alt="01 · Sobre — Quem está por trás do código">
 </picture>
 
-<img src="./assets/svg/about-code.svg" width="416" alt="kanex.ts: dev full-stack no Brasil, foco em produto, web e games; entrega UI, API, banco e deploy; estudando Desenvolvimento de Sistemas; usa agentes de IA com revisão humana.">
-<img src="./assets/svg/about-now.svg" width="416" alt="Agora: construindo o Nexakeep, estudando Desenvolvimento de Sistemas no Senac, explorando Godot 4 e Roblox Studio, aprofundando segurança, testes E2E e CI/CD, e usando agentes de IA com revisão humana.">
+<picture>
+  <img src="./assets/svg/about-code.svg" width="416" alt="kanex.ts: dev full-stack no Brasil, foco em produto, web e games; entrega UI, API, banco e deploy; estudando Desenvolvimento de Sistemas; usa agentes de IA com revisão humana.">
+</picture>
+<picture>
+  <img src="./assets/svg/about-now.svg" width="416" alt="Agora: construindo o Nexakeep, estudando Desenvolvimento de Sistemas no Senac, explorando Godot 4 e Roblox Studio, aprofundando segurança, testes E2E e CI/CD, e usando agentes de IA com revisão humana.">
+</picture>
 </div>
 
 <br>
@@ -51,17 +55,23 @@ Desenvolvo produtos web completos, da interface ao banco de dados e do deploy à
 </div>
 
 <details>
-<summary><b>Ver telas dos projetos</b></summary>
+<summary><picture><img src="./assets/svg/btn-telas.svg" height="46" alt="Ver telas dos projetos"></picture></summary>
 <br>
 <div align="center">
-<img src="./assets/svg/shot-eurora.svg" width="416" alt="Página inicial do Eurora Love">
-<img src="./assets/svg/shot-volker.svg" width="416" alt="Vitrine da loja VOLKER">
-<img src="./assets/svg/shot-vitraya.svg" width="416" alt="Estúdio criativo do Vitraya Studio">
+<picture>
+  <img src="./assets/svg/shot-eurora.svg" width="416" alt="Página inicial do Eurora Love">
+</picture>
+<picture>
+  <img src="./assets/svg/shot-volker.svg" width="416" alt="Vitrine da loja VOLKER">
+</picture>
+<picture>
+  <img src="./assets/svg/shot-vitraya.svg" width="416" alt="Estúdio criativo do Vitraya Studio">
+</picture>
 </div>
 </details>
 
 <details>
-<summary><b>Outros repositórios</b></summary>
+<summary><picture><img src="./assets/svg/btn-outros.svg" height="46" alt="Outros repositórios"></picture></summary>
 <br>
 
 | Projeto | O que é | Stack |
@@ -80,10 +90,18 @@ Desenvolvo produtos web completos, da interface ao banco de dados e do deploy à
   <img src="./assets/svg/title-stack-dark.svg" width="600" alt="03 · Stack — Linguagens e ferramentas">
 </picture>
 
-<img src="./assets/svg/stack-languages.svg" width="416" alt="Linguagens: TypeScript, JavaScript, Python, GDScript, Lua/Luau, HTML, CSS, SQL, Bash e PowerShell.">
-<img src="./assets/svg/stack-web.svg" width="416" alt="Web e dados: Next.js, React, Tailwind, Vite, Node.js, Prisma, Supabase, PostgreSQL, SQLite e Godot 4.">
-<img src="./assets/svg/stack-tools.svg" width="416" alt="Infra e ferramentas: Docker, Nginx, Ubuntu, Vercel, GitHub Actions, Git, GitHub, VS Code, Windows e Roblox Studio.">
-<img src="./assets/svg/stack-integrations.svg" width="416" alt="Integrações e APIs: Mercado Pago, Asaas PIX, Melhor Envio, WhatsApp Cloud API, Evolution API, Telegram Bot API, DeepSeek, Shopee Open API, WebSockets, Playwright, pytest, PM2 e Nginx.">
+<picture>
+  <img src="./assets/svg/stack-languages.svg" width="416" alt="Linguagens: TypeScript, JavaScript, Python, GDScript, Lua/Luau, HTML, CSS, SQL, Bash e PowerShell.">
+</picture>
+<picture>
+  <img src="./assets/svg/stack-web.svg" width="416" alt="Web e dados: Next.js, React, Tailwind, Vite, Node.js, Prisma, Supabase, PostgreSQL, SQLite e Godot 4.">
+</picture>
+<picture>
+  <img src="./assets/svg/stack-tools.svg" width="416" alt="Infra e ferramentas: Docker, Nginx, Ubuntu, Vercel, GitHub Actions, Git, GitHub, VS Code, Windows e Roblox Studio.">
+</picture>
+<picture>
+  <img src="./assets/svg/stack-integrations.svg" width="416" alt="Integrações e APIs: Mercado Pago, Asaas PIX, Melhor Envio, WhatsApp Cloud API, Evolution API, Telegram Bot API, DeepSeek, Shopee Open API, WebSockets, Playwright, pytest, PM2 e Nginx.">
+</picture>
 </div>
 
 <br>
@@ -95,17 +113,25 @@ Desenvolvo produtos web completos, da interface ao banco de dados e do deploy à
   <img src="./assets/svg/title-atividade-dark.svg" width="600" alt="04 · Atividade — Ritmo no GitHub">
 </picture>
 
-<img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/stats.svg" width="416" alt="GitHub em números nos últimos 12 meses: contribuições, commits, pull requests e repositórios, com gráfico semanal.">
-<img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/languages.svg" width="416" alt="Distribuição de linguagens nos repositórios públicos.">
+<picture>
+  <img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/stats.svg" width="416" alt="GitHub em números nos últimos 12 meses: contribuições, commits, pull requests e repositórios, com gráfico semanal.">
+</picture>
+<picture>
+  <img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/languages.svg" width="416" alt="Distribuição de linguagens nos repositórios públicos.">
+</picture>
 
-<img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/snake.svg" width="100%" alt="Cobrinha percorrendo o gráfico de contribuições do GitHub.">
+<picture>
+  <img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/snake.svg" width="100%" alt="Cobrinha percorrendo o gráfico de contribuições do GitHub.">
+</picture>
 </div>
 
 <details>
-<summary><b>Ver calendário de contribuições em 3D</b></summary>
+<summary><picture><img src="./assets/svg/btn-3d.svg" height="46" alt="Ver calendário de contribuições em 3D"></picture></summary>
 <br>
 <div align="center">
-<img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/profile-3d-contrib/profile-kanex.svg" width="100%" alt="Calendário de contribuições em 3D com radar de atividade e linguagens.">
+<picture>
+  <img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/profile-3d-contrib/profile-kanex.svg" width="100%" alt="Calendário de contribuições em 3D com radar de atividade e linguagens.">
+</picture>
 </div>
 </details>
 
@@ -113,7 +139,9 @@ Desenvolvo produtos web completos, da interface ao banco de dados e do deploy à
 
 <a name="contato"></a>
 <div align="center">
-<img src="./assets/svg/footer.svg" width="100%" alt="Vamos construir algo juntos? Aberto a projetos, parcerias e oportunidades.">
+<picture>
+  <img src="./assets/svg/footer.svg" width="100%" alt="Vamos construir algo juntos? Aberto a projetos, parcerias e oportunidades.">
+</picture>
 
 <br><br>
 

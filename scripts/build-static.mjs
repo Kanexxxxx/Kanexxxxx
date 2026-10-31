@@ -1,6 +1,6 @@
 // Gera os SVGs estáticos do perfil em assets/svg/. Rode com: npm run build
 import { mkdirSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
-import { fonts, color, text, measure, wrap, icon, doc, glass, chip, arrowUpRight, delay, esc } from './lib/kit.mjs';
+import { fonts, color, text, measure, wrap, icon, doc, glass, chip, arrowUpRight, delay, tapAt, tapLayers } from './lib/kit.mjs';
 
 const out = new URL('../assets/svg/', import.meta.url);
 mkdirSync(out, { recursive: true });
@@ -116,10 +116,9 @@ function heroArt(p) {
 // Elementos comuns ao herói desktop e mobile.
 function nameMark(p, x, y, size) {
   const name = text('Kanex', { font: fonts.display, size, x, y, fill: `url(#${p}-name)`, tracking: -0.025 });
-  const dot = text('.', { font: fonts.display, size, x: x + name.width + size * 0.01, y, fill: color.teal });
   return {
     defs: `<linearGradient id="${p}-name" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#e1e7ff"/><stop offset="1" stop-color="#b9c6ff"/></linearGradient>`,
-    svg: name.svg + dot.svg,
+    svg: name.svg,
   };
 }
 
@@ -211,25 +210,29 @@ ${g.front}`,
 }
 
 // ───────────────────────────── Navegação ─────────────────────────────
+// As pílulas "tocam" em sequência, da esquerda para a direita, como uma onda.
 function navPill(slug, index, label) {
   const W = 132, H = 40, p = 'n';
+  const tap = tapLayers({ id: p, at: 1.4 + index * 0.3, cx: W / 2, cy: H / 2, ripple: 74, clip: `${p}-clip`,
+    edge: { x: 0.75, y: 0.75, w: W - 1.5, h: H - 1.5, rx: 19.25 } });
+  const num = text(String(index).padStart(2, '0'), { font: fonts.mono, size: 10, x: 0, y: 0 });
+  const lab = text(label, { font: fonts.bodySemi, size: 13.5, x: 0, y: 0 });
+  const x0 = (W - (num.width + 8 + lab.width)) / 2;
   const svg = doc({
     w: W, h: H, title: label, desc: `Ir para a seção ${label}`,
     defs: `<linearGradient id="${p}-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${color.bg2}"/><stop offset="1" stop-color="${color.bg0}"/></linearGradient>
 <linearGradient id="${p}-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".32"/><stop offset=".5" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="${color.teal}" stop-opacity=".4"/></linearGradient>
 <linearGradient id="${p}-sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<clipPath id="${p}-clip"><rect width="${W}" height="${H}" rx="20"/></clipPath>`,
-    body: `<rect width="${W}" height="${H}" rx="20" fill="url(#${p}-bg)"/>
+<clipPath id="${p}-clip"><rect width="${W}" height="${H}" rx="20"/></clipPath>${tap.defs}`,
+    body: `<g class="press-vb" ${tap.t}>
+<rect width="${W}" height="${H}" rx="20" fill="url(#${p}-bg)"/>
+${tap.ripple}
 <rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="19.5" fill="none" stroke="url(#${p}-edge)"/>
-<g clip-path="url(#${p}-clip)"><g class="shine" ${delay(1 + index * 0.35)}><rect x="0" y="-10" width="50" height="60" fill="url(#${p}-sh)" transform="skewX(-18)"/></g></g>
-${(() => {
-  const num = text(String(index).padStart(2, '0'), { font: fonts.mono, size: 10, x: 0, y: 0 });
-  const lab = text(label, { font: fonts.bodySemi, size: 13.5, x: 0, y: 0 });
-  const total = num.width + 8 + lab.width;
-  const x0 = (W - total) / 2;
-  return text(String(index).padStart(2, '0'), { font: fonts.mono, size: 10, x: x0, y: 24.2, fill: color.teal }).svg
-    + text(label, { font: fonts.bodySemi, size: 13.5, x: x0 + num.width + 8, y: 25, fill: color.ink }).svg;
-})()}`,
+<g clip-path="url(#${p}-clip)"><g class="shine" ${delay(3 + index * 0.35)}><rect x="0" y="-10" width="50" height="60" fill="url(#${p}-sh)" transform="skewX(-18)"/></g></g>
+${tap.edge}
+${text(String(index).padStart(2, '0'), { font: fonts.mono, size: 10, x: x0, y: 24.2, fill: color.teal }).svg}
+${text(label, { font: fonts.bodySemi, size: 13.5, x: x0 + num.width + 8, y: 25, fill: color.ink }).svg}
+</g>`,
   });
   save(`nav-${slug}.svg`, svg);
 }
@@ -401,13 +404,19 @@ function projectCard(pr, i) {
     return c.svg;
   });
   if (cx - 7 > W - 24) throw new Error(`Chips não cabem em ${pr.slug}`);
+  // Toque simulado: um card por vez, em sequência pela grade.
+  const bx = W - 42, by = 46;
+  const tap = tapLayers({ id: p, at: 2.4 + i * 1.25, cx: bx, cy: by, ripple: 300, ringR: 17, accent: pr.a, clip: `${p}-clip`,
+    edge: { x: 0.75, y: 0.75, w: W - 1.5, h: H - 1.5, rx: 21.25 } });
   const svg = doc({
     w: W, h: H,
     title: `${pr.title} — ${pr.kicker.toLowerCase()}`,
     desc: `${pr.desc} Tecnologias: ${pr.chips.join(', ')}.`,
-    defs: g.defs + `<linearGradient id="${p}-mark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${pr.a}"/><stop offset="1" stop-color="${pr.b}"/></linearGradient>
+    defs: g.defs + tap.defs + `<linearGradient id="${p}-mark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${pr.a}"/><stop offset="1" stop-color="${pr.b}"/></linearGradient>
 <linearGradient id="${p}-markhi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
-    body: `${g.back}
+    body: `<g class="press-soft" ${tap.t}>
+${g.back}
+${tap.ripple}
 <g class="pop" ${delay(0.1)}>
   <rect x="24" y="24" width="48" height="48" rx="14" fill="url(#${p}-mark)"/>
   <rect x="24" y="24" width="48" height="48" rx="14" fill="url(#${p}-markhi)"/>
@@ -419,12 +428,17 @@ function projectCard(pr, i) {
   ${text(pr.title, { font: fonts.display, size: 23, x: 85, y: 66, fill: color.ink, tracking: -0.01 }).svg}
 </g>
 <g class="fade" ${delay(0.4)}>
-  <circle cx="${W - 42}" cy="46" r="17" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-opacity=".16"/>
-  ${arrowUpRight(W - 42, 46, 5, color.ink)}
+  ${tap.ring}
+  <g class="press" ${tap.t}>
+    <circle cx="${bx}" cy="${by}" r="17" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-opacity=".16"/>
+    <g class="nudge" ${tap.t}>${arrowUpRight(bx, by, 5, color.ink)}</g>
+  </g>
 </g>
 <g class="rise" ${delay(0.32)}>${lines.map((l, k) => text(l, { font: fonts.body, size: 13.5, x: 24, y: 112 + k * 21.5, fill: color.ink2 }).svg).join('')}</g>
 ${chips.join('')}
-${g.front}`,
+${g.front}
+${tap.edge}
+</g>`,
   });
   save(`project-${pr.slug}.svg`, svg);
 }
@@ -593,28 +607,43 @@ ${g.front}`,
   save('footer.svg', svg);
 }
 
-function contactPill(slug, label, glyph, w) {
+// Botão em pílula: contato e abertura das seções recolhíveis. O ripple nasce
+// no ícone, a borda acende e a seta (ou a divisa) dá um empurrão.
+function pillButton(file, label, glyph, { at, trailing = 'arrow' }) {
   const H = 46, p = 'k';
   const lab = text(label, { font: fonts.bodySemi, size: 13.5, x: 0, y: 0 });
-  const W = w ?? Math.ceil(lab.width + 96);
+  const W = Math.ceil(lab.width + 96);
+  const s = `fill="none" stroke="${color.teal}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"`;
   const glyphs = {
-    mail: `<rect x="20" y="16" width="20" height="14" rx="3" fill="none" stroke="${color.teal}" stroke-width="1.6"/><path d="M21 18l9 6.5 9-6.5" fill="none" stroke="${color.teal}" stroke-width="1.6" stroke-linejoin="round"/>`,
-    repo: `<path d="M22 15h13a3 3 0 0 1 3 3v13H25a3 3 0 0 1-3-3z" fill="none" stroke="${color.teal}" stroke-width="1.6" stroke-linejoin="round"/><path d="M22 28a3 3 0 0 1 3-3h13" fill="none" stroke="${color.teal}" stroke-width="1.6"/>`,
+    mail: `<rect x="20" y="16" width="20" height="14" rx="3" ${s}/><path d="M21 18l9 6.5 9-6.5" ${s}/>`,
+    repo: `<path d="M22 15h13a3 3 0 0 1 3 3v13H25a3 3 0 0 1-3-3z" ${s}/><path d="M22 28a3 3 0 0 1 3-3h13" ${s}/>`,
+    gallery: `<rect x="20" y="15" width="20" height="16" rx="3" ${s}/><path d="M22.5 28l5-5 3.5 3.5 2.5-2.5 4 4" ${s}/><circle cx="35" cy="19.8" r="1.6" fill="${color.teal}"/>`,
+    folder: `<path d="M20 18.5a2 2 0 0 1 2-2h5l2.2 2.5H38a2 2 0 0 1 2 2V29a2 2 0 0 1-2 2H22a2 2 0 0 1-2-2z" ${s}/>`,
+    cube: `<path d="M30 14l9 5v10l-9 5-9-5V19z" ${s}/><path d="M21 19l9 5 9-5M30 24v10" ${s}/>`,
   };
+  const tap = tapLayers({ id: p, at, cx: 30, cy: H / 2, ripple: W + 40, clip: `${p}-clip`,
+    edge: { x: 0.75, y: 0.75, w: W - 1.5, h: H - 1.5, rx: 22.25 } });
+  const tail = trailing === 'arrow'
+    ? `<g class="nudge" ${tap.t}>${arrowUpRight(W - 24, 23, 4.5, color.ink2)}</g>`
+    : `<g class="nudge-down" ${tap.t}><path d="M${W - 29} 20.5l5 5 5-5" fill="none" stroke="${color.ink2}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>`;
   const svg = doc({
     w: W, h: H, title: label, desc: label,
     defs: `<linearGradient id="${p}-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${color.bg2}"/><stop offset="1" stop-color="${color.bg0}"/></linearGradient>
 <linearGradient id="${p}-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${color.teal}" stop-opacity=".6"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="${color.peri}" stop-opacity=".55"/></linearGradient>
 <linearGradient id="${p}-sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<clipPath id="${p}-clip"><rect width="${W}" height="${H}" rx="23"/></clipPath>`,
-    body: `<rect width="${W}" height="${H}" rx="23" fill="url(#${p}-bg)"/>
-<g clip-path="url(#${p}-clip)"><g class="shine" ${delay(1.5)}><rect x="0" y="-10" width="70" height="70" fill="url(#${p}-sh)" transform="skewX(-18)"/></g></g>
+<clipPath id="${p}-clip"><rect width="${W}" height="${H}" rx="23"/></clipPath>${tap.defs}`,
+    body: `<g class="press-vb" ${tap.t}>
+<rect width="${W}" height="${H}" rx="23" fill="url(#${p}-bg)"/>
+${tap.ripple}
+<g clip-path="url(#${p}-clip)"><g class="shine" ${delay(at + 3)}><rect x="0" y="-10" width="70" height="70" fill="url(#${p}-sh)" transform="skewX(-18)"/></g></g>
 <rect x=".75" y=".75" width="${W - 1.5}" height="${H - 1.5}" rx="22.25" fill="none" stroke="url(#${p}-edge)" stroke-width="1.5"/>
+${tap.edge}
 ${glyphs[glyph]}
 ${text(label, { font: fonts.bodySemi, size: 13.5, x: 50, y: 28, fill: color.ink }).svg}
-${arrowUpRight(W - 24, 23, 4.5, color.ink2)}`,
+${tail}
+</g>`,
   });
-  save(`contact-${slug}.svg`, svg);
+  save(`${file}.svg`, svg);
 }
 
 // ───────────────────────────── Execução ─────────────────────────────
@@ -635,5 +664,8 @@ browserFrame('eurora', 'eurora.jpg', 'eurora.site', 'image/jpeg');
 browserFrame('volker', 'velkor.jpg', 'volker · loja', 'image/jpeg');
 browserFrame('vitraya', 'vitraya.jpg', '127.0.0.1:4317 · vitraya studio', 'image/jpeg');
 footer();
-contactPill('email', 'kainarodrigues684@gmail.com', 'mail');
-contactPill('repos', 'Todos os repositórios', 'repo');
+pillButton('contact-email', 'kainarodrigues684@gmail.com', 'mail', { at: 2.2 });
+pillButton('contact-repos', 'Todos os repositórios', 'repo', { at: 2.9 });
+pillButton('btn-telas', 'Ver telas dos projetos', 'gallery', { at: 3.2, trailing: 'chevron' });
+pillButton('btn-outros', 'Outros repositórios', 'folder', { at: 3.9, trailing: 'chevron' });
+pillButton('btn-3d', 'Ver calendário em 3D', 'cube', { at: 3.4, trailing: 'chevron' });

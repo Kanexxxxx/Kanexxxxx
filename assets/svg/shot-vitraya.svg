@@ -38,7 +38,27 @@
 @keyframes breathe{to{transform:scaleY(.55)}}
 .flow{animation:flow 6s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-48}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.press,.ripple,.ring{transform-box:fill-box;transform-origin:center}
+.press-soft,.press-vb{transform-box:view-box;transform-origin:50% 50%}
+.press-vb{animation:press 8s cubic-bezier(.3,.7,.3,1) infinite}
+.press{animation:press 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes press{0%,70%{transform:scale(1)}72.5%{transform:scale(.955)}78%{transform:scale(1.015)}83%,100%{transform:scale(1)}}
+.press-soft{animation:pressSoft 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes pressSoft{0%,70%{transform:scale(1)}72.5%{transform:scale(.988)}78%{transform:scale(1.003)}83%,100%{transform:scale(1)}}
+.ripple{opacity:0;animation:ripple 8s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes ripple{0%,70%{opacity:0;transform:scale(.12)}71.5%{opacity:.8}92%,100%{opacity:0;transform:scale(1)}}
+.ring{opacity:0;animation:ring 8s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes ring{0%,71%{opacity:0;transform:scale(.8)}73%{opacity:.95}93%,100%{opacity:0;transform:scale(2)}}
+.edge{opacity:0;animation:edge 8s ease-out infinite}
+@keyframes edge{0%,70%{opacity:0}73%{opacity:1}96%,100%{opacity:0}}
+.nudge{animation:nudge 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes nudge{0%,70%{transform:translate(0,0)}74%{transform:translate(2.5px,-2.5px)}80%{transform:translate(-.8px,.8px)}86%,100%{transform:translate(0,0)}}
+.nudge-down{animation:nudgeDown 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes nudgeDown{0%,70%{transform:translate(0,0)}74%{transform:translate(0,3px)}80%{transform:translate(0,-1px)}86%,100%{transform:translate(0,0)}}
+@media (prefers-reduced-motion:reduce){
+.drift-a,.drift-b,.drift-c,.float-a,.float-b,.float-c,.breathe,.wave1,.wave2,.wave3,.press,.press-soft,.press-vb,.nudge,.nudge-down{animation:none!important}
+.rise,.pop{animation-name:fade!important}
+}
 </style>
 <g clip-path="url(#fc)">
 <rect width="416" height="293" fill="#0c1324"/>

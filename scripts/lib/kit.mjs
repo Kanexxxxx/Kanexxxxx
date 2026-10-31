@@ -127,8 +127,9 @@ export function icon(name, x, y, size, prefix) {
   });
 }
 
-/** CSS de animação comum. Todo estado final é o estado natural do elemento:
- *  com movimento reduzido, nada fica invisível. */
+/** CSS de animação comum. Todo estado final é o estado natural do elemento.
+ *  Com prefers-reduced-motion, param só os movimentos grandes e contínuos
+ *  (deriva, flutuação, ondas, escala); luz, brilho e fades continuam. */
 export const baseStyle = `
 .rise{animation:rise .8s cubic-bezier(.16,.84,.3,1) both}
 @keyframes rise{from{opacity:0;transform:translateY(10px)}}
@@ -165,10 +166,49 @@ export const baseStyle = `
 @keyframes breathe{to{transform:scaleY(.55)}}
 .flow{animation:flow 6s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-48}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.press,.ripple,.ring{transform-box:fill-box;transform-origin:center}
+.press-soft,.press-vb{transform-box:view-box;transform-origin:50% 50%}
+.press-vb{animation:press 8s cubic-bezier(.3,.7,.3,1) infinite}
+.press{animation:press 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes press{0%,70%{transform:scale(1)}72.5%{transform:scale(.955)}78%{transform:scale(1.015)}83%,100%{transform:scale(1)}}
+.press-soft{animation:pressSoft 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes pressSoft{0%,70%{transform:scale(1)}72.5%{transform:scale(.988)}78%{transform:scale(1.003)}83%,100%{transform:scale(1)}}
+.ripple{opacity:0;animation:ripple 8s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes ripple{0%,70%{opacity:0;transform:scale(.12)}71.5%{opacity:.8}92%,100%{opacity:0;transform:scale(1)}}
+.ring{opacity:0;animation:ring 8s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes ring{0%,71%{opacity:0;transform:scale(.8)}73%{opacity:.95}93%,100%{opacity:0;transform:scale(2)}}
+.edge{opacity:0;animation:edge 8s ease-out infinite}
+@keyframes edge{0%,70%{opacity:0}73%{opacity:1}96%,100%{opacity:0}}
+.nudge{animation:nudge 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes nudge{0%,70%{transform:translate(0,0)}74%{transform:translate(2.5px,-2.5px)}80%{transform:translate(-.8px,.8px)}86%,100%{transform:translate(0,0)}}
+.nudge-down{animation:nudgeDown 8s cubic-bezier(.3,.7,.3,1) infinite}
+@keyframes nudgeDown{0%,70%{transform:translate(0,0)}74%{transform:translate(0,3px)}80%{transform:translate(0,-1px)}86%,100%{transform:translate(0,0)}}
+@media (prefers-reduced-motion:reduce){
+.drift-a,.drift-b,.drift-c,.float-a,.float-b,.float-c,.breathe,.wave1,.wave2,.wave3,.press,.press-soft,.press-vb,.nudge,.nudge-down{animation:none!important}
+.rise,.pop{animation-name:fade!important}
+}
 `;
 
 export const delay = s => `style="animation-delay:${r(s)}s"`;
+
+/** Toque simulado: todas as camadas de um botão (afundar, ripple, anel, borda,
+ *  seta) usam o mesmo atraso, para o "clique" acontecer no segundo `at` após
+ *  carregar a imagem e se repetir a cada 8 s. O README não aceita CSS nem JS,
+ *  então hover e clique reais são impossíveis; isso convida ao clique. */
+export const tapAt = at => `style="animation-delay:${r(at - 5.6)}s"`;
+
+/** Camadas de toque para um botão: ripple recortado + anel + borda acesa. */
+export function tapLayers({ id, at, cx, cy, ripple, ringR, accent = color.teal, clip, edge }) {
+  const t = tapAt(at);
+  return {
+    defs: `<radialGradient id="${id}-rip"><stop offset="0" stop-color="${accent}" stop-opacity=".55"/><stop offset=".55" stop-color="${accent}" stop-opacity=".18"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>
+<linearGradient id="${id}-edgeglow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="${accent}" stop-opacity=".9"/><stop offset="1" stop-color="${color.peri}" stop-opacity=".9"/></linearGradient>`,
+    ripple: `<g clip-path="url(#${clip})"><circle class="ripple" ${t} cx="${r(cx)}" cy="${r(cy)}" r="${ripple}" fill="url(#${id}-rip)"/></g>`,
+    ring: ringR ? `<circle class="ring" ${t} cx="${r(cx)}" cy="${r(cy)}" r="${ringR}" fill="none" stroke="${accent}" stroke-width="1.5"/>` : '',
+    edge: edge ? `<rect class="edge" ${t} x="${edge.x}" y="${edge.y}" width="${edge.w}" height="${edge.h}" rx="${edge.rx}" fill="none" stroke="url(#${id}-edgeglow)" stroke-width="1.5"/>` : '',
+    t,
+  };
+}
 
 /** Documento SVG completo, acessível (title/desc) e responsivo. */
 export function doc({ w, h, title, desc, defs = '', style = '', body }) {
