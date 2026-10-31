@@ -1,6 +1,7 @@
 // Gera os SVGs estáticos do perfil em assets/svg/. Rode com: npm run build
 import { mkdirSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
-import { fonts, color, text, measure, wrap, icon, doc, glass, chip, arrowUpRight, delay, esc } from './lib/kit.mjs';
+import { fonts, color, text, measure, wrap, icon, doc, glass, chip, arrowUpRight, delay, tapAt, tapLayers } from './lib/kit.mjs';
+import { tech, techChip, techIcon, legible, categories, writeCategory, updateReadmeBlock, registerLanguage } from './lib/tech.mjs';
 
 const out = new URL('../assets/svg/', import.meta.url);
 mkdirSync(out, { recursive: true });
@@ -116,10 +117,9 @@ function heroArt(p) {
 // Elementos comuns ao herói desktop e mobile.
 function nameMark(p, x, y, size) {
   const name = text('Kanex', { font: fonts.display, size, x, y, fill: `url(#${p}-name)`, tracking: -0.025 });
-  const dot = text('.', { font: fonts.display, size, x: x + name.width + size * 0.01, y, fill: color.teal });
   return {
     defs: `<linearGradient id="${p}-name" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#e1e7ff"/><stop offset="1" stop-color="#b9c6ff"/></linearGradient>`,
-    svg: name.svg + dot.svg,
+    svg: name.svg,
   };
 }
 
@@ -149,7 +149,7 @@ const phrases = [
   'Next.js + TypeScript, do banco à interface',
   'Agendas, lojas e pagamentos via PIX',
   'Jogos 3D em Godot com plateia ao vivo',
-  'IA no WhatsApp, com humano no controle',
+  'WhatsApp automatizado, com confirmação',
   'Estudando Desenvolvimento de Sistemas',
 ];
 
@@ -211,25 +211,29 @@ ${g.front}`,
 }
 
 // ───────────────────────────── Navegação ─────────────────────────────
+// As pílulas "tocam" em sequência, da esquerda para a direita, como uma onda.
 function navPill(slug, index, label) {
   const W = 132, H = 40, p = 'n';
+  const tap = tapLayers({ id: p, at: 1.4 + index * 0.3, cx: W / 2, cy: H / 2, ripple: 74, clip: `${p}-clip`,
+    edge: { x: 0.75, y: 0.75, w: W - 1.5, h: H - 1.5, rx: 19.25 } });
+  const num = text(String(index).padStart(2, '0'), { font: fonts.mono, size: 10, x: 0, y: 0 });
+  const lab = text(label, { font: fonts.bodySemi, size: 13.5, x: 0, y: 0 });
+  const x0 = (W - (num.width + 8 + lab.width)) / 2;
   const svg = doc({
     w: W, h: H, title: label, desc: `Ir para a seção ${label}`,
     defs: `<linearGradient id="${p}-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${color.bg2}"/><stop offset="1" stop-color="${color.bg0}"/></linearGradient>
 <linearGradient id="${p}-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".32"/><stop offset=".5" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="${color.teal}" stop-opacity=".4"/></linearGradient>
 <linearGradient id="${p}-sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<clipPath id="${p}-clip"><rect width="${W}" height="${H}" rx="20"/></clipPath>`,
-    body: `<rect width="${W}" height="${H}" rx="20" fill="url(#${p}-bg)"/>
+<clipPath id="${p}-clip"><rect width="${W}" height="${H}" rx="20"/></clipPath>${tap.defs}`,
+    body: `<g class="press-vb" ${tap.t}>
+<rect width="${W}" height="${H}" rx="20" fill="url(#${p}-bg)"/>
+${tap.ripple}
 <rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="19.5" fill="none" stroke="url(#${p}-edge)"/>
-<g clip-path="url(#${p}-clip)"><g class="shine" ${delay(1 + index * 0.35)}><rect x="0" y="-10" width="50" height="60" fill="url(#${p}-sh)" transform="skewX(-18)"/></g></g>
-${(() => {
-  const num = text(String(index).padStart(2, '0'), { font: fonts.mono, size: 10, x: 0, y: 0 });
-  const lab = text(label, { font: fonts.bodySemi, size: 13.5, x: 0, y: 0 });
-  const total = num.width + 8 + lab.width;
-  const x0 = (W - total) / 2;
-  return text(String(index).padStart(2, '0'), { font: fonts.mono, size: 10, x: x0, y: 24.2, fill: color.teal }).svg
-    + text(label, { font: fonts.bodySemi, size: 13.5, x: x0 + num.width + 8, y: 25, fill: color.ink }).svg;
-})()}`,
+<g clip-path="url(#${p}-clip)"><g class="shine" ${delay(3 + index * 0.35)}><rect x="0" y="-10" width="50" height="60" fill="url(#${p}-sh)" transform="skewX(-18)"/></g></g>
+${tap.edge}
+${text(String(index).padStart(2, '0'), { font: fonts.mono, size: 10, x: x0, y: 24.2, fill: color.teal }).svg}
+${text(label, { font: fonts.bodySemi, size: 13.5, x: x0 + num.width + 8, y: 25, fill: color.ink }).svg}
+</g>`,
   });
   save(`nav-${slug}.svg`, svg);
 }
@@ -280,7 +284,7 @@ function aboutCode() {
     [['  foco', prop], [': [', pun], ['"produto"', str], [', ', pun], ['"web"', str], [', ', pun], ['"games"', str], ['],', pun]],
     [['  entrega', prop], [': [', pun], ['"UI"', str], [', ', pun], ['"API"', str], [', ', pun], ['"banco"', str], [', ', pun], ['"deploy"', str], ['],', pun]],
     [['  estudando', prop], [': ', pun], ['"Desenv. de Sistemas"', str], [',', pun]],
-    [['  ia', prop], [': ', pun], ['"agentes + revisão humana"', str], [',', pun]],
+    [['  padrão', prop], [': [', pun], ['"tipado"', str], [', ', pun], ['"testado"', str], [', ', pun], ['"documentado"', str], ['],', pun]],
     [['} ', pun], ['satisfies ', kw], ['Dev', ty], [';', pun]],
   ];
   const size = 12.5, lh = 23.5, x0 = 52, y0 = 82;
@@ -302,7 +306,7 @@ function aboutCode() {
   const svg = doc({
     w: W, h: H,
     title: 'kanex.ts — quem é o Kanex',
-    desc: 'Editor de código em vidro mostrando um objeto TypeScript: papel dev full-stack, base no Brasil, foco em produto, web e games, entrega de UI, API, banco e deploy, estudando Desenvolvimento de Sistemas e uso de agentes de IA com revisão humana.',
+    desc: 'Editor de código em vidro mostrando um objeto TypeScript: papel dev full-stack, base no Brasil, foco em produto, web e games, entrega de UI, API, banco e deploy, estudando Desenvolvimento de Sistemas, com código tipado, testado e documentado.',
     defs: g.defs,
     body: `${g.back}
 <circle cx="26" cy="25" r="5" fill="#ff7a8a" fill-opacity=".85"/><circle cx="43" cy="25" r="5" fill="#ffd36e" fill-opacity=".85"/><circle cx="60" cy="25" r="5" fill="${color.green}" fill-opacity=".85"/>
@@ -324,240 +328,133 @@ ${g.front}`,
   save('about-code.svg', svg);
 }
 
-// ───────────────────────────── Sobre: agora ─────────────────────────────
-function aboutNow() {
-  const W = 416, H = 304, p = 'w';
-  const g = glass({ w: W, h: H, id: p, shineDelay: 1.6, blobs: [
-    { cx: 420, cy: 300, r: 260, c: color.teal, o: 0.22, cls: 'drift-a' },
-    { cx: 20, cy: 0, r: 220, c: color.peri, o: 0.22, cls: 'drift-b' },
-  ] });
-  const items = [
-    ['CONSTRUINDO', 'Nexakeep: sites e agenda para pequenos negócios', color.teal],
-    ['ESTUDANDO', 'Desenvolvimento de Sistemas · Senac', color.peri],
-    ['EXPLORANDO', 'Godot 4 e Roblox Studio (Luau) para jogos', color.violet],
-    ['APROFUNDANDO', 'Segurança, testes E2E com Playwright e CI/CD', '#f4a7bb'],
-    ['NO FLUXO', 'Agentes de IA no dia a dia, com revisão humana', color.green],
-  ];
-  const top = 86, step = 41;
-  const rows = items.map(([label, body, c], i) => {
-    const y = top + i * step;
-    return `<g class="rise" ${delay(0.3 + i * 0.14)}>
-  ${i === 0 ? `<circle class="pulse" cx="34" cy="${y - 4}" r="5" fill="${c}"/>` : ''}
-  <circle cx="34" cy="${y - 4}" r="9" fill="${c}" fill-opacity=".12"/>
-  <circle cx="34" cy="${y - 4}" r="4.5" fill="${c}"/>
-  ${text(label, { font: fonts.monoSemi, size: 9.5, x: 56, y: y - 0.5, fill: c, tracking: 0.12 }).svg}
-  ${text(body, { font: fonts.bodyMedium, size: 13.5, x: 56, y: y + 17, fill: color.ink }).svg}
-</g>`;
-  }).join('');
-  const svg = doc({
-    w: W, h: H,
-    title: 'Agora — no que o Kanex está trabalhando',
-    desc: items.map(([a, b]) => `${a.toLowerCase()}: ${b}`).join('; '),
-    defs: g.defs + `<linearGradient id="${p}-line" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${color.teal}" stop-opacity=".7"/><stop offset=".6" stop-color="${color.peri}" stop-opacity=".35"/><stop offset="1" stop-color="${color.peri}" stop-opacity="0"/></linearGradient>`,
-    body: `${g.back}
-${text('AGORA', { font: fonts.monoSemi, size: 10.5, x: 24, y: 34, fill: color.teal, tracking: 0.2 }).svg}
-${text('No que estou trabalhando', { font: fonts.display, size: 19, x: 24, y: 58, fill: color.ink }).svg}
-<g class="fade" ${delay(0.2)}><rect x="33.25" y="${top - 4}" width="1.5" height="${step * (items.length - 1) + 30}" fill="url(#${p}-line)"/></g>
-${rows}
-${g.front}`,
-  });
-  save('about-now.svg', svg);
-}
-
 // ───────────────────────────── Projetos ─────────────────────────────
 const projects = [
-  { slug: 'karol', title: 'Studio Karol', letter: 'K', kicker: 'AGENDA · WHATSAPP · IA', a: '#f4a7bb', b: '#a94f78',
-    desc: 'Site, agenda e entrada via PIX para uma profissional de beleza. A IA no WhatsApp propõe mudanças, mas só um toque humano altera a agenda.',
-    chips: ['Next.js 16', 'Supabase', 'WhatsApp API', 'IA'] },
-  { slug: 'confia', title: 'Confia?', letter: 'C', kicker: 'SEGURANÇA · ANTIGOLPE', a: '#5ee6a0', b: '#167a5a',
+  { slug: 'karol', repo: 'Karol', title: 'Studio Karol', logo: 'karol.png', kicker: 'AGENDA · WHATSAPP · IA', a: '#e4c27a', b: '#96702b',
+    desc: 'Site, agenda e entrada via PIX para uma profissional de beleza. O assistente no WhatsApp propõe mudanças, mas só um toque humano altera a agenda.',
+    chips: [['nextjs'], ['supabase'], ['whatsapp'], ['deepseek']] },
+  { slug: 'confia', repo: 'Confia-', title: 'Confia?', logo: 'confia.svg', kicker: 'SEGURANÇA · ANTIGOLPE', a: '#5ee6a0', b: '#16a37f',
     desc: 'Verificação antigolpe: a pessoa envia link, perfil, print ou telefone e recebe uma análise em português explicando o motivo de cada conclusão.',
-    chips: ['Next.js', 'TypeScript', 'PostgreSQL', 'VPS Linux'] },
-  { slug: 'eurora', title: 'Eurora Love', letter: 'E', kicker: 'SAAS · EXPERIÊNCIAS', a: '#ff8fb1', b: '#c2416b',
+    chips: [['nextjs'], ['typescript'], ['postgresql'], ['drizzle', 'Drizzle']] },
+  { slug: 'eurora', repo: 'Eurora', title: 'Eurora Love', logo: 'eurora.svg', kicker: 'SAAS · EXPERIÊNCIAS', a: '#ff6f9a', b: '#f6c986',
     desc: 'SaaS para casais com cinco produtos integrados: página com QR Code e música, quiz, mensagem programada, presentes e textos gerados por IA.',
-    chips: ['Next.js 16', 'Prisma', 'PostgreSQL', 'PIX'] },
-  { slug: 'volker', title: 'VOLKER', letter: 'V', kicker: 'E-COMMERCE · PAGAMENTOS', a: '#ff5a6e', b: '#9e1430',
+    chips: [['nextjs'], ['prisma'], ['postgresql'], ['pix']] },
+  { slug: 'volker', repo: 'Velkor_3', title: 'VOLKER', logo: 'volker.svg', kicker: 'E-COMMERCE · PAGAMENTOS', a: '#ff4d64', b: '#9e1430',
     desc: 'E-commerce completo: catálogo, carrinho, cupons, rastreio e painel admin, com sessões seguras, Mercado Pago e frete real via Melhor Envio.',
-    chips: ['Next.js', 'Node.js', 'Prisma', 'Mercado Pago'] },
-  { slug: 'jogi', title: 'JOGI', letter: 'J', kicker: 'GAME 3D · TEMPO REAL', a: '#7aa6ff', b: '#2f55c9',
+    chips: [['nextjs'], ['node'], ['prisma'], ['mercadopago']] },
+  { slug: 'jogi', repo: 'JOGI', title: 'JOGI', logo: 'jogi.svg', kicker: 'GAME 3D · TEMPO REAL', a: '#6c9bff', b: '#ffd23f',
     desc: 'Jogo 3D vertical para lives no TikTok e no Kwai: a plateia controla a corrida com curtidas, comentários e presentes, via ponte Python em tempo real.',
-    chips: ['Godot 4', 'GDScript', 'Python', 'WebSocket'] },
-  { slug: 'vitraya', title: 'Vitraya Studio', letter: 'v', kicker: 'LOCAL-FIRST · AUTOMAÇÃO', a: '#a99bff', b: '#5b3fd8',
+    chips: [['godot', 'Godot 4'], ['gdscript'], ['python'], ['websocket']] },
+  { slug: 'vitraya', repo: 'Vitraya', title: 'Vitraya Studio', logo: 'vitraya.svg', kicker: 'LOCAL-FIRST · AUTOMAÇÃO', a: '#8f80ff', b: '#baffd2',
     desc: 'App local-first para ofertas de afiliados: importação com fotos, artes e legendas, simulador de cupons e envio por Telegram e WhatsApp.',
-    chips: ['React', 'Vite', 'SQLite', 'Telegram API'] },
+    chips: [['react'], ['vite'], ['sqlite'], ['telegram']] },
 ];
 
-function projectCard(pr, i) {
-  const W = 416, H = 252, p = 'p';
-  const g = glass({ w: W, h: H, id: p, shineDelay: 1.5 + i * 0.6, blobs: [
-    { cx: 400, cy: 0, r: 250, c: pr.a, o: 0.30, cls: 'drift-b' },
-    { cx: 0, cy: 260, r: 220, c: color.peri, o: 0.12, cls: 'drift-a' },
-  ] });
-  const lines = wrap(pr.desc, fonts.body, 13.5, 366);
-  if (lines.length > 3) throw new Error(`Descrição longa demais em ${pr.slug}: ${lines.length} linhas`);
-  let cx = 24;
-  const chips = pr.chips.map((label, k) => {
-    const c = chip(label, { x: cx, y: 196, h: 26, size: 11, padX: 11, cls: 'pop', style: delay(0.55 + k * 0.08) });
-    cx += c.width + 7;
-    return c.svg;
+// Logo do JOGI (o repositório não tem uma): pista em perspectiva no azul-cobalto
+// do jogo, J em itálico e o raio amarelo do turbo.
+function jogiLogo() {
+  const j = text('J', { font: fonts.display, size: 40, x: 0, y: 0 });
+  const svg = doc({
+    w: 64, h: 64, title: 'JOGI', desc: 'Logo do JOGI: pista azul em perspectiva, letra J e raio de turbo amarelo.',
+    defs: `<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f8cff"/><stop offset="1" stop-color="#1a3aa8"/></linearGradient>
+<linearGradient id="hi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect width="64" height="64" rx="16"/></clipPath>`,
+    body: `<g clip-path="url(#c)">
+<rect width="64" height="64" fill="url(#bg)"/>
+<path d="M14 64L28.5 34h7L50 64z" fill="#fff" fill-opacity=".14"/>
+<path d="M31.4 37h1.2v4h-1.2zM31.2 45h1.6v5.5h-1.6zM30.9 54h2.2v8h-2.2z" fill="#fff" fill-opacity=".55"/>
+<rect width="64" height="64" fill="url(#hi)"/>
+</g>
+<g transform="translate(${(29 - j.width / 2).toFixed(2)} 44) skewX(-10)">${text('J', { font: fonts.display, size: 40, x: 2, y: 2, fill: '#0f2a6b', attrs: 'fill-opacity=".55"' }).svg}${text('J', { font: fonts.display, size: 40, x: 0, y: 0, fill: '#fff' }).svg}</g>
+<path d="M47 8l-8.5 13.5h6.2L40.5 33 52 17.5h-6.5L49.6 8z" fill="#ffd23f" stroke="#0f2a6b" stroke-opacity=".35" stroke-width="1"/>
+<rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/>`,
   });
-  if (cx - 7 > W - 24) throw new Error(`Chips não cabem em ${pr.slug}`);
+  writeFileSync(new URL('../assets/logos/jogi.svg', import.meta.url), svg.replace(/<style>[\s\S]*?<\/style>\n/, ''));
+}
+
+const logoData = file => {
+  const buf = readFileSync(new URL(`../assets/logos/${file}`, import.meta.url));
+  return `data:${file.endsWith('.png') ? 'image/png' : 'image/svg+xml'};base64,${buf.toString('base64')}`;
+};
+
+// Card de projeto: cabeçalho com logo real, descrição, tecnologias com ícones
+// e rodapé com o repositório e o botão "Ver projeto".
+function projectCard(pr, i) {
+  const W = 416, H = 292, p = 'p';
+  const g = glass({ w: W, h: H, id: p, shineDelay: 1.5 + i * 0.6, blobs: [
+    { cx: 400, cy: 0, r: 260, c: pr.a, o: 0.28, cls: 'drift-b' },
+    { cx: 0, cy: 300, r: 230, c: pr.b, o: 0.12, cls: 'drift-a' },
+  ] });
+  const lines = wrap(pr.desc, fonts.body, 13.5, 372);
+  if (lines.length > 3) throw new Error(`Descrição longa demais em ${pr.slug}: ${lines.length} linhas`);
+  const at = 2.4 + i * 1.25;
+
+  // Tecnologias: depois de cada "clique" uma onda de luz percorre os chips.
+  let cx = 22;
+  const chips = pr.chips.map(([key, label], k) => {
+    const c = techChip(key, { x: cx, y: 176, label, prefix: `c${k}`, cls: 'pop', style: delay(0.55 + k * 0.08) });
+    const glow = `<rect class="edge" ${tapAt(at + 0.35 + k * 0.12)} x="${cx}" y="176" width="${c.width.toFixed(2)}" height="26" rx="13" fill="#fff" fill-opacity=".06" stroke="${legible(tech[key].hex)}" stroke-width="1.4"/>`;
+    cx += c.width + 5;
+    return c.svg + glow;
+  });
+  if (cx - 5 > W - 22) throw new Error(`Chips não cabem em ${pr.slug}: ${(cx - 5).toFixed(0)}px`);
+
+  // Botão "Ver projeto": gradiente do projeto, luz correndo pela borda e toque.
+  const label = 'Ver projeto';
+  const bw = Math.ceil(measure(label, fonts.bodySemi, 13) + 62), bh = 36;
+  const bx = W - 22 - bw, by = H - 22 - bh, bcx = bx + bw - 22, bcy = by + bh / 2;
+  const tap = tapLayers({ id: p, at, cx: bcx, cy: bcy, ripple: 340, ringR: 13, accent: pr.a, clip: `${p}-clip`,
+    edge: { x: 0.75, y: 0.75, w: W - 1.5, h: H - 1.5, rx: 21.25 } });
+  const repoText = `Kanexxxxx/${pr.repo}`;
+
   const svg = doc({
     w: W, h: H,
     title: `${pr.title} — ${pr.kicker.toLowerCase()}`,
-    desc: `${pr.desc} Tecnologias: ${pr.chips.join(', ')}.`,
-    defs: g.defs + `<linearGradient id="${p}-mark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${pr.a}"/><stop offset="1" stop-color="${pr.b}"/></linearGradient>
-<linearGradient id="${p}-markhi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
-    body: `${g.back}
+    desc: `${pr.desc} Tecnologias: ${pr.chips.map(([k, l]) => l ?? tech[k].name).join(', ')}. Abre o repositório no GitHub.`,
+    defs: g.defs + tap.defs + `<clipPath id="${p}-logo"><rect x="22" y="22" width="56" height="56" rx="16"/></clipPath>
+<radialGradient id="${p}-halo"><stop offset="0" stop-color="${pr.a}" stop-opacity=".55"/><stop offset="1" stop-color="${pr.a}" stop-opacity="0"/></radialGradient>
+<linearGradient id="${p}-btn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${pr.a}" stop-opacity=".34"/><stop offset="1" stop-color="${pr.b}" stop-opacity=".18"/></linearGradient>
+<linearGradient id="${p}-btnedge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="${pr.a}" stop-opacity=".45"/><stop offset="1" stop-color="${pr.b}" stop-opacity=".6"/></linearGradient>
+<linearGradient id="${p}-div" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
+    style: `.run{stroke-dasharray:14 86;animation:run 4.2s linear infinite}@keyframes run{to{stroke-dashoffset:-100}}`,
+    body: `<g class="press-soft" ${tap.t}>
+${g.back}
+${tap.ripple}
 <g class="pop" ${delay(0.1)}>
-  <rect x="24" y="24" width="48" height="48" rx="14" fill="url(#${p}-mark)"/>
-  <rect x="24" y="24" width="48" height="48" rx="14" fill="url(#${p}-markhi)"/>
-  <rect x="24.5" y="24.5" width="47" height="47" rx="13.5" fill="none" stroke="#fff" stroke-opacity=".35"/>
-  ${text(pr.letter, { font: fonts.display, size: 26, x: 48, y: 57, fill: '#fff', anchor: 'middle' }).svg}
+  <circle cx="50" cy="50" r="46" fill="url(#${p}-halo)"/>
+  <rect x="22" y="22" width="56" height="56" rx="16" fill="#0b1224"/>
+  <image x="22" y="22" width="56" height="56" clip-path="url(#${p}-logo)" preserveAspectRatio="xMidYMid slice" href="${logoData(pr.logo)}"/>
+  <rect x="22.5" y="22.5" width="55" height="55" rx="15.5" fill="none" stroke="#fff" stroke-opacity=".28"/>
+  <rect class="edge" ${tap.t} x="21.5" y="21.5" width="57" height="57" rx="16.5" fill="none" stroke="${pr.a}" stroke-width="1.5"/>
 </g>
 <g class="rise" ${delay(0.18)}>
-  ${text(pr.kicker, { font: fonts.monoSemi, size: 9.5, x: 86, y: 41, fill: pr.a, tracking: 0.12 }).svg}
-  ${text(pr.title, { font: fonts.display, size: 23, x: 85, y: 66, fill: color.ink, tracking: -0.01 }).svg}
+  ${text(pr.kicker, { font: fonts.monoSemi, size: 9.5, x: 94, y: 44, fill: legible(pr.a), tracking: 0.12 }).svg}
+  ${text(pr.title, { font: fonts.display, size: 24, x: 93, y: 72, fill: color.ink, tracking: -0.01 }).svg}
 </g>
-<g class="fade" ${delay(0.4)}>
-  <circle cx="${W - 42}" cy="46" r="17" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-opacity=".16"/>
-  ${arrowUpRight(W - 42, 46, 5, color.ink)}
-</g>
-<g class="rise" ${delay(0.32)}>${lines.map((l, k) => text(l, { font: fonts.body, size: 13.5, x: 24, y: 112 + k * 21.5, fill: color.ink2 }).svg).join('')}</g>
+<g class="rise" ${delay(0.32)}>${lines.map((l, k) => text(l, { font: fonts.body, size: 13.5, x: 22, y: 112 + k * 21.5, fill: color.ink2 }).svg).join('')}</g>
 ${chips.join('')}
-${g.front}`,
+<rect x="22" y="${by - 14}" width="${W - 44}" height="1" fill="url(#${p}-div)"/>
+<g class="fade" ${delay(0.5)}>
+  ${techIcon('github', 22, by + bh / 2 - 7, 14, 'gh')}
+  ${text(repoText, { font: fonts.mono, size: 10.5, x: 42, y: by + bh / 2 + 3.8, fill: color.ink3 }).svg}
+</g>
+${tap.ring}
+<g class="press" ${tap.t}>
+  <rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="${bh / 2}" fill="#0b1224" fill-opacity=".6"/>
+  <rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="${bh / 2}" fill="url(#${p}-btn)"/>
+  <rect x="${bx + 0.5}" y="${by + 0.5}" width="${bw - 1}" height="${bh - 1}" rx="${bh / 2 - 0.5}" fill="none" stroke="url(#${p}-btnedge)"/>
+  <rect class="run" pathLength="100" x="${bx + 0.5}" y="${by + 0.5}" width="${bw - 1}" height="${bh - 1}" rx="${bh / 2 - 0.5}" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.4" stroke-linecap="round"/>
+  ${text(label, { font: fonts.bodySemi, size: 13, x: bx + 16, y: by + bh / 2 + 4.6, fill: '#fff' }).svg}
+  <circle cx="${bcx}" cy="${bcy}" r="12" fill="#fff" fill-opacity=".16"/>
+  <g class="nudge" ${tap.t}>${arrowUpRight(bcx, bcy, 4.2, '#fff')}</g>
+</g>
+${g.front}
+${tap.edge}
+</g>`,
   });
   save(`project-${pr.slug}.svg`, svg);
 }
 
-// ───────────────────────────── Stack ─────────────────────────────
-const stack = [
-  { slug: 'languages', n: '01', title: 'Linguagens', blob: color.peri, items: [
-    ['TypeScript', 'TypeScript'], ['JavaScript', 'JavaScript'], ['Python-Dark', 'Python'], ['Godot-Dark', 'GDScript'], ['Lua-Dark', 'Lua / Luau'],
-    ['HTML', 'HTML'], ['CSS', 'CSS'], ['PostgreSQL-Dark', 'SQL'], ['Bash-Dark', 'Bash'], ['Powershell-Dark', 'PowerShell'],
-  ] },
-  { slug: 'web', n: '02', title: 'Web e dados', blob: color.teal, items: [
-    ['NextJS-Dark', 'Next.js'], ['React-Dark', 'React'], ['TailwindCSS-Dark', 'Tailwind'], ['Vite-Dark', 'Vite'], ['NodeJS-Dark', 'Node.js'],
-    ['Prisma', 'Prisma'], ['Supabase-Dark', 'Supabase'], ['PostgreSQL-Dark', 'PostgreSQL'], ['SQLite', 'SQLite'],
-  ] },
-  { slug: 'tools', n: '03', title: 'Infra e ferramentas', blob: color.violet, items: [
-    ['Docker', 'Docker'], ['Nginx', 'Nginx'], ['Ubuntu-Dark', 'Ubuntu'], ['Vercel-Dark', 'Vercel'], ['GithubActions-Dark', 'Actions'],
-    ['Git', 'Git'], ['Github-Dark', 'GitHub'], ['VSCode-Dark', 'VS Code'], ['Windows-Dark', 'Windows'], ['RobloxStudio', 'Roblox'],
-  ] },
-];
-
-function stackTile(t, i) {
-  const W = 416, H = 252, p = 's';
-  const g = glass({ w: W, h: H, id: p, shineDelay: 2 + i * 0.7, blobs: [
-    { cx: 410, cy: 10, r: 240, c: t.blob, o: 0.26, cls: 'drift-b' },
-    { cx: 10, cy: 250, r: 200, c: color.teal, o: 0.12, cls: 'drift-a' },
-  ] });
-  const cols = 5, colW = (W - 48) / cols, size = 44;
-  const cells = t.items.map(([iconName, label], k) => {
-    const row = Math.floor(k / cols), col = k % cols;
-    // Linhas incompletas ficam centralizadas.
-    const inRow = Math.min(cols, t.items.length - row * cols);
-    const cx = 24 + (cols - inRow) * colW / 2 + col * colW + colW / 2;
-    const y = 76 + row * 86;
-    return `<g class="pop" ${delay(0.25 + k * 0.06)}>
-  ${icon(iconName, cx - size / 2, y, size, `${p}${k}`)}
-  ${text(label, { font: fonts.bodyMedium, size: 11, x: cx, y: y + size + 17, fill: color.ink2, anchor: 'middle' }).svg}
-</g>`;
-  }).join('');
-  const svg = doc({
-    w: W, h: H,
-    title: t.title,
-    desc: `${t.title}: ${t.items.map(([, l]) => l).join(', ')}.`,
-    defs: g.defs,
-    body: `${g.back}
-${text(t.n, { font: fonts.monoSemi, size: 10.5, x: 24, y: 40, fill: color.teal, tracking: 0.12 }).svg}
-${text(t.title, { font: fonts.display, size: 19, x: 48, y: 41, fill: color.ink }).svg}
-${text(`${t.items.length} itens`, { font: fonts.mono, size: 10, x: W - 24, y: 40, fill: color.ink3, anchor: 'end' }).svg}
-${cells}
-${g.front}`,
-  });
-  save(`stack-${t.slug}.svg`, svg);
-}
-
-function integrationsTile() {
-  const W = 416, H = 252, p = 'i';
-  const g = glass({ w: W, h: H, id: p, shineDelay: 4.2, blobs: [
-    { cx: 410, cy: 250, r: 240, c: color.green, o: 0.16, cls: 'drift-a' },
-    { cx: 0, cy: 0, r: 220, c: color.peri, o: 0.20, cls: 'drift-b' },
-  ] });
-  const groups = [
-    ['#ffc46b', ['Mercado Pago', 'Asaas · PIX', 'Melhor Envio']],
-    [color.teal, ['WhatsApp Cloud API', 'Evolution API', 'Telegram Bot API']],
-    [color.violet, ['DeepSeek · LLM', 'Shopee Open API', 'WebSockets']],
-    ['#7aa6ff', ['Playwright', 'pytest', 'PM2 · Nginx']],
-  ];
-  const legend = [['#ffc46b', 'pagamentos'], [color.teal, 'mensagens'], [color.violet, 'IA e dados'], ['#7aa6ff', 'testes e deploy']];
-  // Empacotamento first-fit decreasing: as pílulas mais largas entram primeiro
-  // e cada uma vai para a primeira linha onde couber.
-  const h = 28, gap = 7, inner = W - 48, maxRows = 4;
-  const items = groups.flatMap(([c, labels]) => labels.map(label => ({ c, label, w: measure(label, fonts.bodyMedium, 12) + 31 })));
-  const rows = [];
-  for (const item of [...items].sort((a, b) => b.w - a.w)) {
-    const row = rows.find(rw => rw.used + gap + item.w <= inner);
-    if (row) { row.items.push(item); row.used += gap + item.w; }
-    else rows.push({ items: [item], used: item.w });
-  }
-  if (rows.length > maxRows) throw new Error(`Integrações não cabem no cartão (${rows.length} linhas)`);
-  let k = 0, body = '';
-  rows.forEach((row, ri) => {
-    let x = 24;
-    const y = 64 + ri * (h + gap);
-    for (const { c, label, w } of row.items) {
-      body += `<g class="pop" ${delay(0.25 + k++ * 0.05)}>
-  <rect x="${r(x)}" y="${y}" width="${r(w)}" height="${h}" rx="${h / 2}" fill="#fff" fill-opacity=".055" stroke="#fff" stroke-opacity=".12"/>
-  <circle cx="${r(x + 13)}" cy="${y + h / 2}" r="3.5" fill="${c}"/>
-  ${text(label, { font: fonts.bodyMedium, size: 12, x: x + 22.5, y: y + 18.4, fill: color.ink }).svg}
-</g>`;
-      x += w + gap;
-    }
-  });
-  let lx = 24;
-  const leg = legend.map(([c, l]) => {
-    const s = `<circle cx="${lx + 3.5}" cy="${H - 26}" r="3" fill="${c}"/>${text(l, { font: fonts.mono, size: 9.5, x: lx + 11, y: H - 22.6, fill: color.ink3 }).svg}`;
-    lx += measure(l, fonts.mono, 9.5) + 26;
-    return s;
-  }).join('');
-  const svg = doc({
-    w: W, h: H,
-    title: 'Integrações e APIs',
-    desc: `Integrações já usadas em projetos: ${groups.flatMap(([, l]) => l).join(', ')}.`,
-    defs: g.defs,
-    body: `${g.back}
-${text('04', { font: fonts.monoSemi, size: 10.5, x: 24, y: 40, fill: color.teal, tracking: 0.12 }).svg}
-${text('Integrações e APIs', { font: fonts.display, size: 19, x: 48, y: 41, fill: color.ink }).svg}
-${text('em produção e testes', { font: fonts.mono, size: 10, x: W - 24, y: 40, fill: color.ink3, anchor: 'end' }).svg}
-${body}
-<rect x="24" y="${H - 44}" width="${W - 48}" height="1" fill="#fff" fill-opacity=".07"/>
-${leg}
-${g.front}`,
-  });
-  save('stack-integrations.svg', svg);
-}
-
-// ───────────────────────────── Galeria (molduras de navegador) ─────────────────────────────
-function browserFrame(slug, file, url, mime) {
-  const path = new URL(`../assets/shots/${file}`, import.meta.url);
-  if (!existsSync(path)) { console.warn(`(sem ${file}, moldura ignorada)`); return; }
-  const data = readFileSync(path).toString('base64');
-  const W = 416, bar = 34, imgH = Math.round(416 * 560 / 900), H = bar + imgH;
-  const svg = doc({
-    w: W, h: H, title: `Tela do projeto ${slug}`, desc: `Captura de tela de ${url} dentro de uma moldura de navegador.`,
-    defs: `<clipPath id="fc"><rect width="${W}" height="${H}" rx="14"/></clipPath>`,
-    body: `<g clip-path="url(#fc)">
-<rect width="${W}" height="${H}" fill="#0c1324"/>
-<circle cx="18" cy="17" r="4.5" fill="#ff7a8a"/><circle cx="33" cy="17" r="4.5" fill="#ffd36e"/><circle cx="48" cy="17" r="4.5" fill="${color.green}"/>
-<rect x="70" y="8" width="${W - 140}" height="18" rx="9" fill="#fff" fill-opacity=".07"/>
-${text(url, { font: fonts.mono, size: 9.5, x: W / 2, y: 20.5, fill: color.ink2, anchor: 'middle' }).svg}
-<image class="fade" x="0" y="${bar}" width="${W}" height="${imgH}" preserveAspectRatio="xMidYMin slice" href="data:${mime};base64,${data}"/>
-</g>
-<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="13.5" fill="none" stroke="#fff" stroke-opacity=".14"/>`,
-  });
-  save(`shot-${slug}.svg`, svg);
-}
 
 // ───────────────────────────── Rodapé e contato ─────────────────────────────
 function footer() {
@@ -593,28 +490,43 @@ ${g.front}`,
   save('footer.svg', svg);
 }
 
-function contactPill(slug, label, glyph, w) {
+// Botão em pílula: contato e abertura das seções recolhíveis. O ripple nasce
+// no ícone, a borda acende e a seta (ou a divisa) dá um empurrão.
+function pillButton(file, label, glyph, { at, trailing = 'arrow' }) {
   const H = 46, p = 'k';
   const lab = text(label, { font: fonts.bodySemi, size: 13.5, x: 0, y: 0 });
-  const W = w ?? Math.ceil(lab.width + 96);
+  const W = Math.ceil(lab.width + 96);
+  const s = `fill="none" stroke="${color.teal}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"`;
   const glyphs = {
-    mail: `<rect x="20" y="16" width="20" height="14" rx="3" fill="none" stroke="${color.teal}" stroke-width="1.6"/><path d="M21 18l9 6.5 9-6.5" fill="none" stroke="${color.teal}" stroke-width="1.6" stroke-linejoin="round"/>`,
-    repo: `<path d="M22 15h13a3 3 0 0 1 3 3v13H25a3 3 0 0 1-3-3z" fill="none" stroke="${color.teal}" stroke-width="1.6" stroke-linejoin="round"/><path d="M22 28a3 3 0 0 1 3-3h13" fill="none" stroke="${color.teal}" stroke-width="1.6"/>`,
+    mail: `<rect x="20" y="16" width="20" height="14" rx="3" ${s}/><path d="M21 18l9 6.5 9-6.5" ${s}/>`,
+    repo: `<path d="M22 15h13a3 3 0 0 1 3 3v13H25a3 3 0 0 1-3-3z" ${s}/><path d="M22 28a3 3 0 0 1 3-3h13" ${s}/>`,
+    gallery: `<rect x="20" y="15" width="20" height="16" rx="3" ${s}/><path d="M22.5 28l5-5 3.5 3.5 2.5-2.5 4 4" ${s}/><circle cx="35" cy="19.8" r="1.6" fill="${color.teal}"/>`,
+    folder: `<path d="M20 18.5a2 2 0 0 1 2-2h5l2.2 2.5H38a2 2 0 0 1 2 2V29a2 2 0 0 1-2 2H22a2 2 0 0 1-2-2z" ${s}/>`,
+    cube: `<path d="M30 14l9 5v10l-9 5-9-5V19z" ${s}/><path d="M21 19l9 5 9-5M30 24v10" ${s}/>`,
   };
+  const tap = tapLayers({ id: p, at, cx: 30, cy: H / 2, ripple: W + 40, clip: `${p}-clip`,
+    edge: { x: 0.75, y: 0.75, w: W - 1.5, h: H - 1.5, rx: 22.25 } });
+  const tail = trailing === 'arrow'
+    ? `<g class="nudge" ${tap.t}>${arrowUpRight(W - 24, 23, 4.5, color.ink2)}</g>`
+    : `<g class="nudge-down" ${tap.t}><path d="M${W - 29} 20.5l5 5 5-5" fill="none" stroke="${color.ink2}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>`;
   const svg = doc({
     w: W, h: H, title: label, desc: label,
     defs: `<linearGradient id="${p}-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${color.bg2}"/><stop offset="1" stop-color="${color.bg0}"/></linearGradient>
 <linearGradient id="${p}-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${color.teal}" stop-opacity=".6"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="${color.peri}" stop-opacity=".55"/></linearGradient>
 <linearGradient id="${p}-sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<clipPath id="${p}-clip"><rect width="${W}" height="${H}" rx="23"/></clipPath>`,
-    body: `<rect width="${W}" height="${H}" rx="23" fill="url(#${p}-bg)"/>
-<g clip-path="url(#${p}-clip)"><g class="shine" ${delay(1.5)}><rect x="0" y="-10" width="70" height="70" fill="url(#${p}-sh)" transform="skewX(-18)"/></g></g>
+<clipPath id="${p}-clip"><rect width="${W}" height="${H}" rx="23"/></clipPath>${tap.defs}`,
+    body: `<g class="press-vb" ${tap.t}>
+<rect width="${W}" height="${H}" rx="23" fill="url(#${p}-bg)"/>
+${tap.ripple}
+<g clip-path="url(#${p}-clip)"><g class="shine" ${delay(at + 3)}><rect x="0" y="-10" width="70" height="70" fill="url(#${p}-sh)" transform="skewX(-18)"/></g></g>
 <rect x=".75" y=".75" width="${W - 1.5}" height="${H - 1.5}" rx="22.25" fill="none" stroke="url(#${p}-edge)" stroke-width="1.5"/>
+${tap.edge}
 ${glyphs[glyph]}
 ${text(label, { font: fonts.bodySemi, size: 13.5, x: 50, y: 28, fill: color.ink }).svg}
-${arrowUpRight(W - 24, 23, 4.5, color.ink2)}`,
+${tail}
+</g>`,
   });
-  save(`contact-${slug}.svg`, svg);
+  save(`${file}.svg`, svg);
 }
 
 // ───────────────────────────── Execução ─────────────────────────────
@@ -627,13 +539,22 @@ sectionHeader('projetos', '02 · PROJETOS', 'Projetos em destaque');
 sectionHeader('stack', '03 · STACK', 'Linguagens e ferramentas');
 sectionHeader('atividade', '04 · ATIVIDADE', 'Ritmo no GitHub');
 aboutCode();
-aboutNow();
+jogiLogo();
 projects.forEach(projectCard);
-stack.forEach(stackTile);
-integrationsTile();
-browserFrame('eurora', 'eurora.jpg', 'eurora.site', 'image/jpeg');
-browserFrame('volker', 'velkor.jpg', 'volker · loja', 'image/jpeg');
-browserFrame('vitraya', 'vitraya.jpg', '127.0.0.1:4317 · vitraya studio', 'image/jpeg');
+// Stack: um cartão clicável por tecnologia. As linguagens vêm de
+// assets/languages.json, mantido pela Action (scripts/sync-languages.mjs).
+const synced = existsSync(new URL('../assets/languages.json', import.meta.url))
+  ? JSON.parse(readFileSync(new URL('../assets/languages.json', import.meta.url), 'utf8')).languages
+  : [];
+for (const l of synced) if (!tech[l.key]) registerLanguage(l.name, l.hex);
+categories.forEach((cat, ci) => {
+  const keys = cat.keys ?? synced.map(l => l.key);
+  writeCategory(cat, keys, ci * 12);
+  updateReadmeBlock(cat.slug, keys);
+  console.log(`stack ${cat.slug.padEnd(21)} ${keys.length} cartões`);
+});
 footer();
-contactPill('email', 'kainarodrigues684@gmail.com', 'mail');
-contactPill('repos', 'Todos os repositórios', 'repo');
+pillButton('contact-email', 'kainarodrigues684@gmail.com', 'mail', { at: 2.2 });
+pillButton('contact-repos', 'Todos os repositórios', 'repo', { at: 2.9 });
+pillButton('btn-telas', 'Ver telas dos projetos', 'gallery', { at: 3.2, trailing: 'chevron' });
+pillButton('btn-outros', 'Outros repositórios', 'folder', { at: 3.9, trailing: 'chevron' });

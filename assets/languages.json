@@ -1,0 +1,65 @@
+{
+  "languages": [
+    {
+      "name": "TypeScript",
+      "bytes": 2674423,
+      "hex": "#3178c6",
+      "key": "typescript"
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 1084660,
+      "hex": "#f1e05a",
+      "key": "javascript"
+    },
+    {
+      "name": "Python",
+      "bytes": 984154,
+      "hex": "#3572A5",
+      "key": "python"
+    },
+    {
+      "name": "GDScript",
+      "bytes": 683990,
+      "hex": "#355570",
+      "key": "gdscript"
+    },
+    {
+      "name": "HTML",
+      "bytes": 430793,
+      "hex": "#e34c26",
+      "key": "html"
+    },
+    {
+      "name": "CSS",
+      "bytes": 396551,
+      "hex": "#663399",
+      "key": "css"
+    },
+    {
+      "name": "Shell",
+      "bytes": 144352,
+      "hex": "#89e051",
+      "key": "bash"
+    },
+    {
+      "name": "PLpgSQL",
+      "bytes": 138820,
+      "hex": "#336790",
+      "key": "sql"
+    },
+    {
+      "name": "PowerShell",
+      "bytes": 5096,
+      "hex": "#012456",
+      "key": "powershell"
+    },
+    {
+      "name": "Lua",
+      "bytes": 0,
+      "hex": null,
+      "extra": true,
+      "key": "lua"
+    }
+  ]
+}

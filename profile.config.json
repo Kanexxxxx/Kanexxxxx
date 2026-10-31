@@ -1,0 +1,66 @@
+{
+  "user": "Kanexxxxx",
+  "minLanguageShare": 0.0005,
+  "ignoreLanguages": [
+    "Batchfile",
+    "Dockerfile",
+    "GDShader",
+    "Makefile",
+    "Procfile"
+  ],
+  "extraLanguages": [
+    "Lua"
+  ],
+  "progress": [
+    {
+      "name": "Studio Karol",
+      "repo": "Karol",
+      "branch": "main",
+      "file": "docs/estado-atual.md",
+      "rule": "table-section",
+      "section": "No ar",
+      "unit": "partes no ar",
+      "color": "#e4c27a",
+      "fallback": {
+        "done": 8,
+        "total": 9
+      }
+    },
+    {
+      "name": "Confia?",
+      "repo": "Confia-",
+      "branch": "main",
+      "file": "PLANO.md",
+      "rule": "headings",
+      "match": "Etapa",
+      "unit": "etapas",
+      "color": "#5ee6a0",
+      "fallback": {
+        "done": 5,
+        "total": 10
+      }
+    },
+    {
+      "name": "Vitraya Studio",
+      "repo": "Vitraya",
+      "manual": {
+        "done": 4,
+        "total": 6
+      },
+      "unit": "validações",
+      "color": "#8f80ff",
+      "source": "docs/VALIDACAO.md"
+    },
+    {
+      "name": "Nexakeep",
+      "repo": "projeto-pessoal",
+      "manual": {
+        "done": 4,
+        "total": 20
+      },
+      "unit": "tarefas",
+      "color": "#77ebd7",
+      "source": "docs/TAREFAS.md (branch implementacao)"
+    }
+  ]
+}
