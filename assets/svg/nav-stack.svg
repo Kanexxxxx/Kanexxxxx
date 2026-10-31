@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="40" viewBox="0 0 132 40" role="img" aria-labelledby="t d">
+<title id="t">Stack</title>
+<desc id="d">Ir para a seção Stack</desc>
+<defs><linearGradient id="n-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1a33"/><stop offset="1" stop-color="#05080f"/></linearGradient>
+<linearGradient id="n-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".32"/><stop offset=".5" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#77ebd7" stop-opacity=".4"/></linearGradient>
+<linearGradient id="n-sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="n-clip"><rect width="132" height="40" rx="20"/></clipPath><path id="f0g123" d="M300 10L300 10Q233 10 184-17Q134-43 107-92Q80-140 80-205L80-205L80-525Q80-591 107-639Q134-687 184-714Q233-740 300-740L300-740Q368-740 417-714Q466-687 493-639Q520-591 520-525L520-525L520-205Q520-140 493-92Q466-43 417-17Q367 10 300 10ZM300-67L300-67Q360-67 397-106Q433-144 433-205L433-205L433-525Q433-586 397-625Q360-663 300-663L300-663Q240-663 204-625Q167-586 167-525L167-525L167-205Q167-144 204-106Q240-67 300-67ZM300-306L300-306Q273-306 257-323Q240-340 240-368L240-368Q240-395 257-412Q273-428 300-428L300-428Q327-428 344-412Q360-395 360-368L360-368Q360-340 344-323Q327-306 300-306Z"/><path id="f0g126" d="M289 10L289 10Q223 10 174-17Q124-43 97-90Q70-137 70-200L70-200L160-200Q160-139 195-105Q229-70 290-70L290-70Q352-70 386-106Q420-142 420-200L420-200L420-252Q420-314 386-348Q352-382 290-382L290-382L215-382L215-472L396-648L100-648L100-730L487-730L487-640L292-451L292-462Q392-462 451-405Q510-348 510-252L510-252L510-200Q510-137 483-90Q455-43 405-17Q355 10 289 10Z"/><path id="f1g90" d="M673 23L673 23Q500 23 373-31Q245-85 173-188Q101-291 95-438L95-438L358-438Q365-360 407-308Q449-256 518-231Q587-205 671-205L671-205Q759-205 827-232Q894-259 932-308Q970-356 970-420L970-420Q970-478 937-516Q903-554 843-581Q782-607 701-627L701-627L532-671Q345-719 241-816Q136-913 136-1071L136-1071Q136-1203 207-1302Q278-1401 401-1456Q524-1510 680-1510L680-1510Q839-1510 959-1455Q1079-1400 1147-1303Q1214-1206 1217-1082L1217-1082L958-1082Q948-1178 873-1231Q797-1283 676-1283L676-1283Q592-1283 532-1258Q471-1232 439-1188Q406-1144 406-1087L406-1087Q406-1025 445-985Q483-945 542-921Q600-897 660-882L660-882L799-846Q882-826 960-793Q1038-760 1101-710Q1163-659 1200-587Q1237-515 1237-418L1237-418Q1237-287 1170-188Q1103-88 977-33Q851 23 673 23Z"/><path id="f1g217" d="M20-1118L655-1118L655-914L20-914L20-1118ZM179-293L179-1384L439-1384L439-315Q439-254 465-226Q491-197 550-197L550-197Q568-197 598-202Q627-206 645-210L645-210L686-9Q643 4 598 10Q553 15 512 15L512 15Q351 15 265-65Q179-145 179-293L179-293Z"/><path id="f1g130" d="M450 23L450 23Q344 23 259-16Q174-54 125-129Q76-204 76-314L76-314Q76-409 112-471Q147-533 208-570Q268-607 344-626Q420-645 502-653L502-653Q599-664 660-672Q721-680 750-698Q778-716 778-754L778-754L778-759Q778-814 756-853Q734-891 691-912Q647-932 583-932L583-932Q518-932 471-912Q423-892 393-860Q363-828 349-791L349-791L108-840Q141-939 210-1004Q279-1068 375-1100Q470-1132 582-1132L582-1132Q661-1132 742-1114Q822-1095 889-1051Q956-1007 997-933Q1038-859 1038-747L1038-747L1038 0L789 0L789-154L779-154Q754-107 711-67Q667-26 603-2Q538 23 450 23ZM517-170L517-170Q598-170 657-202Q715-234 748-287Q780-339 780-401L780-401L780-533Q767-523 737-514Q706-505 669-498Q631-491 595-486Q558-481 533-478L533-478Q475-470 428-452Q381-434 355-402Q328-369 328-317L328-317Q328-269 353-237Q377-204 420-187Q462-170 517-170Z"/><path id="f1g146" d="M623 23L623 23Q460 23 340-50Q220-122 155-252Q89-381 89-553L89-553Q89-727 155-858Q220-988 340-1060Q460-1132 623-1132L623-1132Q716-1132 796-1108Q876-1084 939-1039Q1002-993 1045-928Q1087-863 1105-781L1105-781L862-730Q851-773 831-809Q810-844 780-869Q750-894 711-908Q672-921 625-921L625-921Q534-921 474-873Q414-824 384-742Q354-659 354-554L354-554Q354-451 384-368Q414-285 474-237Q534-188 625-188L625-188Q673-188 713-202Q752-216 783-242Q813-268 834-305Q855-342 865-387L865-387L1108-336Q1090-252 1048-186Q1005-120 942-74Q878-27 798-2Q717 23 623 23Z"/><path id="f1g180" d="M577-567L376-352L376-667L417-667L820-1118L1125-1118L631-567L577-567ZM398 0L138 0L138-1490L398-1490L398 0ZM1151 0L839 0L473-509L649-693L1151 0Z"/></defs>
+<style>
+.rise{animation:rise .8s cubic-bezier(.16,.84,.3,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.fade{animation:fade 1s ease-out both}
+@keyframes fade{from{opacity:0}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.7)}}
+.drift-a,.drift-b,.drift-c{transform-box:fill-box;transform-origin:center}
+.drift-a{animation:driftA 16s ease-in-out infinite alternate}
+.drift-b{animation:driftB 21s ease-in-out infinite alternate}
+.drift-c{animation:driftC 26s ease-in-out infinite alternate}
+@keyframes driftA{to{transform:translate(46px,-22px) scale(1.12)}}
+@keyframes driftB{to{transform:translate(-52px,24px) scale(.9)}}
+@keyframes driftC{to{transform:translate(28px,30px) scale(1.18)}}
+.shine{animation:shine 9s cubic-bezier(.45,0,.2,1) infinite}
+@keyframes shine{0%{transform:translateX(-140%)}18%,100%{transform:translateX(260%)}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{0%{opacity:.7;transform:scale(1)}80%,100%{opacity:0;transform:scale(2.8)}}
+.blink{animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.float-a{animation:floatA 7s ease-in-out infinite alternate}
+.float-b{animation:floatB 9s ease-in-out infinite alternate}
+.float-c{animation:floatC 8s ease-in-out infinite alternate}
+@keyframes floatA{to{transform:translateY(-9px)}}
+@keyframes floatB{to{transform:translateY(8px)}}
+@keyframes floatC{to{transform:translateY(-6px)}}
+.grow{transform-box:fill-box;transform-origin:left center;animation:grow 1.4s cubic-bezier(.16,.84,.3,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.rise-y{transform-box:fill-box;transform-origin:center bottom;animation:riseY 1.2s cubic-bezier(.16,.84,.3,1) both}
+@keyframes riseY{from{transform:scaleY(0)}}
+.draw{stroke-dasharray:1;animation:draw 2.4s cubic-bezier(.4,0,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.breathe{transform-box:fill-box;transform-origin:center bottom;animation:breathe 3.6s ease-in-out infinite alternate}
+@keyframes breathe{to{transform:scaleY(.55)}}
+.flow{animation:flow 6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-48}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="132" height="40" rx="20" fill="url(#n-bg)"/>
+<rect x=".5" y=".5" width="131" height="39" rx="19.5" fill="none" stroke="url(#n-edge)"/>
+<g clip-path="url(#n-clip)"><g class="shine" style="animation-delay:2.05s"><rect x="0" y="-10" width="50" height="60" fill="url(#n-sh)" transform="skewX(-18)"/></g></g>
+<g fill="#77ebd7"><use href="#f0g123" transform="matrix(0.01 0 0 0.01 37.58 24.2)"/><use href="#f0g126" transform="matrix(0.01 0 0 0.01 43.58 24.2)"/></g><g fill="#eef2fb"><use href="#f1g90" transform="matrix(0.0065918 0 0 0.0065918 57.58 25)"/><use href="#f1g217" transform="matrix(0.0065918 0 0 0.0065918 66.36 25)"/><use href="#f1g130" transform="matrix(0.0065918 0 0 0.0065918 71.12 25)"/><use href="#f1g146" transform="matrix(0.0065918 0 0 0.0065918 78.87 25)"/><use href="#f1g180" transform="matrix(0.0065918 0 0 0.0065918 86.74 25)"/></g>
+</svg>

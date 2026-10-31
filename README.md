@@ -1,67 +1,127 @@
 <div align="center">
 
-<sub>PORTFÓLIO · DESENVOLVIMENTO DE SOFTWARE</sub>
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/svg/hero-mobile.svg">
+  <img src="./assets/svg/hero.svg" width="100%" alt="Kanex — desenvolvedor full-stack. Produto, web e games.">
+</picture>
 
-# Kanex.
+<br><br>
 
-**Interfaces que fazem sentido. Sistemas que funcionam.**
+<a href="#sobre"><img src="./assets/svg/nav-sobre.svg" height="40" alt="Sobre"></a>
+<a href="#projetos"><img src="./assets/svg/nav-projetos.svg" height="40" alt="Projetos"></a>
+<a href="#stack"><img src="./assets/svg/nav-stack.svg" height="40" alt="Stack"></a>
+<a href="#atividade"><img src="./assets/svg/nav-atividade.svg" height="40" alt="Atividade"></a>
+<a href="#contato"><img src="./assets/svg/nav-contato.svg" height="40" alt="Contato"></a>
 
-Desenvolvo produtos digitais com atenção à experiência de uso, à lógica por trás de cada fluxo e à organização do código.
+<br>
 
-<a href="#projetos-em-destaque">Projetos</a> &nbsp;·&nbsp; <a href="#tecnologias">Tecnologias</a> &nbsp;·&nbsp; <a href="#sobre-mim">Sobre</a> &nbsp;·&nbsp; <a href="mailto:kainarodrigues684@gmail.com">Contato</a>
+Desenvolvo produtos web completos, da interface ao banco de dados e do deploy à automação, e jogos em Godot. Gosto de projetos em que design, dados e código precisam funcionar juntos.
 
 </div>
 
----
+<br>
 
-## Projetos em destaque
+<a name="sobre"></a>
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/svg/title-sobre-light.svg">
+  <img src="./assets/svg/title-sobre-dark.svg" width="600" alt="01 · Sobre — Quem está por trás do código">
+</picture>
 
-<sub>QUATRO PROJETOS · QUATRO PROPOSTAS DIFERENTES</sub>
+<img src="./assets/svg/about-code.svg" width="416" alt="kanex.ts: dev full-stack no Brasil, foco em produto, web e games; entrega UI, API, banco e deploy; estudando Desenvolvimento de Sistemas; usa agentes de IA com revisão humana.">
+<img src="./assets/svg/about-now.svg" width="416" alt="Agora: construindo o Nexakeep, estudando Desenvolvimento de Sistemas no Senac, explorando Godot 4 e Roblox Studio, aprofundando segurança, testes E2E e CI/CD, e usando agentes de IA com revisão humana.">
+</div>
 
-<table>
-<tr>
-<td width="50%" valign="top">
-  <p><img src="./assets/mark-karol.svg" width="40" height="40" align="left" alt="Identidade gráfica do Studio Karol" /> <strong>Studio Karol Carvalho</strong><br /><sub>AGENDAMENTO · ATENDIMENTO</sub></p>
-  <p>Agenda online para serviços de beleza, com painel de gestão e fluxos de WhatsApp. Ações sensíveis exigem confirmação humana.</p>
-  <p><code>Next.js</code> <code>Supabase</code><br /><a href="https://github.com/Kanexxxxx/Karol"><strong>Conhecer o projeto →</strong></a></p>
-</td>
-<td width="50%" valign="top">
-  <p><img src="./assets/mark-confia.svg" width="40" height="40" align="left" alt="Identidade gráfica do Confia" /> <strong>Confia?</strong><br /><sub>SEGURANÇA · ANÁLISE ANTIGOLPE</sub></p>
-  <p>Projeto de verificação de sinais de golpes em links e perfis, com respostas em português que explicam a análise.</p>
-  <p><code>Next.js</code> <code>TypeScript</code><br /><a href="https://github.com/Kanexxxxx/Confia-"><strong>Conhecer o projeto →</strong></a></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-  <p><img src="./assets/mark-eurora.svg" width="40" height="40" align="left" alt="Identidade gráfica da Eurora" /> <strong>Eurora Love</strong><br /><sub>EXPERIÊNCIA · PERSONALIZAÇÃO</sub></p>
-  <p>Plataforma de experiências para casais, com páginas personalizadas, quiz e recursos para criar e compartilhar lembranças.</p>
-  <p><code>Next.js</code> <code>Prisma</code><br /><a href="https://github.com/Kanexxxxx/Eurora"><strong>Conhecer o projeto →</strong></a></p>
-</td>
-<td width="50%" valign="top">
-  <p><img src="./assets/mark-volker.svg" width="40" height="40" align="left" alt="Identidade gráfica do Volker" /> <strong>VOLKER</strong><br /><sub>E-COMMERCE · OPERAÇÃO</sub></p>
-  <p>Loja digital com catálogo, carrinho, pedidos, contas e painel administrativo, estruturada com front-end e API.</p>
-  <p><code>Next.js</code> <code>Node.js</code><br /><a href="https://github.com/Kanexxxxx/Velkor_3"><strong>Conhecer o projeto →</strong></a></p>
-</td>
-</tr>
-</table>
+<br>
 
-<sub>Os links levam aos repositórios e à documentação. Disponibilidade de sites e integrações externas deve ser confirmada em cada projeto.</sub>
+<a name="projetos"></a>
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/svg/title-projetos-light.svg">
+  <img src="./assets/svg/title-projetos-dark.svg" width="600" alt="02 · Projetos — Projetos em destaque">
+</picture>
 
----
+<a href="https://github.com/Kanexxxxx/Karol"><img src="./assets/svg/project-karol.svg" width="416" alt="Studio Karol: site, agenda e entrada via PIX para uma profissional de beleza, com IA no WhatsApp e confirmação humana. Next.js 16, Supabase, WhatsApp API."></a>
+<a href="https://github.com/Kanexxxxx/Confia-"><img src="./assets/svg/project-confia.svg" width="416" alt="Confia?: verificação antigolpe de links, perfis, prints e telefones, com análise explicada em português. Next.js, TypeScript, PostgreSQL."></a>
+<a href="https://github.com/Kanexxxxx/Eurora"><img src="./assets/svg/project-eurora.svg" width="416" alt="Eurora Love: SaaS para casais com página com QR Code, quiz, mensagem programada, presentes e textos por IA. Next.js 16, Prisma, PostgreSQL, PIX."></a>
+<a href="https://github.com/Kanexxxxx/Velkor_3"><img src="./assets/svg/project-volker.svg" width="416" alt="VOLKER: e-commerce com catálogo, carrinho, cupons, rastreio, painel admin, Mercado Pago e Melhor Envio. Next.js, Node.js, Prisma."></a>
+<a href="https://github.com/Kanexxxxx/JOGI"><img src="./assets/svg/project-jogi.svg" width="416" alt="JOGI: jogo 3D vertical para lives no TikTok e Kwai, controlado pela plateia em tempo real. Godot 4, GDScript, Python, WebSocket."></a>
+<a href="https://github.com/Kanexxxxx/Vitraya"><img src="./assets/svg/project-vitraya.svg" width="416" alt="Vitraya Studio: app local-first para ofertas de afiliados, com artes, legendas, cupons e envio por Telegram e WhatsApp. React, Vite, SQLite."></a>
 
-## Tecnologias
+</div>
 
-**Interface e aplicação** &nbsp; `TypeScript` · `JavaScript` · `React` · `Next.js` · `Tailwind CSS`  
-**Serviços e dados** &nbsp; `Node.js` · `Python` · `PostgreSQL` · `SQLite` · `Prisma` · `Supabase`  
-**Desenvolvimento** &nbsp; `Git` · `GitHub Actions` · `Playwright`
+<details>
+<summary><b>Ver telas dos projetos</b></summary>
+<br>
+<div align="center">
+<img src="./assets/svg/shot-eurora.svg" width="416" alt="Página inicial do Eurora Love">
+<img src="./assets/svg/shot-volker.svg" width="416" alt="Vitrine da loja VOLKER">
+<img src="./assets/svg/shot-vitraya.svg" width="416" alt="Estúdio criativo do Vitraya Studio">
+</div>
+</details>
 
-## Sobre mim
+<details>
+<summary><b>Outros repositórios</b></summary>
+<br>
 
-Desenvolvo aplicações web e ferramentas digitais, do desenho das telas às regras de negócio e integrações. Estudo Desenvolvimento de Sistemas e gosto de projetos em que design, dados e código precisam trabalhar juntos.
+| Projeto | O que é | Stack |
+| :-- | :-- | :-- |
+| [Nexakeep](https://github.com/Kanexxxxx/projeto-pessoal) | Sites e agendamento por loja para pequenos negócios. Em desenvolvimento na branch `implementacao`. | Next.js · TypeScript · PostgreSQL |
+| [Senac](https://github.com/Kanexxxxx/Senac) | Atividades do curso de Desenvolvimento de Sistemas, organizadas por unidade curricular. | JavaScript · HTML · CSS |
 
-Este perfil destaca uma seleção de trabalhos. Os repositórios mostram a implementação e as decisões técnicas por trás de cada um.
+</details>
 
-<p align="center">
-  <a href="https://github.com/Kanexxxxx?tab=repositories">Ver todos os repositórios públicos</a> &nbsp;·&nbsp;
-  <a href="mailto:kainarodrigues684@gmail.com">Entrar em contato</a>
-</p>
+<br>
+
+<a name="stack"></a>
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/svg/title-stack-light.svg">
+  <img src="./assets/svg/title-stack-dark.svg" width="600" alt="03 · Stack — Linguagens e ferramentas">
+</picture>
+
+<img src="./assets/svg/stack-languages.svg" width="416" alt="Linguagens: TypeScript, JavaScript, Python, GDScript, Lua/Luau, HTML, CSS, SQL, Bash e PowerShell.">
+<img src="./assets/svg/stack-web.svg" width="416" alt="Web e dados: Next.js, React, Tailwind, Vite, Node.js, Prisma, Supabase, PostgreSQL, SQLite e Godot 4.">
+<img src="./assets/svg/stack-tools.svg" width="416" alt="Infra e ferramentas: Docker, Nginx, Ubuntu, Vercel, GitHub Actions, Git, GitHub, VS Code, Windows e Roblox Studio.">
+<img src="./assets/svg/stack-integrations.svg" width="416" alt="Integrações e APIs: Mercado Pago, Asaas PIX, Melhor Envio, WhatsApp Cloud API, Evolution API, Telegram Bot API, DeepSeek, Shopee Open API, WebSockets, Playwright, pytest, PM2 e Nginx.">
+</div>
+
+<br>
+
+<a name="atividade"></a>
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/svg/title-atividade-light.svg">
+  <img src="./assets/svg/title-atividade-dark.svg" width="600" alt="04 · Atividade — Ritmo no GitHub">
+</picture>
+
+<img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/stats.svg" width="416" alt="GitHub em números nos últimos 12 meses: contribuições, commits, pull requests e repositórios, com gráfico semanal.">
+<img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/languages.svg" width="416" alt="Distribuição de linguagens nos repositórios públicos.">
+
+<img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/snake.svg" width="100%" alt="Cobrinha percorrendo o gráfico de contribuições do GitHub.">
+</div>
+
+<details>
+<summary><b>Ver calendário de contribuições em 3D</b></summary>
+<br>
+<div align="center">
+<img src="https://raw.githubusercontent.com/Kanexxxxx/Kanexxxxx/output/profile-3d-contrib/profile-kanex.svg" width="100%" alt="Calendário de contribuições em 3D com radar de atividade e linguagens.">
+</div>
+</details>
+
+<br>
+
+<a name="contato"></a>
+<div align="center">
+<img src="./assets/svg/footer.svg" width="100%" alt="Vamos construir algo juntos? Aberto a projetos, parcerias e oportunidades.">
+
+<br><br>
+
+<a href="mailto:kainarodrigues684@gmail.com"><img src="./assets/svg/contact-email.svg" height="46" alt="E-mail: kainarodrigues684@gmail.com"></a>
+<a href="https://github.com/Kanexxxxx?tab=repositories"><img src="./assets/svg/contact-repos.svg" height="46" alt="Ver todos os repositórios"></a>
+
+<br><br>
+
+<sub>Cartões em SVG gerados por <a href="./scripts">scripts próprios</a> · números, linguagens e cobrinha atualizados todo dia por GitHub Actions</sub>
+
+</div>

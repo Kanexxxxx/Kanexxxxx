@@ -1,0 +1,72 @@
+# Atualiza todo dia os cartões dinâmicos do perfil e publica na branch "output":
+# cobrinha (Platane/snk), calendário 3D (github-profile-3d-contrib),
+# números e linguagens (scripts/update-metrics.mjs).
+# Se algum passo falhar, a branch output mantém a última versão válida.
+name: Atualizar perfil
+
+on:
+  schedule:
+    - cron: "17 6 * * *" # 03:17 em Brasília
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "package*.json"
+      - ".github/profile-3d.json"
+      - ".github/workflows/profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-output
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Cobrinha das contribuições
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-raw.svg?color_snake=#9aa9ff&color_dots=#141c30,#134a4c,#1f7f72,#3fc0aa,#77ebd7
+
+      - name: Calendário 3D
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: .github/profile-3d.json
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Números, linguagens e moldura da cobrinha
+        run: npm run metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
+
+      - name: Juntar o calendário 3D
+        run: |
+          mkdir -p dist/profile-3d-contrib
+          cp profile-3d-contrib/*.svg dist/profile-3d-contrib/
+
+      - name: Publicar na branch output
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "Atualiza cartões do perfil"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
