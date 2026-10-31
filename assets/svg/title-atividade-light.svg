@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="92" viewBox="0 0 600 92" role="img" aria-labelledby="t d">
+<title id="t">Ritmo no GitHub</title>
+<desc id="d">Seção 04 · atividade: Ritmo no GitHub</desc>
+<defs><linearGradient id="u" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#77ebd7"/><stop offset="1" stop-color="#9aa9ff"/></linearGradient>
+<linearGradient id="fl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b8f7c" stop-opacity="0"/><stop offset="1" stop-color="#0b8f7c" stop-opacity=".6"/></linearGradient>
+<linearGradient id="fr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b8f7c" stop-opacity=".6"/><stop offset="1" stop-color="#0b8f7c" stop-opacity="0"/></linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="uc"><rect x="264" y="76" width="72" height="4" rx="2"/></clipPath><path id="f4g123" d="M300 10L300 10Q230 10 179-17Q127-44 99-93Q71-142 71-207L71-207L71-523Q71-589 99-638Q127-686 179-713Q230-740 300-740L300-740Q371-740 422-713Q473-686 501-638Q529-589 529-523L529-523L529-207Q529-142 501-93Q473-44 422-17Q370 10 300 10ZM300-90L300-90Q354-90 386-123Q418-155 418-207L418-207L418-523Q418-575 386-608Q354-640 300-640L300-640Q246-640 214-608Q182-575 182-523L182-523L182-207Q182-155 214-123Q246-90 300-90ZM300-302L300-302Q271-302 254-320Q236-338 236-368L236-368Q236-397 254-415Q271-432 300-432L300-432Q329-432 347-415Q364-397 364-368L364-368Q364-338 347-320Q329-302 300-302Z"/><path id="f4g127" d="M511 0L395 0L395-148L69-148L69-320L351-730L481-730L181-290L181-252L395-252L395-420L511-420L511 0Z"/><path id="f4g149" d="M300-256L300-256Q258-256 234-281Q209-305 209-346L209-346Q209-388 234-413Q258-438 300-438L300-438Q342-438 367-413Q391-388 391-346L391-346Q391-305 367-281Q342-256 300-256Z"/><path id="f4g1" d="M158 0L39 0L224-730L376-730L561 0L443 0L400-181L200-181L158 0ZM269-481L221-277L378-277L332-480Q320-532 312-573Q303-614 300-630L300-630Q297-614 289-574Q281-533 269-481L269-481Z"/><path id="f4g47" d="M358 0L242 0L242-623L48-623L48-731L552-731L552-623L358-623L358 0Z"/><path id="f4g23" d="M506 0L94 0L94-103L241-103L241-627L94-627L94-730L506-730L506-627L359-627L359-103L506-103L506 0Z"/><path id="f4g53" d="M376 0L224 0L39-730L159-730L273-249Q283-210 291-169Q299-128 303-103L303-103Q307-128 315-169Q322-210 332-250L332-250L444-730L561-730L376 0Z"/><path id="f4g13" d="M289 0L79 0L79-730L289-730Q363-730 417-702Q470-674 500-624Q530-573 530-504L530-504L530-227Q530-158 500-107Q470-56 417-28Q363 0 289 0L289 0ZM196-623L196-107L289-107Q347-107 380-139Q413-171 413-227L413-227L413-504Q413-559 380-591Q347-623 289-623L289-623L196-623Z"/><path id="f4g15" d="M524 0L91 0L91-730L524-730L524-628L206-628L206-429L489-429L489-327L206-327L206-102L524-102L524 0Z"/><path id="f2g21" d="M198 0L66 0L66-700L370-700Q436-700 485-677Q534-654 561-612Q588-570 588-513L588-513L588-501Q588-438 558-399Q528-360 484-342L484-342L484-324Q524-322 546-297Q568-271 568-229L568-229L568 0L436 0L436-210Q436-234 424-249Q411-264 382-264L382-264L198-264L198 0ZM198-580L198-384L356-384Q403-384 430-410Q456-435 456-477L456-477L456-487Q456-529 430-555Q404-580 356-580L356-580L198-580Z"/><path id="f2g38" d="M196 0L70 0L70-496L196-496L196 0ZM133-554L133-554Q99-554 76-576Q52-598 52-634L52-634Q52-670 76-692Q99-714 133-714L133-714Q168-714 191-692Q214-670 214-634L214-634Q214-598 191-576Q168-554 133-554Z"/><path id="f2g49" d="M400 0L260 0Q211 0 181-31Q150-61 150-112L150-112L150-392L26-392L26-496L150-496L150-650L276-650L276-496L412-496L412-392L276-392L276-134Q276-104 304-104L304-104L400-104L400 0Z"/><path id="f2g42" d="M196 0L70 0L70-496L194-496L194-442L212-442Q225-467 255-486Q285-504 334-504L334-504Q387-504 419-484Q451-463 468-430L468-430L486-430Q503-462 534-483Q565-504 622-504L622-504Q668-504 706-485Q743-465 766-426Q788-386 788-326L788-326L788 0L662 0L662-317Q662-358 641-379Q620-399 582-399L582-399Q539-399 516-372Q492-344 492-293L492-293L492 0L366 0L366-317Q366-358 345-379Q324-399 286-399L286-399Q243-399 220-372Q196-344 196-293L196-293L196 0Z"/><path id="f2g44" d="M306 14L306 14Q232 14 173-16Q114-46 80-103Q46-160 46-240L46-240L46-256Q46-336 80-393Q114-450 173-480Q232-510 306-510L306-510Q380-510 439-480Q498-450 532-393Q566-336 566-256L566-256L566-240Q566-160 532-103Q498-46 439-16Q380 14 306 14ZM306-98L306-98Q364-98 402-136Q440-173 440-243L440-243L440-253Q440-323 403-361Q365-398 306-398L306-398Q248-398 210-361Q172-323 172-253L172-253L172-243Q172-173 210-136Q248-98 306-98Z"/><path id="f2g43" d="M196 0L70 0L70-496L194-496L194-431L212-431Q224-457 257-481Q290-504 357-504L357-504Q415-504 459-478Q502-451 526-405Q550-358 550-296L550-296L550 0L424 0L424-286Q424-342 397-370Q369-398 318-398L318-398Q260-398 228-360Q196-321 196-252L196-252L196 0Z"/><path id="f2g10" d="M308 14L308 14Q236 14 178-19Q119-51 85-114Q50-176 50-266L50-266L50-434Q50-569 126-642Q202-714 332-714L332-714Q461-714 532-646Q602-577 602-460L602-460L602-456L472-456L472-464Q472-501 457-531Q441-561 410-579Q379-596 332-596L332-596Q262-596 222-553Q182-510 182-436L182-436L182-264Q182-191 222-147Q262-102 334-102L334-102Q406-102 439-140Q472-178 472-236L472-236L472-246L306-246L306-358L602-358L602 0L480 0L480-67L462-67Q455-50 440-31Q424-12 393 1Q362 14 308 14Z"/><path id="f2g11" d="M198 0L66 0L66-700L198-700L198-411L458-411L458-700L590-700L590 0L458 0L458-291L198-291L198 0Z"/><path id="f2g50" d="M259 8L259 8Q201 8 158-19Q114-45 90-92Q66-139 66-200L66-200L66-496L192-496L192-210Q192-154 220-126Q247-98 298-98L298-98Q356-98 388-137Q420-175 420-244L420-244L420-496L546-496L546 0L422 0L422-65L404-65Q392-40 359-16Q326 8 259 8Z"/><path id="f2g31" d="M368 14L368 14Q301 14 265-9Q229-32 212-60L212-60L194-60L194 0L70 0L70-700L196-700L196-439L214-439Q225-457 244-473Q262-489 293-500Q323-510 368-510L368-510Q428-510 479-481Q530-451 561-394Q592-337 592-256L592-256L592-240Q592-159 561-102Q530-45 479-16Q428 14 368 14ZM330-96L330-96Q388-96 427-134Q466-171 466-243L466-243L466-253Q466-325 428-363Q389-400 330-400L330-400Q272-400 233-363Q194-325 194-253L194-253L194-243Q194-171 233-134Q272-96 330-96Z"/></defs>
+<style>
+.rise{animation:rise .8s cubic-bezier(.16,.84,.3,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.fade{animation:fade 1s ease-out both}
+@keyframes fade{from{opacity:0}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.7)}}
+.drift-a,.drift-b,.drift-c{transform-box:fill-box;transform-origin:center}
+.drift-a{animation:driftA 16s ease-in-out infinite alternate}
+.drift-b{animation:driftB 21s ease-in-out infinite alternate}
+.drift-c{animation:driftC 26s ease-in-out infinite alternate}
+@keyframes driftA{to{transform:translate(46px,-22px) scale(1.12)}}
+@keyframes driftB{to{transform:translate(-52px,24px) scale(.9)}}
+@keyframes driftC{to{transform:translate(28px,30px) scale(1.18)}}
+.shine{animation:shine 9s cubic-bezier(.45,0,.2,1) infinite}
+@keyframes shine{0%{transform:translateX(-140%)}18%,100%{transform:translateX(260%)}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{0%{opacity:.7;transform:scale(1)}80%,100%{opacity:0;transform:scale(2.8)}}
+.blink{animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.float-a{animation:floatA 7s ease-in-out infinite alternate}
+.float-b{animation:floatB 9s ease-in-out infinite alternate}
+.float-c{animation:floatC 8s ease-in-out infinite alternate}
+@keyframes floatA{to{transform:translateY(-9px)}}
+@keyframes floatB{to{transform:translateY(8px)}}
+@keyframes floatC{to{transform:translateY(-6px)}}
+.grow{transform-box:fill-box;transform-origin:left center;animation:grow 1.4s cubic-bezier(.16,.84,.3,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.rise-y{transform-box:fill-box;transform-origin:center bottom;animation:riseY 1.2s cubic-bezier(.16,.84,.3,1) both}
+@keyframes riseY{from{transform:scaleY(0)}}
+.draw{stroke-dasharray:1;animation:draw 2.4s cubic-bezier(.4,0,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.breathe{transform-box:fill-box;transform-origin:center bottom;animation:breathe 3.6s ease-in-out infinite alternate}
+@keyframes breathe{to{transform:scaleY(.55)}}
+.flow{animation:flow 6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-48}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.sweep{animation:sweep 4.5s ease-in-out infinite}@keyframes sweep{0%{transform:translateX(-40px)}60%,100%{transform:translateX(90px)}}</style>
+<g class="fade">
+  <rect x="178.07" y="17.5" width="46" height="1" fill="url(#fl)"/>
+  <g fill="#0b8f7c"><use href="#f4g123" transform="matrix(0.011 0 0 0.011 238.07 22)"/><use href="#f4g127" transform="matrix(0.011 0 0 0.011 247.09 22)"/><use href="#f4g149" transform="matrix(0.011 0 0 0.011 265.13 22)"/><use href="#f4g1" transform="matrix(0.011 0 0 0.011 283.17 22)"/><use href="#f4g47" transform="matrix(0.011 0 0 0.011 292.19 22)"/><use href="#f4g23" transform="matrix(0.011 0 0 0.011 301.21 22)"/><use href="#f4g53" transform="matrix(0.011 0 0 0.011 310.23 22)"/><use href="#f4g23" transform="matrix(0.011 0 0 0.011 319.25 22)"/><use href="#f4g13" transform="matrix(0.011 0 0 0.011 328.27 22)"/><use href="#f4g1" transform="matrix(0.011 0 0 0.011 337.29 22)"/><use href="#f4g13" transform="matrix(0.011 0 0 0.011 346.31 22)"/><use href="#f4g15" transform="matrix(0.011 0 0 0.011 355.33 22)"/></g>
+  <rect x="375.93" y="17.5" width="46" height="1" fill="url(#fr)"/>
+</g>
+<g class="rise" style="animation-delay:0.12s"><g fill="#0b1220"><use href="#f2g21" transform="matrix(0.03 0 0 0.03 185.4 62)"/><use href="#f2g38" transform="matrix(0.03 0 0 0.03 203.91 62)"/><use href="#f2g49" transform="matrix(0.03 0 0 0.03 211.44 62)"/><use href="#f2g42" transform="matrix(0.03 0 0 0.03 224.67 62)"/><use href="#f2g44" transform="matrix(0.03 0 0 0.03 249.84 62)"/><use href="#f2g43" transform="matrix(0.03 0 0 0.03 274.92 62)"/><use href="#f2g44" transform="matrix(0.03 0 0 0.03 292.95 62)"/><use href="#f2g10" transform="matrix(0.03 0 0 0.03 318.03 62)"/><use href="#f2g38" transform="matrix(0.03 0 0 0.03 337.44 62)"/><use href="#f2g49" transform="matrix(0.03 0 0 0.03 344.97 62)"/><use href="#f2g11" transform="matrix(0.03 0 0 0.03 358.2 62)"/><use href="#f2g50" transform="matrix(0.03 0 0 0.03 377.43 62)"/><use href="#f2g31" transform="matrix(0.03 0 0 0.03 395.46 62)"/></g></g>
+<g class="fade" style="animation-delay:0.3s">
+  <rect x="264" y="76" width="72" height="4" rx="2" fill="url(#u)"/>
+  <g clip-path="url(#uc)"><g class="sweep"><rect x="250" y="76" width="30" height="4" fill="url(#sh)" opacity="0.9"/></g></g>
+</g>
+</svg>
