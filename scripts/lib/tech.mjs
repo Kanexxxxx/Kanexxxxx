@@ -1,6 +1,7 @@
 // Catálogo de tecnologias: nome, papel, ícone oficial, cor da marca e site
 // oficial. Usado pelos chips dos projetos e pelos cartões clicáveis do Stack.
-// Ícones: Simple Icons (CC0) e Devicon (MIT), em assets/brand.\n// Linguagens usam marcas originais coloridas do Devicon para melhor reconhecimento.
+// Ícones: Simple Icons (CC0), Devicon (MIT) e marcas oficiais; fontes em assets/brand/SOURCES.md.
+// Linguagens usam marcas originais coloridas do Devicon para melhor reconhecimento.
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { fonts, color, text, measure, doc, tapLayers, arrowUpRight } from './kit.mjs';
 
@@ -19,45 +20,46 @@ export const tech = {
   bash: { name: 'Shell', sub: 'Bash', icon: 'dev:bash', hex: '#4EAA25', url: 'https://www.gnu.org/software/bash/' },
   powershell: { name: 'PowerShell', sub: 'automação', icon: 'dev:powershell', hex: '#5391FE', url: 'https://learn.microsoft.com/powershell/' },
   // Web e dados
-  nextjs: { name: 'Next.js', sub: 'framework', icon: 'si:nextdotjs', hex: '#000000', url: 'https://nextjs.org' },
-  react: { name: 'React', sub: 'interface', icon: 'si:react', hex: '#61DAFB', url: 'https://react.dev' },
-  tailwind: { name: 'Tailwind CSS', sub: 'estilo', icon: 'si:tailwindcss', hex: '#06B6D4', url: 'https://tailwindcss.com' },
-  vite: { name: 'Vite', sub: 'build', icon: 'si:vite', hex: '#9135FF', url: 'https://vite.dev' },
-  node: { name: 'Node.js', sub: 'runtime', icon: 'si:nodedotjs', hex: '#5FA04E', url: 'https://nodejs.org' },
+  nextjs: { name: 'Next.js', sub: 'framework', icon: 'dev:nextjs', hex: '#000000', url: 'https://nextjs.org' },
+  react: { name: 'React', sub: 'interface', icon: 'dev:react', hex: '#61DAFB', url: 'https://react.dev' },
+  tailwind: { name: 'Tailwind CSS', sub: 'estilo', icon: 'dev:tailwindcss', hex: '#06B6D4', url: 'https://tailwindcss.com' },
+  vite: { name: 'Vite', sub: 'build', icon: 'dev:vitejs', hex: '#9135FF', url: 'https://vite.dev' },
+  node: { name: 'Node.js', sub: 'runtime', icon: 'dev:nodejs', hex: '#5FA04E', url: 'https://nodejs.org' },
   prisma: { name: 'Prisma', sub: 'ORM', icon: 'si:prisma', hex: '#2D3748', url: 'https://www.prisma.io' },
   drizzle: { name: 'Drizzle ORM', sub: 'ORM', icon: 'si:drizzle', hex: '#C5F74F', url: 'https://orm.drizzle.team' },
-  supabase: { name: 'Supabase', sub: 'backend', icon: 'si:supabase', hex: '#3FCF8E', url: 'https://supabase.com' },
-  postgresql: { name: 'PostgreSQL', sub: 'banco de dados', icon: 'si:postgresql', hex: '#4169E1', url: 'https://www.postgresql.org' },
-  sqlite: { name: 'SQLite', sub: 'banco local', icon: 'si:sqlite', hex: '#003B57', url: 'https://sqlite.org' },
+  supabase: { name: 'Supabase', sub: 'backend', icon: 'dev:supabase', hex: '#3FCF8E', url: 'https://supabase.com' },
+  postgresql: { name: 'PostgreSQL', sub: 'banco de dados', icon: 'dev:postgresql', hex: '#4169E1', url: 'https://www.postgresql.org' },
+  sqlite: { name: 'SQLite', sub: 'banco local', icon: 'dev:sqlite', hex: '#003B57', url: 'https://sqlite.org' },
   zod: { name: 'Zod', sub: 'validação', icon: 'si:zod', hex: '#408AFF', url: 'https://zod.dev' },
   // Infra, deploy e testes
-  docker: { name: 'Docker', sub: 'containers', icon: 'si:docker', hex: '#2496ED', url: 'https://www.docker.com' },
-  nginx: { name: 'NGINX', sub: 'proxy reverso', icon: 'si:nginx', hex: '#009639', url: 'https://nginx.org' },
-  ubuntu: { name: 'Ubuntu', sub: 'servidor VPS', icon: 'si:ubuntu', hex: '#E95420', url: 'https://ubuntu.com' },
+  docker: { name: 'Docker', sub: 'containers', icon: 'dev:docker', hex: '#2496ED', url: 'https://www.docker.com' },
+  nginx: { name: 'NGINX', sub: 'proxy reverso', icon: 'dev:nginx', hex: '#009639', url: 'https://nginx.org' },
+  ubuntu: { name: 'Ubuntu', sub: 'servidor VPS', icon: 'dev:ubuntu', hex: '#E95420', url: 'https://ubuntu.com' },
   pm2: { name: 'PM2', sub: 'processos', icon: 'si:pm2', hex: '#2B037A', url: 'https://pm2.keymetrics.io' },
   letsencrypt: { name: "Let's Encrypt", sub: 'SSL', icon: 'si:letsencrypt', hex: '#003A70', url: 'https://letsencrypt.org' },
   vercel: { name: 'Vercel', sub: 'deploy', icon: 'si:vercel', hex: '#000000', url: 'https://vercel.com' },
-  githubactions: { name: 'GitHub Actions', sub: 'CI/CD', icon: 'si:githubactions', hex: '#2088FF', url: 'https://github.com/features/actions' },
-  git: { name: 'Git', sub: 'versionamento', icon: 'si:git', hex: '#F03C2E', url: 'https://git-scm.com' },
+  githubactions: { name: 'GitHub Actions', sub: 'CI/CD', icon: 'dev:githubactions', hex: '#2088FF', url: 'https://github.com/features/actions' },
+  git: { name: 'Git', sub: 'versionamento', icon: 'dev:git', hex: '#F03C2E', url: 'https://git-scm.com' },
   github: { name: 'GitHub', sub: 'código', icon: 'si:github', hex: '#181717', url: 'https://github.com' },
   vscode: { name: 'VS Code', sub: 'editor', icon: 'dev:vscode', hex: '#2F80ED', url: 'https://code.visualstudio.com' },
   playwright: { name: 'Playwright', sub: 'testes E2E', icon: 'dev:playwright', hex: '#45BA4B', url: 'https://playwright.dev' },
-  vitest: { name: 'Vitest', sub: 'testes', icon: 'si:vitest', hex: '#6E9F18', url: 'https://vitest.dev' },
-  pytest: { name: 'pytest', sub: 'testes Python', icon: 'si:pytest', hex: '#0A9EDC', url: 'https://docs.pytest.org' },
-  godot: { name: 'Godot Engine', sub: 'games 3D', icon: 'si:godotengine', hex: '#478CBF', url: 'https://godotengine.org' },
+  vitest: { name: 'Vitest', sub: 'testes', icon: 'dev:vitest', hex: '#6E9F18', url: 'https://vitest.dev' },
+  pytest: { name: 'pytest', sub: 'testes Python', icon: 'dev:pytest', hex: '#0A9EDC', url: 'https://docs.pytest.org' },
+  godot: { name: 'Godot Engine', sub: 'games 3D', icon: 'dev:godot', hex: '#478CBF', url: 'https://godotengine.org' },
   roblox: { name: 'Roblox Studio', sub: 'games', icon: 'si:robloxstudio', hex: '#00A2FF', url: 'https://create.roblox.com' },
   // Integrações e APIs
-  whatsapp: { name: 'WhatsApp', sub: 'Cloud API', icon: 'si:whatsapp', hex: '#25D366', url: 'https://developers.facebook.com/docs/whatsapp/cloud-api' },
-  evolution: { name: 'Evolution API', sub: 'WhatsApp', icon: 'glyph:chat', hex: '#5EE6A0', url: 'https://doc.evolution-api.com' },
+  whatsapp: { name: 'WhatsApp', sub: 'Cloud API', icon: 'brand:whatsapp', hex: '#25D366', url: 'https://developers.facebook.com/docs/whatsapp/cloud-api' },
+  evolution: { name: 'Evolution API', sub: 'WhatsApp', icon: 'raster:evolution', hex: '#5EE6A0', url: 'https://doc.evolution-api.com' },
   telegram: { name: 'Telegram', sub: 'Bot API', icon: 'si:telegram', hex: '#26A5E4', url: 'https://core.telegram.org/bots/api' },
-  mercadopago: { name: 'Mercado Pago', sub: 'pagamentos', icon: 'si:mercadopago', hex: '#00B1EA', url: 'https://www.mercadopago.com.br/developers' },
-  asaas: { name: 'Asaas', sub: 'PIX e cartão', icon: 'glyph:card', hex: '#5B8CFF', url: 'https://docs.asaas.com' },
+  mercadolivre: { name: 'Mercado Livre', sub: 'afiliados', icon: 'brand:mercadolivre', hex: '#FFE600', url: 'https://www.mercadolivre.com.br/afiliados' },
+  mercadopago: { name: 'Mercado Pago', sub: 'pagamentos', icon: 'brand:mercadopago', hex: '#00B1EA', url: 'https://www.mercadopago.com.br/developers' },
+  asaas: { name: 'Asaas', sub: 'PIX e cartão', icon: 'brand:asaas', hex: '#5B8CFF', url: 'https://docs.asaas.com' },
   pix: { name: 'Pix', sub: 'pagamentos', icon: 'si:pix', hex: '#77B6A8', url: 'https://www.bcb.gov.br/estabilidadefinanceira/pix' },
-  melhorenvio: { name: 'Melhor Envio', sub: 'frete', icon: 'glyph:box', hex: '#FFB84D', url: 'https://docs.melhorenvio.com.br' },
-  deepseek: { name: 'DeepSeek', sub: 'LLM', icon: 'si:deepseek', hex: '#5786FE', url: 'https://api-docs.deepseek.com' },
+  melhorenvio: { name: 'Melhor Envio', sub: 'frete', icon: 'raster:melhorenvio', hex: '#FFB84D', url: 'https://docs.melhorenvio.com.br' },
+  deepseek: { name: 'DeepSeek', sub: 'LLM', icon: 'brand:deepseek', hex: '#5786FE', url: 'https://api-docs.deepseek.com' },
   shopee: { name: 'Shopee', sub: 'Open API', icon: 'si:shopee', hex: '#EE4D2D', url: 'https://affiliate.shopee.com.br' },
-  resend: { name: 'Resend', sub: 'e-mail', icon: 'si:resend', hex: '#000000', url: 'https://resend.com' },
-  gmail: { name: 'Gmail SMTP', sub: 'e-mail', icon: 'si:gmail', hex: '#EA4335', url: 'https://nodemailer.com/usage/using-gmail/' },
+  resend: { name: 'Resend', sub: 'e-mail', icon: 'brand:resend', hex: '#000000', url: 'https://resend.com' },
+  gmail: { name: 'Gmail SMTP', sub: 'e-mail', icon: 'brand:gmail', hex: '#EA4335', url: 'https://nodemailer.com/usage/using-gmail/' },
   websocket: { name: 'WebSockets', sub: 'tempo real', icon: 'glyph:sync', hex: '#9AA9FF', url: 'https://developer.mozilla.org/pt-BR/docs/Web/API/WebSockets_API' },
 };
 
@@ -91,19 +93,26 @@ export function legible(hex, bg = '#111b35', min = 5.2) {
 export function techIcon(key, x, y, s, prefix) {
   const t = tech[key] ?? { icon: 'glyph:code', hex: '#9AA9FF' };
   const [kind, name] = t.icon.split(':');
-  const fill = legible(t.hex);
+  // Preserve brand colors; use the white variant for dark monochrome marks.
+  const fill = luminance(t.hex) < 0.06 ? '#FFFFFF' : t.hex;
+  if (kind === 'raster') {
+    const data = readFileSync(new URL(`brand-${name}.png`, brandDir)).toString('base64');
+    return `<image x="${x}" y="${y}" width="${s}" height="${s}" href="data:image/png;base64,${data}"/>`;
+  }
   if (kind === 'si') {
     const src = readFileSync(new URL(`${name}.svg`, brandDir), 'utf8');
     const d = src.match(/<path d="([^"]+)"/)[1];
     return `<svg x="${x}" y="${y}" width="${s}" height="${s}" viewBox="0 0 24 24"><path d="${d}" fill="${fill}"/></svg>`;
   }
-  if (kind === 'dev') {
-    let src = readFileSync(new URL(`devicon-${name}.svg`, brandDir), 'utf8');
+  if (kind === 'dev' || kind === 'brand') {
+    let src = readFileSync(new URL(`${kind === 'dev' ? 'devicon' : 'brand'}-${name}.svg`, brandDir), 'utf8');
     src = src.replace(/<\?xml[^>]*>/, '')
       .replace(/\bid="([^"]+)"/g, `id="${prefix}-$1"`)
       .replace(/url\(#([^)]+)\)/g, `url(#${prefix}-$1)`)
       .replace(/(xlink:href|href)="#([^"]+)"/g, `$1="#${prefix}-$2"`);
-    return src.replace(/<svg\b([^>]*)>/, (m, a) => `<svg x="${x}" y="${y}" width="${s}" height="${s}" viewBox="${a.match(/viewBox="([^"]+)"/)?.[1] ?? '0 0 128 128'}">`);
+    if (name === 'asaas') src = src.replace(/viewBox="[^"]+"/, 'viewBox="0 0 21 18"');
+    const backing = name === 'bash' ? `<rect x="${x - 2}" y="${y - 2}" width="${s + 4}" height="${s + 4}" rx="5" fill="#F4F7FA"/>` : '';
+    return backing + src.replace(/<svg\b([^>]*)>/, (m, a) => `<svg x="${x}" y="${y}" width="${s}" height="${s}" viewBox="${a.match(/viewBox="([^"]+)"/)?.[1] ?? '0 0 128 128'}">`);
   }
   return `<svg x="${x}" y="${y}" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${fill}" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${glyphs[name] ?? glyphs.code}</svg>`;
 }
@@ -150,7 +159,7 @@ export function techTile(key, { at, order = 0 }) {
 <rect width="${W}" height="${H}" rx="16" fill="#fff" fill-opacity=".03"/>
 ${tap.ripple}
 <rect x="12" y="12" width="40" height="40" rx="12" fill="${tint}" fill-opacity=".12" stroke="${tint}" stroke-opacity=".35"/>
-${techIcon(key, 21, 21, 22, `${p}i`)}
+${techIcon(key, 17, 17, 30, `${p}i`)}
 ${text(t.name, { font: fonts.bodySemi, size, x: 62, y: 30, fill: color.ink }).svg}
 ${text(t.sub, { font: fonts.mono, size: 9.5, x: 62, y: 46, fill: color.ink3 }).svg}
 <g class="nudge" ${tap.t}>${arrowUpRight(W - 15, 15, 3.2, color.ink3)}</g>
@@ -163,14 +172,14 @@ ${tap.edge}
 
 /** Bloco do README com cartões clicáveis de uma categoria. */
 export function tilesMarkdown(keys, dir = './assets/svg/tech') {
-  return keys.map(k => `<a href="${tech[k]?.url ?? `https://github.com/topics/${encodeURIComponent(k)}`}"><img src="${dir}/${k}.svg" width="164" alt="${tech[k]?.name ?? k}"></a>`).join('\n');
+  return keys.map(k => `<a href="${tech[k]?.url ?? `https://github.com/topics/${encodeURIComponent(k)}`}"><img src="${dir}/${k}.svg" width="164" alt="${tech[k]?.name ?? k}"></a>`).join(' ');
 }
 
 export const hasIcon = key => {
   const t = tech[key];
   if (!t) return false;
   const [kind, name] = t.icon.split(':');
-  return kind === 'glyph' || existsSync(new URL(kind === 'si' ? `${name}.svg` : `devicon-${name}.svg`, brandDir));
+  return kind === 'glyph' || existsSync(new URL(kind === 'si' ? `${name}.svg` : kind === 'raster' ? `brand-${name}.png` : `${kind === 'dev' ? 'devicon' : 'brand'}-${name}.svg`, brandDir));
 };
 
 // ───── Stack: categorias, cabeçalhos, cartões e blocos do README.
@@ -178,7 +187,7 @@ export const categories = [
   { slug: 'languages', n: '01', title: 'Linguagens', note: 'sincronizado com o GitHub' },
   { slug: 'web', n: '02', title: 'Web e dados', keys: ['nextjs', 'react', 'tailwind', 'vite', 'node', 'supabase', 'postgresql', 'prisma', 'drizzle', 'sqlite', 'zod'] },
   { slug: 'infra', n: '03', title: 'Infra, deploy e testes', keys: ['docker', 'nginx', 'ubuntu', 'pm2', 'letsencrypt', 'vercel', 'githubactions', 'git', 'github', 'vscode', 'playwright', 'vitest', 'pytest', 'godot', 'roblox'] },
-  { slug: 'integrations', n: '04', title: 'Integrações e APIs', keys: ['whatsapp', 'evolution', 'telegram', 'mercadopago', 'asaas', 'pix', 'melhorenvio', 'deepseek', 'shopee', 'resend', 'gmail', 'websocket'] },
+  { slug: 'integrations', n: '04', title: 'Integrações e APIs', keys: ['whatsapp', 'evolution', 'telegram', 'mercadolivre', 'mercadopago', 'asaas', 'pix', 'melhorenvio', 'deepseek', 'shopee', 'resend', 'gmail', 'websocket'] },
 ];
 
 const root = new URL('../../', import.meta.url);

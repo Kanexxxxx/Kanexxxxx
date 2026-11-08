@@ -65,18 +65,18 @@
 .rise,.pop{animation-name:fade!important}
 }
 </style>
-<g class="fade" style="animation-delay:0.35s">
+<g class="fade" style="animation-delay:0.39s">
 <rect width="164" height="64" rx="16" fill="url(#t-bg)"/>
 <rect width="164" height="64" rx="16" fill="url(#t-glow)"/>
 <rect width="164" height="64" rx="16" fill="#fff" fill-opacity=".03"/>
-<g clip-path="url(#t-clip)"><circle class="ripple" style="animation-delay:3.62s;animation-duration:12s" cx="32" cy="32" r="190" fill="url(#t-rip)"/></g>
+<g clip-path="url(#t-clip)"><circle class="ripple" style="animation-delay:3.84s;animation-duration:12s" cx="32" cy="32" r="190" fill="url(#t-rip)"/></g>
 <rect x="12" y="12" width="40" height="40" rx="12" fill="#77b6a8" fill-opacity=".12" stroke="#77b6a8" stroke-opacity=".35"/>
-<svg x="21" y="21" width="22" height="22" viewBox="0 0 24 24"><path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156" fill="#77b6a8"/></svg>
+<svg x="17" y="17" width="30" height="30" viewBox="0 0 24 24"><path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156" fill="#77B6A8"/></svg>
 <g fill="#eef2fb"><use href="#f1g84" transform="matrix(0.0065918 0 0 0.0065918 62 30)"/><use href="#f1g167" transform="matrix(0.0065918 0 0 0.0065918 70.71 30)"/><use href="#f1g238" transform="matrix(0.0065918 0 0 0.0065918 74.24 30)"/></g>
 <g fill="#6f7b96"><use href="#f0g102" transform="matrix(0.0095 0 0 0.0095 62 46)"/><use href="#f0g59" transform="matrix(0.0095 0 0 0.0095 67.7 46)"/><use href="#f0g78" transform="matrix(0.0095 0 0 0.0095 73.4 46)"/><use href="#f0g59" transform="matrix(0.0095 0 0 0.0095 79.1 46)"/><use href="#f0g91" transform="matrix(0.0095 0 0 0.0095 84.8 46)"/><use href="#f0g72" transform="matrix(0.0095 0 0 0.0095 90.5 46)"/><use href="#f0g92" transform="matrix(0.0095 0 0 0.0095 96.2 46)"/><use href="#f0g108" transform="matrix(0.0095 0 0 0.0095 101.9 46)"/><use href="#f0g94" transform="matrix(0.0095 0 0 0.0095 107.6 46)"/><use href="#f0g106" transform="matrix(0.0095 0 0 0.0095 113.3 46)"/></g>
-<g class="nudge" style="animation-delay:3.62s;animation-duration:12s"><path d="M145.8 18.2L152.2 11.8M147.88 11.8H152.2V16.12" fill="none" stroke="#6f7b96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g class="nudge" style="animation-delay:3.84s;animation-duration:12s"><path d="M145.8 18.2L152.2 11.8M147.88 11.8H152.2V16.12" fill="none" stroke="#6f7b96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
 <rect x="16" y=".6" width="132" height="1" fill="url(#t-top)"/>
 <rect x=".5" y=".5" width="163" height="63" rx="15.5" fill="none" stroke="url(#t-edge)"/>
-<rect class="edge" style="animation-delay:3.62s;animation-duration:12s" x="0.75" y="0.75" width="162.5" height="62.5" rx="15.25" fill="none" stroke="url(#t-edgeglow)" stroke-width="1.5"/>
+<rect class="edge" style="animation-delay:3.84s;animation-duration:12s" x="0.75" y="0.75" width="162.5" height="62.5" rx="15.25" fill="none" stroke="url(#t-edgeglow)" stroke-width="1.5"/>
 </g>
 </svg>
