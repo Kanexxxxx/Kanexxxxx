@@ -2,6 +2,7 @@
 import { mkdirSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { fonts, color, text, measure, wrap, icon, doc, glass, chip, arrowUpRight, delay, tapAt, tapLayers } from './lib/kit.mjs';
 import { tech, techChip, techIcon, legible, categories, writeCategory, updateReadmeBlock, registerLanguage } from './lib/tech.mjs';
+import { writeSites } from './lib/sites.mjs';
 
 const out = new URL('../assets/svg/', import.meta.url);
 mkdirSync(out, { recursive: true });
@@ -400,7 +401,7 @@ function projectCard(pr, i) {
   if (cx - 5 > W - 22) throw new Error(`Chips não cabem em ${pr.slug}: ${(cx - 5).toFixed(0)}px`);
 
   // Botão "Ver projeto": gradiente do projeto, luz correndo pela borda e toque.
-  const label = 'Ver projeto';
+  const label = 'Ver código';
   const bw = Math.ceil(measure(label, fonts.bodySemi, 13) + 62), bh = 36;
   const bx = W - 22 - bw, by = H - 22 - bh, bcx = bx + bw - 22, bcy = by + bh / 2;
   const tap = tapLayers({ id: p, at, cx: bcx, cy: bcy, ripple: 340, ringR: 13, accent: pr.a, clip: `${p}-clip`,
@@ -558,3 +559,4 @@ pillButton('contact-email', 'kainarodrigues684@gmail.com', 'mail', { at: 2.2 });
 pillButton('contact-repos', 'Todos os repositórios', 'repo', { at: 2.9 });
 pillButton('btn-telas', 'Ver telas dos projetos', 'gallery', { at: 3.2, trailing: 'chevron' });
 pillButton('btn-outros', 'Outros repositórios', 'folder', { at: 3.9, trailing: 'chevron' });
+writeSites();

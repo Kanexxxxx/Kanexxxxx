@@ -65,18 +65,18 @@
 .rise,.pop{animation-name:fade!important}
 }
 </style>
-<g class="fade" style="animation-delay:0.59s">
+<g class="fade" style="animation-delay:0.63s">
 <rect width="164" height="64" rx="16" fill="url(#t-bg)"/>
 <rect width="164" height="64" rx="16" fill="url(#t-glow)"/>
 <rect width="164" height="64" rx="16" fill="#fff" fill-opacity=".03"/>
-<g clip-path="url(#t-clip)"><circle class="ripple" style="animation-delay:4.94s;animation-duration:12s" cx="32" cy="32" r="190" fill="url(#t-rip)"/></g>
+<g clip-path="url(#t-clip)"><circle class="ripple" style="animation-delay:5.16s;animation-duration:12s" cx="32" cy="32" r="190" fill="url(#t-rip)"/></g>
 <rect x="12" y="12" width="40" height="40" rx="12" fill="#9aa9ff" fill-opacity=".12" stroke="#9aa9ff" stroke-opacity=".35"/>
-<svg x="21" y="21" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa9ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5h14.5M15 5l3.5 3.5L15 12M20 15.5H5.5M9 12l-3.5 3.5L9 19"/></svg>
+<svg x="17" y="17" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#9AA9FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5h14.5M15 5l3.5 3.5L15 12M20 15.5H5.5M9 12l-3.5 3.5L9 19"/></svg>
 <g fill="#eef2fb"><use href="#f1g112" transform="matrix(0.0065918 0 0 0.0065918 62 30)"/><use href="#f1g151" transform="matrix(0.0065918 0 0 0.0065918 75.77 30)"/><use href="#f1g143" transform="matrix(0.0065918 0 0 0.0065918 83.75 30)"/><use href="#f1g90" transform="matrix(0.0065918 0 0 0.0065918 92.18 30)"/><use href="#f1g195" transform="matrix(0.0065918 0 0 0.0065918 100.96 30)"/><use href="#f1g146" transform="matrix(0.0065918 0 0 0.0065918 109.18 30)"/><use href="#f1g180" transform="matrix(0.0065918 0 0 0.0065918 117.04 30)"/><use href="#f1g151" transform="matrix(0.0065918 0 0 0.0065918 124.73 30)"/><use href="#f1g217" transform="matrix(0.0065918 0 0 0.0065918 132.71 30)"/><use href="#f1g213" transform="matrix(0.0065918 0 0 0.0065918 137.48 30)"/></g>
 <g fill="#6f7b96"><use href="#f0g108" transform="matrix(0.0095 0 0 0.0095 62 46)"/><use href="#f0g72" transform="matrix(0.0095 0 0 0.0095 67.7 46)"/><use href="#f0g91" transform="matrix(0.0095 0 0 0.0095 73.4 46)"/><use href="#f0g102" transform="matrix(0.0095 0 0 0.0095 79.1 46)"/><use href="#f0g94" transform="matrix(0.0095 0 0 0.0095 84.8 46)"/><use href="#f0g105" transform="matrix(0.0095 0 0 0.0095 96.2 46)"/><use href="#f0g72" transform="matrix(0.0095 0 0 0.0095 101.9 46)"/><use href="#f0g59" transform="matrix(0.0095 0 0 0.0095 107.6 46)"/><use href="#f0g90" transform="matrix(0.0095 0 0 0.0095 113.3 46)"/></g>
-<g class="nudge" style="animation-delay:4.94s;animation-duration:12s"><path d="M145.8 18.2L152.2 11.8M147.88 11.8H152.2V16.12" fill="none" stroke="#6f7b96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g class="nudge" style="animation-delay:5.16s;animation-duration:12s"><path d="M145.8 18.2L152.2 11.8M147.88 11.8H152.2V16.12" fill="none" stroke="#6f7b96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
 <rect x="16" y=".6" width="132" height="1" fill="url(#t-top)"/>
 <rect x=".5" y=".5" width="163" height="63" rx="15.5" fill="none" stroke="url(#t-edge)"/>
-<rect class="edge" style="animation-delay:4.94s;animation-duration:12s" x="0.75" y="0.75" width="162.5" height="62.5" rx="15.25" fill="none" stroke="url(#t-edgeglow)" stroke-width="1.5"/>
+<rect class="edge" style="animation-delay:5.16s;animation-duration:12s" x="0.75" y="0.75" width="162.5" height="62.5" rx="15.25" fill="none" stroke="url(#t-edgeglow)" stroke-width="1.5"/>
 </g>
 </svg>
